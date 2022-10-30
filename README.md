@@ -137,19 +137,19 @@ print(getdata().getdata(date: "2022-08-28", datanum: 1))
 ___
 ># App 預覽 (1.3.67)
 >>## iPhone 14 Pro
->>><img src="http://58.177.101.104:3000/TsangHingTat/M3-Ultra/raw/branch/main/img/img3.png" width="200">
->>><img src="http://58.177.101.104:3000/TsangHingTat/M3-Ultra/raw/branch/main/img/img1.png" width="200">
->>><img src="http://58.177.101.104:3000/TsangHingTat/M3-Ultra/raw/branch/main/img/img4.png" width="200">
->>><img src="http://58.177.101.104:3000/TsangHingTat/M3-Ultra/raw/branch/main/img/img5.png" width="200">
->>><img src="http://58.177.101.104:3000/TsangHingTat/M3-Ultra/raw/branch/main/img/img2.png" width="200">
->>><img src="http://58.177.101.104:3000/TsangHingTat/M3-Ultra/raw/branch/main/img/img6.png" width="200">
+>>><img src="http://58.177.101.104:9000/TsangHingTat/M3-Ultra/raw/branch/main/img/img3.png" width="200">
+>>><img src="http://58.177.101.104:9000/TsangHingTat/M3-Ultra/raw/branch/main/img/img1.png" width="200">
+>>><img src="http://58.177.101.104:9000/TsangHingTat/M3-Ultra/raw/branch/main/img/img4.png" width="200">
+>>><img src="http://58.177.101.104:9000/TsangHingTat/M3-Ultra/raw/branch/main/img/img5.png" width="200">
+>>><img src="http://58.177.101.104:9000/TsangHingTat/M3-Ultra/raw/branch/main/img/img2.png" width="200">
+>>><img src="http://58.177.101.104:9000/TsangHingTat/M3-Ultra/raw/branch/main/img/img6.png" width="200">
 >>## M1 iPad Pro 12.9 inch 
->>><img src="http://58.177.101.104:3000/TsangHingTat/M3-Ultra/raw/branch/main/img/imgpad6.png" width="1000">
->>><img src="http://58.177.101.104:3000/TsangHingTat/M3-Ultra/raw/branch/main/img/imgpad5.png" width="1000">
->>><img src="http://58.177.101.104:3000/TsangHingTat/M3-Ultra/raw/branch/main/img/imgpad4.png" width="1000">
->>><img src="http://58.177.101.104:3000/TsangHingTat/M3-Ultra/raw/branch/main/img/imgpad1.png" width="1000">
->>><img src="http://58.177.101.104:3000/TsangHingTat/M3-Ultra/raw/branch/main/img/imgpad2.png" width="1000">
->>><img src="http://58.177.101.104:3000/TsangHingTat/M3-Ultra/raw/branch/main/img/imgpad3.png" width="1000">
+>>><img src="http://58.177.101.104:9000/TsangHingTat/M3-Ultra/raw/branch/main/img/imgpad6.png" width="1000">
+>>><img src="http://58.177.101.104:9000/TsangHingTat/M3-Ultra/raw/branch/main/img/imgpad5.png" width="1000">
+>>><img src="http://58.177.101.104:9000/TsangHingTat/M3-Ultra/raw/branch/main/img/imgpad4.png" width="1000">
+>>><img src="http://58.177.101.104:9000/TsangHingTat/M3-Ultra/raw/branch/main/img/imgpad1.png" width="1000">
+>>><img src="http://58.177.101.104:9000/TsangHingTat/M3-Ultra/raw/branch/main/img/imgpad2.png" width="1000">
+>>><img src="http://58.177.101.104:9000/TsangHingTat/M3-Ultra/raw/branch/main/img/imgpad3.png" width="1000">
 
 
 # 支援的裝置:
