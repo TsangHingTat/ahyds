@@ -210,9 +210,9 @@ ___
 - MacBook Pro ( 13 吋 2020 )
 - Mac mini ( 2020 )
 - iMac ( 24 吋 2021 )
-- MacBook Pro（14寸 2021）
-- MacBook Pro（16寸 2021）
-- Mac Studio（ 2022 ）
+- MacBook Pro ( 14寸 2021 )
+- MacBook Pro ( 16寸 2021 )
+- Mac Studio ( 2022 )
 - MacBook Air ( 2022 )
 - MacBook Pro ( 13 吋 2022 )
 
