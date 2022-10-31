@@ -23,7 +23,7 @@
 
 # 開發:
 ```shell
-git clone http://58.177.101.104:3000/TsangHingTat/AHYDS.git
+git clone http://58.177.101.104:9000/TsangHingTat/AHYDS.git
 ```
 - Xcode 13
 - iOS 15 SDK
