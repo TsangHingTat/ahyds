@@ -12,8 +12,6 @@ struct trainView: View {
     @State var view2 = false
     @State var view3 = false
     @State var view4 = false
-    @State var action = "loading"
-    let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     var body: some View {
         ScrollView(showsIndicators: false) {
             // MARK: 可選項目 Button
@@ -103,41 +101,12 @@ struct trainView: View {
                         }
                     }
             }
-            #if DEBUG
-            // MARK: Debug Button
-            Button(action: {
-                view4 = true
-            }) {
-                Image("swift")
-                    .resizable()
-                    .cornerRadius(15)
-                    .frame(width: 340, height: 340)
-                    .padding()
-                    .shadow(radius: 10)
-                    .overlay() {
-                        VStack {
-                            Spacer()
-                            HStack {
-                                Text("Debug")
-                                    .foregroundColor(.white)
-                                    .font(.title)
-                                    .bold()
-                                    .padding(25)
-                                Spacer()
-                            }
-                        }
-                    } 
-            }
-            #endif
-            
         }
         // MARK: Action after tapped 掌上壓 Button
         .fullScreenCover(isPresented: $view1) {
             NavigationView {
                 VStack {
-                    CameraSelfView()
-                    Text(action)
-                    dpView()
+                    errorView()
                 }
                     .navigationTitle("掌上壓")
                     .navigationBarTitleDisplayMode(.inline)
@@ -155,56 +124,12 @@ struct trainView: View {
         
         // MARK: Action after tapped 仰臥起坐 Button
         .fullScreenCover(isPresented: $view2) {
-            NavigationView {
-                VStack {
-                    CameraSelfView()
-                    Text(action)
-                    dpView()
-                }
-                    .navigationTitle("仰臥起坐")
-                    .navigationBarTitleDisplayMode(.inline)
-                    .toolbar() {
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            HStack {
-                                Button(action: {
-                                    view2 = false
-                                }, label: {
-                                    Text("退出")
-                                })
-                            }
-                        }
-                    }
-            }
+            aiView(onoff: $view2)
         }
-        // MARK: Action after tapped Debug Button
-        .fullScreenCover(isPresented: $view4) {
-            NavigationView {
-                VStack {
-                    CameraSelfView()
-                    Text(action)
-                    dpView()
-                }
-                    .navigationTitle("Debug")
-                    .navigationBarTitleDisplayMode(.inline)
-                    .toolbar() {
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            HStack {
-                                Button(action: {
-                                    view4 = false
-                                }, label: {
-                                    Text("退出")
-                                })
-                            }
-                        }
-                    }
-            }
-        }
+        
         // MARK: Action after tapped 可選項目 Button
         .sheet(isPresented: $view3) {
              optionalView(isopen: $view3, pushup: $view1, situp: $view2)
-        }
-        .onReceive(timer) { timer in
-            action = getdata().getdefaultsdata(type: "howmanytimes?")
         }
         
     }

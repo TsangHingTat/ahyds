@@ -111,7 +111,9 @@ struct classView: View {
         }
         .fullScreenCover(isPresented: $view1) {
             NavigationView {
-                aiView(fullpoint: 20)
+                VStack {
+                    errorView()
+                }
                     .navigationTitle("掌上壓")
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar() {
