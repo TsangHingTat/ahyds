@@ -1,16 +1,7 @@
-/*
-See LICENSE folder for this sample’s licensing information.
-
-Abstract:
-Creates a video data output set to produce frames with a specific pixel format.
-*/
 
 import AVFoundation
 
 extension AVCaptureVideoDataOutput {
-    /// Creates a video data output with a pixel format.
-    /// - Parameter pixelFormatType: The pixel format for the video output.
-    /// - Tag: withPixelFormatType
     static func withPixelFormatType(_ pixelFormatType: OSType) -> AVCaptureVideoDataOutput {
         let videoDataOutput = AVCaptureVideoDataOutput()
         let validPixelTypes = videoDataOutput.availableVideoPixelFormatTypes
@@ -31,7 +22,7 @@ extension AVCaptureVideoDataOutput {
             fatalError(errorMessage)
         }
 
-        // Configure the output pixel type.
+        
         let pixelTypeKey = String(kCVPixelBufferPixelFormatTypeKey)
         videoDataOutput.videoSettings = [pixelTypeKey: pixelFormatType]
 

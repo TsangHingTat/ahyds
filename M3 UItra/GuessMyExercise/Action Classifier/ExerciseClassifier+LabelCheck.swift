@@ -1,12 +1,6 @@
-/*
-See LICENSE folder for this sample’s licensing information.
-
-Abstract:
-Adds a runtime check to see if the app's knowledge matches the model's labels.
-*/
 
 extension ExerciseClassifier {
-    /// Ensures the apps knows all of the model's labels at runtime.
+    
     func checkLabels() {
         let metadata = model.modelDescription.metadata
         guard let classLabels = model.modelDescription.classLabels else {
@@ -38,7 +32,7 @@ extension ExerciseClassifier {
                 fatalError("Action classifier labels should be strings.")
             }
 
-            // Ensure ExerciseClassifier.Label supports the model's label.
+            
             let label = Label(modelLabelString)
             print("  \(number): \(label.rawValue)")
         }

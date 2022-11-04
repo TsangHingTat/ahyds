@@ -45,7 +45,6 @@
 		796F199429150ED8002D0652 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F197929150ED7002D0652 /* Pose.swift */; };
 		796F199529150ED8002D0652 /* Pose+Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F197A29150ED7002D0652 /* Pose+Connection.swift */; };
 		796F199629150ED8002D0652 /* Pose+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F197B29150ED7002D0652 /* Pose+Empty.swift */; };
-		796F199729150ED8002D0652 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F197D29150ED7002D0652 /* SummaryViewController.swift */; };
 		796F199829150ED8002D0652 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F197E29150ED7002D0652 /* MainViewController.swift */; };
 		796F199929150ED8002D0652 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796F197F29150ED7002D0652 /* Main.storyboard */; };
 		796F199A29150ED8002D0652 /* PerformanceReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F198229150ED7002D0652 /* PerformanceReporter.swift */; };
@@ -167,7 +166,6 @@
 		796F197929150ED7002D0652 /* Pose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
 		796F197A29150ED7002D0652 /* Pose+Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pose+Connection.swift"; sourceTree = "<group>"; };
 		796F197B29150ED7002D0652 /* Pose+Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pose+Empty.swift"; sourceTree = "<group>"; };
-		796F197D29150ED7002D0652 /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		796F197E29150ED7002D0652 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		796F198029150ED7002D0652 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		796F198229150ED7002D0652 /* PerformanceReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceReporter.swift; sourceTree = "<group>"; };
@@ -352,8 +350,8 @@
 		796F197C29150ED7002D0652 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				796F197D29150ED7002D0652 /* SummaryViewController.swift */,
 				796F197E29150ED7002D0652 /* MainViewController.swift */,
+				4977E77A2915353E00E08057 /* File.swift */,
 				796F197F29150ED7002D0652 /* Main.storyboard */,
 			);
 			path = Views;
@@ -384,7 +382,6 @@
 				4932CDC128A4E8F2000E7443 /* camera.swift */,
 				4932CDC328A4E92B000E7443 /* the line and view.swift */,
 				4932CDC528A4EA5B000E7443 /* frame.swift */,
-				4977E77A2915353E00E08057 /* File.swift */,
 			);
 			path = "AI Camera";
 			sourceTree = "<group>";
@@ -619,7 +616,6 @@
 				796F198529150ED8002D0652 /* ActionPrediction.swift in Sources */,
 				79D0AAD628AAB18F00E60B4C /* Data.xcdatamodeld in Sources */,
 				796F199429150ED8002D0652 /* Pose.swift in Sources */,
-				796F199729150ED8002D0652 /* SummaryViewController.swift in Sources */,
 				7994DCDA28E7457C00CA0941 /* getdata func.swift in Sources */,
 				7971A78528B33875007302A1 /* barchartView.swift in Sources */,
 				796F198E29150ED8002D0652 /* VideoProcessingChain.swift in Sources */,

@@ -1,10 +1,3 @@
-/*
-See LICENSE folder for this sample’s licensing information.
-
-Abstract:
-The performance reporter prints the number of frames and predictions every
- second. This is a "nice to have" feature the app doesn't need to function.
-*/
 
 import Foundation
 
