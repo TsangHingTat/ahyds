@@ -132,7 +132,10 @@ struct trainView: View {
         // MARK: Action after tapped 掌上壓 Button
         .fullScreenCover(isPresented: $view1) {
             NavigationView {
-                aiView(fullpoint: 20)
+                VStack {
+                    CameraSelfView()
+                    CameraSelfDataView()
+                }
                     .navigationTitle("掌上壓")
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar() {
@@ -150,7 +153,10 @@ struct trainView: View {
         // MARK: Action after tapped 仰臥起坐 Button
         .fullScreenCover(isPresented: $view2) {
             NavigationView {
-                aiView(fullpoint: 20)
+                VStack {
+                CameraSelfView()
+                CameraSelfDataView()
+                }
                     .navigationTitle("仰臥起坐")
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar() {
@@ -169,7 +175,10 @@ struct trainView: View {
         // MARK: Action after tapped Debug Button
         .fullScreenCover(isPresented: $view4) {
             NavigationView {
-                aiView(debugapp: true, fullpoint: 20)
+                VStack {
+                    CameraSelfView()
+                    CameraSelfDataView()
+                }
                     .navigationTitle("Debug")
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar() {

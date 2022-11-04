@@ -7,6 +7,36 @@ The app's main view controller.
 
 import UIKit
 import Vision
+import SwiftUI
+
+struct CameraSelfView: UIViewControllerRepresentable {
+    typealias UIViewControllerType = MainViewController
+    
+    func makeUIViewController(context content: Context) -> MainViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let controller = storyboard.instantiateViewController(withIdentifier: "Camera")
+        return controller as! MainViewController
+    }
+    
+    func updateUIViewController(_ uiViewController: MainViewController, context: Context) {
+        
+    }
+}
+
+struct CameraSelfDataView: UIViewControllerRepresentable {
+    typealias UIViewControllerType = SummaryViewController
+    
+    func makeUIViewController(context content: Context) -> SummaryViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let controller = storyboard.instantiateViewController(withIdentifier: "SummaryViewController")
+        return controller as! SummaryViewController
+    }
+    
+    func updateUIViewController(_ uiViewController: SummaryViewController, context: Context) {
+        
+    }
+}
+
 
 @available(iOS 14.0, *)
 class MainViewController: UIViewController {
