@@ -18,6 +18,7 @@ extension ExerciseClassifier {
             let output = try prediction(poses: window)
             let action = Label(output.label)
             let confidence = output.labelProbabilities[output.label]!
+            getdata().savedefaultsdata(type: "action", data: output.label)
 
             return ActionPrediction(label: action.rawValue, confidence: confidence)
 
