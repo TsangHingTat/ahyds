@@ -21,13 +21,19 @@ struct dpView: View {
     var body: some View {
         VStack {
             Text("")
+                .hidden()
             
         }
         .onReceive(doTime2) { _ in
-            getdata().getdefaultsdataint(type: "")
+            p = getdata().getdefaultsdataint(type: "confidence")
+            if getdata().getdefaultsdata(type: "action") == "0" {
+                appear = 0
+            } else {
+                appear = 1
+            }
         }
-        .onReceive(doTime) { doTime in
-            print(doTime)
+        .onReceive(doTime) { _ in
+            getdata().savedefaultsdataint(type: "howmanytimes?", data: dotime)
             if p < 85 {
                 bool = 0
             }

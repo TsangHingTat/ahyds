@@ -137,6 +137,7 @@ struct trainView: View {
                 VStack {
                     CameraSelfView()
                     Text(action)
+                    dpView()
                 }
                     .navigationTitle("掌上壓")
                     .navigationBarTitleDisplayMode(.inline)
@@ -158,6 +159,7 @@ struct trainView: View {
                 VStack {
                     CameraSelfView()
                     Text(action)
+                    dpView()
                 }
                     .navigationTitle("仰臥起坐")
                     .navigationBarTitleDisplayMode(.inline)
@@ -180,6 +182,7 @@ struct trainView: View {
                 VStack {
                     CameraSelfView()
                     Text(action)
+                    dpView()
                 }
                     .navigationTitle("Debug")
                     .navigationBarTitleDisplayMode(.inline)
@@ -201,7 +204,7 @@ struct trainView: View {
              optionalView(isopen: $view3, pushup: $view1, situp: $view2)
         }
         .onReceive(timer) { timer in
-            action = getdata().getdefaultsdata(type: "action")
+            action = getdata().getdefaultsdata(type: "howmanytimes?")
         }
         
     }
