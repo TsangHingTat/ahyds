@@ -33,21 +33,19 @@ struct dpView: View {
             }
         }
         .onReceive(doTime) { _ in
-            getdata().savedefaultsdataint(type: "howmanytimes?", data: dotime)
-            if p < 85 {
+            if appear == 1 {
+                
                 bool = 0
-            }
-            if bool == 0 {
-                if appear == 1 {
-                    bool = 1
-                }
-                if appear == 0{
-                    bool = 0
-                    dotime += 1
-                }
-            } else {
                 
             }
+            
+            if bool == 0 && appear == 0 {
+                
+                bool = 1
+                dotime += 1
+                
+            }
+            getdata().savedefaultsdataint(type: "howmanytimes?", data: dotime)
         }
     }
 }
