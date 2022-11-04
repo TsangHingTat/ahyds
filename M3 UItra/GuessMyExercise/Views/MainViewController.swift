@@ -23,7 +23,19 @@ struct CameraSelfView: UIViewControllerRepresentable {
     }
 }
 
-
+struct CameraSelfDataView: UIViewControllerRepresentable {
+    typealias UIViewControllerType = SummaryViewController
+    
+    func makeUIViewController(context content: Context) -> SummaryViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let controller = storyboard.instantiateViewController(withIdentifier: "SummaryViewController")
+        return controller as! SummaryViewController
+    }
+    
+    func updateUIViewController(_ uiViewController: SummaryViewController, context: Context) {
+        
+    }
+}
 
 
 @available(iOS 14.0, *)

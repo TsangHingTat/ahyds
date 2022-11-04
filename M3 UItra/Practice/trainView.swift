@@ -12,6 +12,8 @@ struct trainView: View {
     @State var view2 = false
     @State var view3 = false
     @State var view4 = false
+    @State var action = "loading"
+    let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     var body: some View {
         ScrollView(showsIndicators: false) {
             // MARK: 可選項目 Button
@@ -134,7 +136,7 @@ struct trainView: View {
             NavigationView {
                 VStack {
                     CameraSelfView()
-                    CameraSelfDataView()
+                    Text(action)
                 }
                     .navigationTitle("掌上壓")
                     .navigationBarTitleDisplayMode(.inline)
@@ -154,8 +156,8 @@ struct trainView: View {
         .fullScreenCover(isPresented: $view2) {
             NavigationView {
                 VStack {
-                CameraSelfView()
-                CameraSelfDataView()
+                    CameraSelfView()
+                    Text(action)
                 }
                     .navigationTitle("仰臥起坐")
                     .navigationBarTitleDisplayMode(.inline)
@@ -177,7 +179,7 @@ struct trainView: View {
             NavigationView {
                 VStack {
                     CameraSelfView()
-                    CameraSelfDataView()
+                    Text(action)
                 }
                     .navigationTitle("Debug")
                     .navigationBarTitleDisplayMode(.inline)
@@ -197,6 +199,9 @@ struct trainView: View {
         // MARK: Action after tapped 可選項目 Button
         .sheet(isPresented: $view3) {
              optionalView(isopen: $view3, pushup: $view1, situp: $view2)
+        }
+        .onReceive(timer) { timer in
+            action = getdata().getdefaultsdata(type: "action")
         }
         
     }
