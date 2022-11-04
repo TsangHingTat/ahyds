@@ -14,6 +14,7 @@
 		4932CDC228A4E8F2000E7443 /* camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4932CDC128A4E8F2000E7443 /* camera.swift */; };
 		4932CDC428A4E92B000E7443 /* the line and view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4932CDC328A4E92B000E7443 /* the line and view.swift */; };
 		4932CDC628A4EA5B000E7443 /* frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4932CDC528A4EA5B000E7443 /* frame.swift */; };
+		4977E77B2915353F00E08057 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977E77A2915353E00E08057 /* File.swift */; };
 		7912388328ACFBA000CE4E0B /* trainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7912388228ACFBA000CE4E0B /* trainView.swift */; };
 		7912388528ACFBE300CE4E0B /* classView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7912388428ACFBE300CE4E0B /* classView.swift */; };
 		791FD04D28AE5D1600E7845B /* welcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FD04C28AE5D1600E7845B /* welcomeView.swift */; };
@@ -131,6 +132,7 @@
 		4932CDC128A4E8F2000E7443 /* camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = camera.swift; sourceTree = "<group>"; };
 		4932CDC328A4E92B000E7443 /* the line and view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "the line and view.swift"; sourceTree = "<group>"; };
 		4932CDC528A4EA5B000E7443 /* frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = frame.swift; sourceTree = "<group>"; };
+		4977E77A2915353E00E08057 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		7912388228ACFBA000CE4E0B /* trainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trainView.swift; sourceTree = "<group>"; };
 		7912388428ACFBE300CE4E0B /* classView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classView.swift; sourceTree = "<group>"; };
 		791FD04C28AE5D1600E7845B /* welcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeView.swift; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 				4932CDC128A4E8F2000E7443 /* camera.swift */,
 				4932CDC328A4E92B000E7443 /* the line and view.swift */,
 				4932CDC528A4EA5B000E7443 /* frame.swift */,
+				4977E77A2915353E00E08057 /* File.swift */,
 			);
 			path = "AI Camera";
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 				796F198629150ED8002D0652 /* ExerciseClassifier+Label.swift in Sources */,
 				796F198829150ED8002D0652 /* ExerciseClassifier+Singleton.swift in Sources */,
 				7912388328ACFBA000CE4E0B /* trainView.swift in Sources */,
+				4977E77B2915353F00E08057 /* File.swift in Sources */,
 				796F199029150ED8002D0652 /* AVCaptureDeviceInput+Camera.swift in Sources */,
 				792AE62B28AF379B0002F750 /* RingView.swift in Sources */,
 				796F198329150ED8002D0652 /* ExerciseClassifier+FrameRate.swift in Sources */,
