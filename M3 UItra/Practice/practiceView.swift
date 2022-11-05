@@ -14,129 +14,21 @@ struct practiceView: View {
     var body: some View {
         ZStack {
             NavigationView {
-                if view == true {
-                    trainView()
-                        .navigationBarTitleDisplayMode(.inline)
-                } else {
-                    ScrollView(showsIndicators: false) {
-                        classView()
-                            .navigationBarTitleDisplayMode(.inline)
-                    }
-                    
-                }
-                
-            }
-            ZStack {
-                if UIDevice.isIPhone == true {
-                    if UIDevice.current.hasNotch {
-                        VStack {
-                            Color.white
-                                .frame(height: 110)
-                                .opacity(0.9)
-                                .ignoresSafeArea(.all)
-                            Spacer()
-                        }
-                        VStack {
-                            Color.gray
-                                .frame(height: 110)
-                                .opacity(0.5).ignoresSafeArea(.all)
-                            Spacer()
-                        }
-                    } else {
-                        VStack {
-                            Color.white
-                                .frame(height: 65)
-                                .opacity(0.9)
-                                .ignoresSafeArea(.all)
-                            Spacer()
-                        }
-                        VStack {
-                            Color.gray
-                                .frame(height: 65)
-                                .opacity(0.5).ignoresSafeArea(.all)
-                            Spacer()
-                        }
-                    }
-                } else {
-                    VStack {
-                        Color.white
-                            .frame(height: 65)
-                            .opacity(0.9)
-                            .ignoresSafeArea(.all)
-                        Spacer()
-                    }
-                    VStack {
-                        Color.gray
-                            .frame(height: 65)
-                            .opacity(0.5).ignoresSafeArea(.all)
-                        Spacer()
-                    }
-                }
-                VStack {
-                    // MARK: 訓練 Button
-                    HStack {
-                        if view == true {
-                            Rectangle()
-                                .frame(width: size, height: 35)
-                                .foregroundColor(.blue)
-                                .cornerRadius(25)
-                                .overlay() {
-                                    Text("訓練")
-                                        .bold()
-                                }
-                                .onTapGesture {
-                                    view = true
-                                }
-                        } else {
-                            Rectangle()
-                                .frame(width: size, height: 35)
-                                .foregroundColor(.gray)
-                                .cornerRadius(25)
-                                .overlay() {
-                                    Text("訓練")
-                                }
-                                .onTapGesture {
-                                    view = true
-                                }
-                        }
-                        Spacer()
-                        // MARK: 課程 Button
-                        if view == true {
-                            Rectangle()
-                                .frame(width: size, height: 35)
-                                .foregroundColor(.gray)
-                                .cornerRadius(25)
-                                .overlay() {
-                                    Text("課程")
-                                        
-                                }
-                                .onTapGesture {
-                                    view = false
-                                }
-                        } else {
-                            Rectangle()
-                                .frame(width: size, height: 35)
-                                .foregroundColor(.blue)
-                                .cornerRadius(25)
-                                .overlay() {
-                                    Text("課程")
-                                        .bold()
-                                }
-                                .onTapGesture {
-                                    view = false
-                                }
-                        }
-                        
+                trainView()
+                    .toolbar {
+                      ToolbarItem(placement: .navigationBarTrailing) {
+                          NavigationLink(destination: JoinSessionView()) {
+                              Text("連接課堂")
+                          }
+                      }
                         
                     }
-                    Spacer()
-                }
-                .frame(width: 340)
+                    .navigationTitle("訓練")
+           
             }
-                
             
+            .navigationViewStyle(.stack)
         }
-        .navigationViewStyle(.stack)
         #if DEBUG
         .onAppear() {
             notify()

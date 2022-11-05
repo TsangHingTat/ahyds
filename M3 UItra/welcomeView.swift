@@ -12,7 +12,6 @@ import SwiftUI
 struct welcomeView: View {
     @Binding var showWelcomeScreen: Bool
     @State var isOnline = false
-    @ObservedObject private var remoteConnectionManager = RemoteConnectionManager()
     var body: some View {
         NavigationView {
             VStack {
@@ -30,29 +29,6 @@ struct welcomeView: View {
                     FeatureCell(image: "info.circle.fill", title: "Version", subtitle: UIApplication.appVersion ?? "", color: .gray)                  
                     FeatureCell(image: "exclamationmark.triangle.fill", title: "develop in progress", subtitle: "This app is develop in progress.", color: .yellow)
                 }
-                Spacer()
-                let transapp = getdata().getdefaultsdatabool(type: "transapp")
-                if transapp == false {
-                    Button(
-                      action: {
-                        remoteConnectionManager.host()
-                      }, label: {
-                        Rectangle()
-                          .frame(width: 350, height: 50)
-                          .foregroundColor(.green)
-                          .cornerRadius(25)
-                          .overlay() {
-                            Label("轉移數據到此裝置", systemImage: "square.and.arrow.down.fill")
-                          }
-                      })
-                }
-                NavigationLink(
-                  destination: RemoteView()
-                    .environmentObject(remoteConnectionManager),
-                  isActive: $remoteConnectionManager.connectedToRemote) {
-                    EmptyView()
-                }
-                .padding(.leading)
                 Spacer()
                 Button(action: {
                     getdata().savedefaultsdata(type: "firstopen", data: UIApplication.appVersion ?? "")

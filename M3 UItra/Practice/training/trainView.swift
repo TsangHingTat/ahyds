@@ -12,9 +12,6 @@ struct trainView: View {
     @State var titles = ["仰臥起坐", "掌上壓"]
     var body: some View {
         ScrollView(showsIndicators: false) {
-            // MARK: 可選項目 Button
-            Spacer()
-                .frame(height: 50)
             ForEach((titles), id: \.self) { title in
                 trainingViewButtoncell(needed: 20, title: title)
                 

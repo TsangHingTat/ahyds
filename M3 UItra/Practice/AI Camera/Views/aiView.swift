@@ -25,7 +25,7 @@ struct aiView: View {
                         .padding()
                         .overlay() {
                             Group {
-                                if Int(action) ?? 0 <= 20 {
+                                if Int(action) ?? 0 <= need {
                                     Text("Point: \(action)")
                                         .font(.largeTitle)
                                         .foregroundColor(.white)
