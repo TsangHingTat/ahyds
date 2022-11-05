@@ -52,6 +52,7 @@
 		7971A78528B33875007302A1 /* barchartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971A78428B33875007302A1 /* barchartView.swift */; };
 		7971A78728B3460B007302A1 /* calchartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971A78628B3460B007302A1 /* calchartView.swift */; };
 		79722B4828C0D1D900CC5265 /* decode utf8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79722B4728C0D1D900CC5265 /* decode utf8.swift */; };
+		797D621D2916350600847A56 /* trainingViewButtoncell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797D621C2916350600847A56 /* trainingViewButtoncell.swift */; };
 		7983409528D34F3D0071EF92 /* dynmaicisland.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7983409428D34F3D0071EF92 /* dynmaicisland.swift */; };
 		798EDC9528FC2C0000E2E463 /* img in Resources */ = {isa = PBXBuildFile; fileRef = 798EDC9428FC2C0000E2E463 /* img */; };
 		79941A8528DB24B900FA9A93 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79941A5528DB233900FA9A93 /* WidgetKit.framework */; };
@@ -79,8 +80,8 @@
 		79D0AAD628AAB18F00E60B4C /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 79D0AAD428AAB18F00E60B4C /* Data.xcdatamodeld */; };
 		79DC432C28AEA2E500E1853E /* usernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC432B28AEA2E500E1853E /* usernameView.swift */; };
 		79E8838228DA993B0047B280 /* optionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E8838128DA993B0047B280 /* optionalView.swift */; };
-		79FA35B028BDD317002750AE /* TransAppManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA35AE28BDD317002750AE /* TransAppManger.swift */; };
-		79FA35B128BDD317002750AE /* TransappListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA35AF28BDD317002750AE /* TransappListView.swift */; };
+		79FA35B028BDD317002750AE /* MultipeerConnectivityManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA35AE28BDD317002750AE /* MultipeerConnectivityManger.swift */; };
+		79FA35B128BDD317002750AE /* MultipeerConnectivityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA35AF28BDD317002750AE /* MultipeerConnectivityListView.swift */; };
 		79FBAE69291587C7007056D9 /* aiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FBAE68291587C7007056D9 /* aiView.swift */; };
 		79FFB77628D436CE00F1FBDC /* waterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FFB77528D436CE00F1FBDC /* waterView.swift */; };
 /* End PBXBuildFile section */
@@ -170,6 +171,7 @@
 		7971A78428B33875007302A1 /* barchartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barchartView.swift; sourceTree = "<group>"; };
 		7971A78628B3460B007302A1 /* calchartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calchartView.swift; sourceTree = "<group>"; };
 		79722B4728C0D1D900CC5265 /* decode utf8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "decode utf8.swift"; sourceTree = "<group>"; };
+		797D621C2916350600847A56 /* trainingViewButtoncell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trainingViewButtoncell.swift; sourceTree = "<group>"; };
 		7983409428D34F3D0071EF92 /* dynmaicisland.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dynmaicisland.swift; sourceTree = "<group>"; };
 		798EDC9428FC2C0000E2E463 /* img */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; path = img; sourceTree = SOURCE_ROOT; };
 		79941A5528DB233900FA9A93 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -201,8 +203,8 @@
 		79D0D19528DB293200E3E6D0 /* Widget-ai-sportsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Widget-ai-sportsExtension.entitlements"; sourceTree = "<group>"; };
 		79DC432B28AEA2E500E1853E /* usernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usernameView.swift; sourceTree = "<group>"; };
 		79E8838128DA993B0047B280 /* optionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = optionalView.swift; sourceTree = "<group>"; };
-		79FA35AE28BDD317002750AE /* TransAppManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransAppManger.swift; sourceTree = "<group>"; };
-		79FA35AF28BDD317002750AE /* TransappListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransappListView.swift; sourceTree = "<group>"; };
+		79FA35AE28BDD317002750AE /* MultipeerConnectivityManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerConnectivityManger.swift; sourceTree = "<group>"; };
+		79FA35AF28BDD317002750AE /* MultipeerConnectivityListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerConnectivityListView.swift; sourceTree = "<group>"; };
 		79FBAE68291587C7007056D9 /* aiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aiView.swift; sourceTree = "<group>"; };
 		79FFB77528D436CE00F1FBDC /* waterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -395,8 +397,6 @@
 				7971A78428B33875007302A1 /* barchartView.swift */,
 				7971A78628B3460B007302A1 /* calchartView.swift */,
 				795C818528BA90FF0080CD26 /* langsupport.swift */,
-				79FA35AE28BDD317002750AE /* TransAppManger.swift */,
-				79FA35AF28BDD317002750AE /* TransappListView.swift */,
 				79650C4728BF757900D5BFC2 /* supportView.swift */,
 				79722B4728C0D1D900CC5265 /* decode utf8.swift */,
 				7983409428D34F3D0071EF92 /* dynmaicisland.swift */,
@@ -411,8 +411,11 @@
 			children = (
 				79C8582A28AA384A00A37B5E /* practiceView.swift */,
 				7912388228ACFBA000CE4E0B /* trainView.swift */,
+				797D621C2916350600847A56 /* trainingViewButtoncell.swift */,
 				79E8838128DA993B0047B280 /* optionalView.swift */,
 				7912388428ACFBE300CE4E0B /* classView.swift */,
+				79FA35AE28BDD317002750AE /* MultipeerConnectivityManger.swift */,
+				79FA35AF28BDD317002750AE /* MultipeerConnectivityListView.swift */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -596,11 +599,12 @@
 				7971A78728B3460B007302A1 /* calchartView.swift in Sources */,
 				79C8582528AA37C200A37B5E /* homeView.swift in Sources */,
 				796F199A29150ED8002D0652 /* PerformanceReporter.swift in Sources */,
-				79FA35B028BDD317002750AE /* TransAppManger.swift in Sources */,
+				79FA35B028BDD317002750AE /* MultipeerConnectivityManger.swift in Sources */,
 				79996AF228AE10F5000E1FF0 /* todayView.swift in Sources */,
 				796F198F29150ED8002D0652 /* VideoCapture.swift in Sources */,
 				792AE63128AF37FC0002F750 /* ColorExtension.swift in Sources */,
 				79575C0B29158B3100DCA7AB /* the line and view.swift in Sources */,
+				797D621D2916350600847A56 /* trainingViewButtoncell.swift in Sources */,
 				792AE62F28AF37D20002F750 /* Constants.swift in Sources */,
 				796F199129150ED8002D0652 /* AVCaptureDevice+FrameRate.swift in Sources */,
 				796F198529150ED8002D0652 /* ActionPrediction.swift in Sources */,
@@ -620,7 +624,7 @@
 				79C8582B28AA384A00A37B5E /* practiceView.swift in Sources */,
 				796F199529150ED8002D0652 /* Pose+Connection.swift in Sources */,
 				79FFB77628D436CE00F1FBDC /* waterView.swift in Sources */,
-				79FA35B128BDD317002750AE /* TransappListView.swift in Sources */,
+				79FA35B128BDD317002750AE /* MultipeerConnectivityListView.swift in Sources */,
 				7912388528ACFBE300CE4E0B /* classView.swift in Sources */,
 				7943A97C28AFBBF7006E7F19 /* airplaysettingsView.swift in Sources */,
 				796F198729150ED8002D0652 /* ExerciseClassifier+PredictAction.swift in Sources */,

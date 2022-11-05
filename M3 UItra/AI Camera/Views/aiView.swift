@@ -11,7 +11,8 @@ struct aiView: View {
     @State var action = "loading"
     let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     @Binding var onoff: Bool
-    @State var need = 20
+    @State var need: Int
+    @State var title: String
     var barView: some View {
             VStack {
                 Spacer()
@@ -49,7 +50,7 @@ struct aiView: View {
                 .onAppear() {
                     getdata().savedefaultsdataint(type: "howmanytimes?", data: 0)
                 }
-                .navigationTitle("掌上壓")
+                .navigationTitle(title)
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar() {
                     ToolbarItem(placement: .navigationBarTrailing) {

@@ -9,140 +9,69 @@ import SwiftUI
 import WebKit
 
 struct classView: View {
-    @State var showAlert = false
-    @State var text = String("")
-    @State var view1 = false
-    @State var lesson = false
-    @State var point = 0
+    @State var teacher = 0
+    @State var whosheet = false
     var body: some View {
         Spacer()
-            .frame(height: 50)
+            .frame(height: 100)
         // MARK: 連接課堂
         Group {
-            if lesson == true {
-                VStack {
-                    Rectangle()
-                        .frame(width: 340, height: 70)
-                        .foregroundColor(.green)
-                        .cornerRadius(15)
-                        .padding()
-                        .shadow(radius: 10)
-                        .overlay() {
-                            VStack {
-                                Spacer()
-                                Text("荔景天主教中學")
-                                    .foregroundColor(.black)
-                                    .font(.largeTitle)
-                                    .bold()
-                                Spacer()
-                            }
-                        }
-                }
-                Button(action: {
-                    view1 = true
-                }) {
-                    Image("push")
-                        .resizable()
-                        .frame(width: 340, height: 240)
-                        .foregroundColor(.pink)
-                        .cornerRadius(15)
-                        .padding()
-                        .shadow(radius: 10)
-                        .overlay() {
-                            ZStack {
-                                VStack {
-                                    Spacer()
-                                    HStack {
-                                        Text("掌上壓")
-                                            .foregroundColor(.white)
-                                            .font(.title)
-                                            .bold()
-                                            .padding(25)
-                                        Spacer()
-                                    }
-                                }
-                                
-                            }
-                        }
-                }
+            if teacher == 0 {
+                errorView(errorcode: "Cannot detect Techer mode")
+            } else if teacher == 1 {
+                JoinSessionView(teachermode: true)
             } else {
+                JoinSessionView(teachermode: false)
+            }
+        }
+        .onAppear() {
+            teacher = getdata().getdefaultsdataint(type: "teacher")
+            if teacher == 0 {
+                whosheet = true
+            }
+        }
+        .fullScreenCover(isPresented: $whosheet) {
+            Button(action: {
+                teacher = 1
+                getdata().savedefaultsdataint(type: "teacher", data: 1)
+                whosheet = false
+            }, label: {
                 Rectangle()
-                    .frame(width: 340, height: 500)
+                    .frame(width: 350,height: 100)
+                    .cornerRadius(30)
                     .foregroundColor(.green)
-                    .cornerRadius(15)
-                    .padding()
-                    .shadow(radius: 10)
                     .overlay() {
-                        VStack {
-                            Spacer()
-                            Text("輸入課堂連接代碼")
-                                .foregroundColor(.black)
-                                .font(.title3)
-                                .bold()
-                            Spacer()
-                            HStack {
-                                TextField("代碼", text: $text)
-                                    .multilineTextAlignment(.center)
-                                    .foregroundColor(.black)
-                                    .font(.title)
-                            }.frame(maxWidth: 200)
-                            Spacer()
-                            Button(action: {
-                                if text == "LKCSS" {
-                                    lesson = true
-                                } else {
-                                    showAlert = true
-                                }
-                            }, label: {
-                                Rectangle()
-                                    .frame(width: 150, height: 50)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(25)
-                                    .overlay() {
-                                        Text("連接")
-                                            .font(.title)
-                                            .bold()
-                                    }
-                            })
-                            Spacer()
-                        }
+                        Text("我是老師")
+                            .font(.largeTitle)
+                            .foregroundColor(.black)
+                            .bold()
                     }
-            }
-        }
-        .fullScreenCover(isPresented: $view1) {
-            NavigationView {
-                VStack {
-                    errorView()
-                }
-                    .navigationTitle("掌上壓")
-                    .navigationBarTitleDisplayMode(.inline)
-                    .toolbar() {
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            Button(action: {
-                                view1 = false
-                            }, label: {
-                                Text("退出")
-                            })
-                        }
-                    }
-            }
-        }
-        
-        
-        // MARK: if error
-        // if error run "showAlert = true"
-            .alert("代碼無效 !", isPresented: $showAlert, actions: {
-                        Button("返回") { }
             })
+            Button(action: {
+                teacher = 2
+                getdata().savedefaultsdataint(type: "teacher", data: 2)
+                whosheet = false
+            }, label: {
+                Rectangle()
+                    .frame(width: 350,height: 100)
+                    .cornerRadius(30)
+                    .foregroundColor(.green)
+                    .overlay() {
+                        Text("我是學生")
+                            .font(.largeTitle)
+                            .foregroundColor(.black)
+                            .bold()
+                    }
+            })
+        }
     }
-    
 }
 
 
 struct classView_Previews: PreviewProvider {
     static var previews: some View {
         ScrollView {
-            classView()
+           classView()
         }
     }
 }

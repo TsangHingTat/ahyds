@@ -10,8 +10,8 @@ import SwiftUI
 struct errorView: View {
     var errorcode = ""
     var body: some View {
-        HStack {
-            Text("Error:")
+        VStack {
+            Text("Error")
                 .font(.largeTitle)
                 .bold()
                 .foregroundColor(.blue)

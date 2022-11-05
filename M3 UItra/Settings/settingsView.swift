@@ -74,17 +74,6 @@ struct settingsView: View {
                     
                 }
                 Section {
-                    NavigationLink(destination: JoinSessionView().navigationBarTitle("轉移數據")) {
-                        HStack {
-                            Image(systemName: "iphone.and.arrow.forward")
-                            Text("轉移數據")
-                            Spacer()
-                        }
-                    }
-                    
-                    
-                }
-                Section {
                     NavigationLink(destination: supportView().navigationBarTitle("支援")) {
                         HStack {
                             Image(systemName: "questionmark.circle")

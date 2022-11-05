@@ -48,7 +48,6 @@ struct RemoteListView: View {
                   .padding(16)
                 }
             }
-            .opacity(0)
             
         }
     }
@@ -98,7 +97,6 @@ extension getLocalNetworkAccessState : NetServiceDelegate {
 
 struct MessageBodyView: View {
     let message: RemoteMessage
-    let defaults = UserDefaults.standard
 
       var body: some View {
         HStack {
@@ -111,40 +109,14 @@ struct MessageBodyView: View {
 
 struct MessageBodyView2: View {
     let message: RemoteMessage
-    let defaults = UserDefaults.standard
-    @State var quit = false
       var body: some View {
         HStack {
           VStack {
             Text(message.body)
-          }.onAppear() {
-              quit = true
-              
           }
         }
-        .alert("退出此App以保存更改", isPresented: $quit, actions: {
-            Button("退出") {
-                let dictionary = defaults.dictionaryRepresentation()
-                dictionary.keys.forEach { key in
-                    defaults.removeObject(forKey: key)
-                }
-                loadalldata(str: message.body)
-                exit(0)
-            }
-        })
     }
     
-    func loadalldata(str: String) -> Void {
-        let array = str.components(separatedBy: "-all-")
-        let key = array[0]
-        let arraykey = key.components(separatedBy: "-key-")
-        let string = array[1]
-        let arraystr = string.components(separatedBy: "-string-")
-        for i in 0..<arraykey.count {
-            defaults.set("\(arraystr[i])", forKey: "\(arraykey[i])")
-        }
-        defaults.set(true, forKey: "transapp")
-    }
 }
 struct RemoteView: View {
     @EnvironmentObject var remoteConnectionManager: RemoteConnectionManager
@@ -158,7 +130,6 @@ struct RemoteView: View {
       RemoteListView()
         .environmentObject(remoteConnectionManager)
       messageField
-            .opacity(0)
     }
     .navigationBarBackButtonHidden(true)
   }
@@ -166,93 +137,32 @@ struct RemoteView: View {
   private var messageField: some View {
     VStack(spacing: 0) {
         Text("loading")
-      .onAppear() {
-          if remoteConnectionManager.isHosting == true {
-              
-          } else {
-              savealldata()
-              let all = ["\(alldatakey.joined(separator: "-key-"))", "\(alldatastring.joined(separator: "-string-"))"]
-              remoteConnectionManager.send("\(all.joined(separator: "-all-"))")
-              NSLog("\(all.joined(separator: "-all-"))")
-          }
-          
-      }
       .padding()
     }
   }
-    func savealldata() -> Void {
-        let alldata = Array(defaults.dictionaryRepresentation().keys)
-        for i in alldata {
-            let datastr = defaults.string(forKey: "\(i)")
-            if i.contains("data") == true {
-                alldatakey.append(i)
-                alldatastring.append(datastr ?? "nil")
-            } else if i.contains("reward") == true {
-                alldatakey.append(i)
-                alldatastring.append(datastr ?? "nil")
-            } else if i.contains("showwelcome") == true {
-                alldatakey.append(i)
-                alldatastring.append(datastr ?? "nil")
-            } else if i.contains("username") == true {
-                alldatakey.append(i)
-                alldatastring.append(datastr ?? "nil")
-            } else if i.contains("notifyon") == true {
-                alldatakey.append(i)
-                alldatastring.append(datastr ?? "nil")
-            } else if i.contains("firstopen") == true {
-                alldatakey.append(i)
-                alldatastring.append(datastr ?? "nil")
-            }
-            
-        }
-        
-    }
-
 
 
 }
 
 
 struct JoinSessionView: View {
-  @ObservedObject private var remoteConnectionManager = RemoteConnectionManager()
-
-  var body: some View {
-    VStack(spacing: 24) {
-      Button(
-        action: {
-          remoteConnectionManager.join()
-        }, label: {
-          Rectangle()
-            .frame(width: 350, height: 50)
-            .foregroundColor(.blue)
-            .cornerRadius(25)
-            .overlay() {
-              Label("轉移數據到另一部裝置", systemImage: "square.and.arrow.up.fill")
-                    .foregroundColor(.black)
+    @ObservedObject private var remoteConnectionManager = RemoteConnectionManager()
+    @State var teachermode: Bool
+    var body: some View {
+        VStack(spacing: 24) {
+            Text("Loading...")
+                .onAppear() {
+                    if teachermode == true {
+                        remoteConnectionManager.join()
+                    } else {
+                        remoteConnectionManager.host()
+                    }
+                }
+                NavigationLink(destination: RemoteView().environmentObject(remoteConnectionManager),isActive: $remoteConnectionManager.connectedToRemote) {
+                EmptyView()
             }
-        })
-      
-      Button(
-        action: {
-          remoteConnectionManager.host()
-        }, label: {
-          Rectangle()
-            .frame(width: 350, height: 50)
-            .foregroundColor(.blue)
-            .cornerRadius(25)
-            .overlay() {
-              Label("轉移數據到此裝置", systemImage: "square.and.arrow.down.fill")
-                    .foregroundColor(.black)
-            }
-        })
-      NavigationLink(
-        destination: RemoteView()
-          .environmentObject(remoteConnectionManager),
-        isActive: $remoteConnectionManager.connectedToRemote) {
-          EmptyView()
-      }
+        }
     }
-  }
 }
 
 struct RemoteMessage: Identifiable, Equatable, Codable {
