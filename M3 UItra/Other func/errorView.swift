@@ -11,10 +11,11 @@ struct errorView: View {
     var errorcode = ""
     var body: some View {
         VStack {
-            Text("Error")
+            Text("發生錯誤")
                 .font(.largeTitle)
                 .bold()
                 .foregroundColor(.blue)
+                .padding()
             if errorcode == "" {
                 Text("頁面開發中")
                     .font(.largeTitle)

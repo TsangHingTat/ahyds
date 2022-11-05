@@ -11,44 +11,32 @@ struct studentView: View {
     @EnvironmentObject var chatConnectionManager: ChatConnectionManager
     let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     @State var view = false
-    @State var sub = false
     @State var howmanytimes = ""
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            Button(action: {
-                view = true
-            }) {
-                Image("仰臥起坐")
-                    .resizable()
-                    .frame(width: 340, height: 240)
-                    .cornerRadius(15)
-                    .padding()
-                    .shadow(radius: 10)
-                    .overlay() {
-                        ZStack {
-                            VStack {
-                                Spacer()
-                                HStack {
-                                    Text("仰臥起坐")
-                                        .foregroundColor(.white)
-                                        .font(.title)
-                                        .bold()
-                                        .padding(25)
-                                    Spacer()
-                                }
-                            }
-                            
-                        }
+        Text("已連接課堂")
+            .bold()
+            .font(.largeTitle)
+        .fullScreenCover(isPresented: $view) {
+            stuaiView(onoff: $view, title: "仰臥起坐", howmanytimes: $howmanytimes)
+        }
+        
+        .onReceive(timer) { input in
+            if view != true {
+                for i in (0...chatConnectionManager.messages.count-1) {
+                    if chatConnectionManager.messages[i].body == "start sport 30324290" {
+                        chatConnectionManager.messages.remove(at: i)
+                        view = true
+                        howmanytimes = "0"
                     }
-            }
-            .fullScreenCover(isPresented: $view) {
-                stuaiView(onoff: $view, title: "仰臥起坐", sub: $sub, howmanytimes: $howmanytimes)
-            }
-            
-            .onReceive(timer) { timer in
-                if sub == true {
-                    chatConnectionManager.send("仰臥起坐 X \(howmanytimes)")
-                    sub = false
+                }
+            } else {
+                for i in (0...chatConnectionManager.messages.count-1) {
+                    if chatConnectionManager.messages[i].body == "stop sport 30324290" {
+                        chatConnectionManager.messages.remove(at: i)
+                        chatConnectionManager.send("仰臥起坐 X \(howmanytimes)")
+                        view = false
+                        howmanytimes = "0"
+                    }
                 }
             }
         }
@@ -61,7 +49,6 @@ struct stuaiView: View {
     let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     @Binding var onoff: Bool
     @State var title: String
-    @Binding var sub: Bool
     @Binding var howmanytimes: String
     var barView: some View {
             VStack {
@@ -97,17 +84,6 @@ struct stuaiView: View {
                 }
                 .navigationTitle(title)
                 .navigationBarTitleDisplayMode(.inline)
-                .toolbar() {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button(action: {
-                            onoff = false
-                            howmanytimes = action
-                            sub = true
-                        }, label: {
-                            Text("退出")
-                        })
-                    }
-                }
         }
         
         .onReceive(timer) { timer in

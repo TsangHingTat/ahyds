@@ -7,7 +7,7 @@ struct ChatView: View {
   @State private var messageText = ""
   @State var showperson = false
   @State var connected = false
-
+  let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
   var body: some View {
     Group {
         if chatConnectionManager.isHosting == true {
@@ -47,6 +47,15 @@ struct ChatView: View {
             }
         }
           
+    }
+    .onReceive(timer) { input in
+        if connected != true {
+            for i in (chatConnectionManager.messages) {
+                if i.body == "start" {
+                    connected = true
+                }
+            }
+        }
     }
     .navigationBarBackButtonHidden(true)
     .sheet(isPresented: $showperson) {

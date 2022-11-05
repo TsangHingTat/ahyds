@@ -43,10 +43,14 @@ struct trainingViewButtoncell: View {
                 aiView(onoff: $view, need: needed, title: title)
             } else {
                 VStack {
-                    errorView(errorcode: "AI Model is missing. \n (26398689754)")
+                    Spacer()
+                        .frame(height: 190)
+                    errorView(errorcode: "AI Model is missing.")
+                        .padding()
                     Button("Back") {
                         view.toggle()
                     }
+                    Spacer()
                 }
             }
         }
