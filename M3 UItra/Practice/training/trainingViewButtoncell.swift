@@ -26,7 +26,7 @@ struct trainingViewButtoncell: View {
                         VStack {
                             Spacer()
                             HStack {
-                                Text(title)
+                                Text("\(NSLocalizedString("\(title)", comment: "\(title)"))")
                                     .foregroundColor(.white)
                                     .font(.title)
                                     .bold()

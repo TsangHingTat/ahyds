@@ -41,7 +41,7 @@ struct JoinSessionView: View {
           EmptyView()
       }
     }
-    .navigationTitle("Lesson")
+    .navigationTitle("課堂")
   }
 }
 
