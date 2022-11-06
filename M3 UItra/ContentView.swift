@@ -47,6 +47,14 @@ struct ContentView: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .sheet(isPresented: $welcome) {
+            welcomeView(showWelcomeScreen: $welcome)
+        }
+        .onAppear() {
+            if getdata().getdefaultsdata(type: "firstopen") != UIApplication.appVersion {
+                welcome = true
+            }
+        }
     }
 }
 
@@ -66,6 +74,9 @@ struct refreshhelper: View {
         
         .onAppear() {
             refresh = false
+            if getdata().getdefaultsdata(type: "username") == "" {
+                getdata().savedefaultsdata(type: "username", data: "USERNAME")
+            }
         }
         
     }

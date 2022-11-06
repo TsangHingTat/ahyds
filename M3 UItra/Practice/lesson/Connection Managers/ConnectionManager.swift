@@ -3,6 +3,7 @@
 import Foundation
 import MultipeerConnectivity
 
+
 class ChatConnectionManager: NSObject, ObservableObject {
   private static let service = "datatrans"
 
@@ -48,7 +49,7 @@ class ChatConnectionManager: NSObject, ObservableObject {
     session = MCSession(peer: myPeerId, securityIdentity: nil, encryptionPreference: .required)
     session?.delegate = self
     guard
-      let window = UIApplication.shared.windows.first,
+      let window = UIApplication.shared.connectedScenes.filter({ $0.activationState == .foregroundActive }).first(where: { $0 is UIWindowScene }).flatMap({ $0 as? UIWindowScene })?.windows.first(where: \.isKeyWindow),
       let session = session
     else { return }
 

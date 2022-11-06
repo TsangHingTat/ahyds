@@ -73,7 +73,7 @@ struct developerView: View {
                 } else {
                     Text("Output: (nil : N/A)")
                 }
-                NavigationLink(destination: WebView(url: URL(string: "https://github.com/AlwaysBoringStudio/M3-UItra/blob/main/api.pdf")!).navigationTitle("API Help").navigationBarTitleDisplayMode(.inline)) {
+                NavigationLink(destination: WebView(url: URL(string: "http://58.177.101.104:9000/TsangHingTat/ahyds/src/branch/main/README.md")!).navigationTitle("API Help").navigationBarTitleDisplayMode(.inline)) {
                     Text("API Help")
                 }
             }
@@ -86,14 +86,14 @@ struct developerView: View {
                     }
                 }
             }
-            Section(header: Text("GitHub")) {
-                NavigationLink(destination: WebView(url: URL(string: "https://github.com/AlwaysBoringStudio/M3-UItra")!).navigationTitle("GitHub").navigationBarTitleDisplayMode(.inline)) {
-                    Text("GitHub")
+            Section(header: Text("Git")) {
+                NavigationLink(destination: WebView(url: URL(string: "http://58.177.101.104:9000/TsangHingTat/ahyds")!).navigationTitle("Git").navigationBarTitleDisplayMode(.inline)) {
+                    Text("Git")
                 }
                 
             }
             Section(header: Text("Bug")) {
-                NavigationLink(destination: WebView(url: URL(string: "https://github.com/AlwaysBoringStudio/M3-UItra/issues")!).navigationTitle("GitHub").navigationBarTitleDisplayMode(.inline)) {
+                NavigationLink(destination: WebView(url: URL(string: "http://58.177.101.104:9000/TsangHingTat/ahyds/issues")!).navigationTitle("Bug").navigationBarTitleDisplayMode(.inline)) {
                     HStack {
                         Image(systemName: "exclamationmark.triangle.fill")
                             .resizable()
