@@ -86,7 +86,8 @@
 		79E8838228DA993B0047B280 /* optionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E8838128DA993B0047B280 /* optionalView.swift */; };
 		79EF93F12916DCAC00AE7F45 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EF93F02916DCAC00AE7F45 /* Formatters.swift */; };
 		79EFA80C29176F200096B9CA /* ML Model Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EFA80B29176F200096B9CA /* ML Model Controller.swift */; };
-		79EFA813291798460096B9CA /* push-up.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 79EFA812291798460096B9CA /* push-up.mlmodel */; };
+		79EFA813291798460096B9CA /* push-up2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 79EFA812291798460096B9CA /* push-up2.mlmodel */; };
+		79EFA81529179C120096B9CA /* push-up.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 79EFA81429179C120096B9CA /* push-up.mlmodel */; };
 		79FBAE69291587C7007056D9 /* aiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FBAE68291587C7007056D9 /* aiView.swift */; };
 		79FFB77628D436CE00F1FBDC /* waterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FFB77528D436CE00F1FBDC /* waterView.swift */; };
 /* End PBXBuildFile section */
@@ -214,7 +215,8 @@
 		79E8838128DA993B0047B280 /* optionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = optionalView.swift; sourceTree = "<group>"; };
 		79EF93F02916DCAC00AE7F45 /* Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		79EFA80B29176F200096B9CA /* ML Model Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ML Model Controller.swift"; sourceTree = "<group>"; };
-		79EFA812291798460096B9CA /* push-up.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "push-up.mlmodel"; sourceTree = "<group>"; };
+		79EFA812291798460096B9CA /* push-up2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "push-up2.mlmodel"; sourceTree = "<group>"; };
+		79EFA81429179C120096B9CA /* push-up.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "push-up.mlmodel"; sourceTree = "<group>"; };
 		79FBAE68291587C7007056D9 /* aiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aiView.swift; sourceTree = "<group>"; };
 		79FFB77528D436CE00F1FBDC /* waterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -294,14 +296,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		7907ED80291673E6002B318C /* Chat Views */ = {
+		7907ED80291673E6002B318C /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				7907ED81291673E6002B318C /* TeacherListView.swift */,
 				7907ED90291680C6002B318C /* studentView.swift */,
 				7907ED82291673E6002B318C /* LessonCellView.swift */,
 			);
-			path = "Chat Views";
+			path = Views;
 			sourceTree = "<group>";
 		};
 		7907ED83291673E6002B318C /* Connection Managers */ = {
@@ -491,7 +493,7 @@
 		79EF93ED2916D98000AE7F45 /* lesson */ = {
 			isa = PBXGroup;
 			children = (
-				7907ED80291673E6002B318C /* Chat Views */,
+				7907ED80291673E6002B318C /* Views */,
 				7907ED83291673E6002B318C /* Connection Managers */,
 			);
 			path = lesson;
@@ -514,7 +516,8 @@
 			isa = PBXGroup;
 			children = (
 				796F199B291517E6002D0652 /* push-up1.mlmodel */,
-				79EFA812291798460096B9CA /* push-up.mlmodel */,
+				79EFA812291798460096B9CA /* push-up2.mlmodel */,
+				79EFA81429179C120096B9CA /* push-up.mlmodel */,
 			);
 			path = "AI Model";
 			sourceTree = "<group>";
@@ -647,6 +650,7 @@
 				7912388328ACFBA000CE4E0B /* trainView.swift in Sources */,
 				4977E77B2915353F00E08057 /* Counter.swift in Sources */,
 				796F199029150ED8002D0652 /* AVCaptureDeviceInput+Camera.swift in Sources */,
+				79EFA81529179C120096B9CA /* push-up.mlmodel in Sources */,
 				79EFA80C29176F200096B9CA /* ML Model Controller.swift in Sources */,
 				792AE62B28AF379B0002F750 /* RingView.swift in Sources */,
 				796F198329150ED8002D0652 /* ExerciseClassifier+FrameRate.swift in Sources */,
@@ -682,7 +686,7 @@
 				79FFB77628D436CE00F1FBDC /* waterView.swift in Sources */,
 				7907ED91291680C6002B318C /* studentView.swift in Sources */,
 				796F198729150ED8002D0652 /* ExerciseClassifier+PredictAction.swift in Sources */,
-				79EFA813291798460096B9CA /* push-up.mlmodel in Sources */,
+				79EFA813291798460096B9CA /* push-up2.mlmodel in Sources */,
 				796F198429150ED8002D0652 /* ExerciseClassifier+LabelCheck.swift in Sources */,
 				79575C0D29158B3100DCA7AB /* frame.swift in Sources */,
 				799CB78C28AEB425004076AD /* notifyView.swift in Sources */,

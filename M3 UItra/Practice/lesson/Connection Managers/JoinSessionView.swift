@@ -9,29 +9,51 @@ struct JoinSessionView: View {
       Button(action: {
         chatConnectionManager.join()
       }, label: {
-          Rectangle()
-              .frame(width: 350,height: 100)
-              .cornerRadius(30)
-              .foregroundColor(.green)
+          Color.orange
+              .frame(width: 340, height: 240)
+              .cornerRadius(15)
+              .padding()
+              .shadow(radius: 10)
               .overlay() {
-                  Text("開始課堂")
-                      .font(.largeTitle)
-                      .foregroundColor(.black)
-                      .bold()
+                  ZStack {
+                      VStack {
+                          Spacer()
+                          HStack {
+                              Spacer()
+                              Text("\(NSLocalizedString("開始課堂", comment: "開始課堂"))")
+                                  .foregroundColor(.white)
+                                  .font(.title)
+                                  .bold()
+                                  .padding(25)
+                          }
+                      }
+                      
+                  }
               }
       })
       Button(action: {
         chatConnectionManager.host()
       }, label: {
-          Rectangle()
-              .frame(width: 350,height: 100)
-              .cornerRadius(30)
-              .foregroundColor(.green)
+          Color.orange
+              .frame(width: 340, height: 240)
+              .cornerRadius(15)
+              .padding()
+              .shadow(radius: 10)
               .overlay() {
-                  Text("連接課堂")
-                      .font(.largeTitle)
-                      .foregroundColor(.black)
-                      .bold()
+                  ZStack {
+                      VStack {
+                          Spacer()
+                          HStack {
+                              Spacer()
+                              Text("\(NSLocalizedString("連接課堂", comment: "連接課堂"))")
+                                  .foregroundColor(.white)
+                                  .font(.title)
+                                  .bold()
+                                  .padding(25)
+                          }
+                      }
+                      
+                  }
               }
       })
       NavigationLink(
