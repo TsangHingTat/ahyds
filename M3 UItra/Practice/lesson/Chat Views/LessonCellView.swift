@@ -7,12 +7,13 @@ struct ChatView: View {
   @State private var messageText = ""
   @State var showperson = false
   @State var connected = false
+  @State var leave = false
   let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
   var body: some View {
     Group {
         if chatConnectionManager.isHosting == true {
             if connected == true {
-                studentView()
+                studentView(leave: $leave)
                     .environmentObject(chatConnectionManager)
             } else {
                 VStack {
@@ -20,11 +21,21 @@ struct ChatView: View {
                         .bold()
                         .font(.largeTitle)
                         .padding()
-                    Text("你的名稱: \(getdata().getdefaultsdata(type: "username"))")
+                    Text("\(NSLocalizedString("你的名稱:", comment: "你的名稱:")) \(getdata().getdefaultsdata(type: "username"))")
                         .padding()
                     ProgressView()
                         .padding()
+                    Button("離開") {
+                        chatConnectionManager.leaveChat()
+                    }
                 }
+            }
+            if leave == true {
+                Text("loading...")
+                    .onAppear() {
+                        chatConnectionManager.leaveChat()
+                        leave = false
+                    }
             }
             
         } else {

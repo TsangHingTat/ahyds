@@ -30,13 +30,13 @@ struct ChatListView: View {
                 chatConnectionManager.send("start sport 30324290")
                 chatConnectionManager.messages.removeLast()
             }, label: {
-                Text("Start")
+                Text("開始")
             })
             Button(action: {
                 chatConnectionManager.send("stop sport 30324290")
                 chatConnectionManager.messages.removeLast()
             }, label: {
-                Text("Stop")
+                Text("停止")
             })
         }
     }

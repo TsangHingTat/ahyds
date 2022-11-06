@@ -9,7 +9,7 @@ import SwiftUI
 
 struct aiView: View {
     @State var action = "loading"
-    let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 0.001, on: .main, in: .common).autoconnect()
     @Binding var onoff: Bool
     @State var need: Int
     @State var title: String
@@ -64,7 +64,7 @@ struct aiView: View {
         }
         
         .onReceive(timer) { timer in
-            action = getdata().getdefaultsdata(type: "howmanytimes?")
+            action = "\(getdata().getdefaultsdataint(type: "howmanytimes?"))"
         }
     }
 }

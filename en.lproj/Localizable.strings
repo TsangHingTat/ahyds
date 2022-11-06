@@ -94,4 +94,13 @@
 "轉移數據到此裝置" = "Transfer data to this device";
 "正在等待連線" = "Waiting for connection";
 "支援" = "Support";
-"請求發送測試訊息" = "Request to send a test message";
+"你的名稱:" = "Your name:";
+"課堂" = "Classroom";
+"已接連的學生" = "Connected Students";
+"發放練習" = "Release practice";
+"已連接課堂" = "Classroom connected";
+"開始" = "start";
+"停止" = "stop";
+"開始課堂" = "Host a Class";
+"連接課堂" = "Connect to a Class";
+

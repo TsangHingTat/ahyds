@@ -46,6 +46,7 @@ struct dpView: View {
                 
             }
             getdata().savedefaultsdataint(type: "howmanytimes?", data: dotime)
+            print(getdata().getdefaultsdata(type: "action"))
         }
     }
 }

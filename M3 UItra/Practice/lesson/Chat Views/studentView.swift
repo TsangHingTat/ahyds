@@ -12,10 +12,18 @@ struct studentView: View {
     let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     @State var view = false
     @State var howmanytimes = ""
+    @Binding var leave: Bool
     var body: some View {
-        Text("已連接課堂")
-            .bold()
-            .font(.largeTitle)
+        VStack {
+            Text("已連接課堂")
+                .bold()
+                .font(.largeTitle)
+                .padding()
+            Button("離開") {
+                leave = true
+            }
+        }
+        
         .fullScreenCover(isPresented: $view) {
             stuaiView(onoff: $view, title: "仰臥起坐", howmanytimes: $howmanytimes)
         }
@@ -24,6 +32,7 @@ struct studentView: View {
             if view != true {
                 for i in (0...chatConnectionManager.messages.count-1) {
                     if chatConnectionManager.messages[i].body == "start sport 30324290" {
+                        getdata().savedefaultsdata(type: "mlmodel", data: "push-up")
                         chatConnectionManager.messages.remove(at: i)
                         view = true
                         howmanytimes = "0"
@@ -33,7 +42,7 @@ struct studentView: View {
                 for i in (0...chatConnectionManager.messages.count-1) {
                     if chatConnectionManager.messages[i].body == "stop sport 30324290" {
                         chatConnectionManager.messages.remove(at: i)
-                        chatConnectionManager.send("仰臥起坐 X \(howmanytimes)")
+                        chatConnectionManager.send("仰臥起坐 X \("\(getdata().getdefaultsdataint(type: "howmanytimes?"))")")
                         view = false
                         howmanytimes = "0"
                     }
@@ -81,13 +90,14 @@ struct stuaiView: View {
             }
                 .onAppear() {
                     getdata().savedefaultsdataint(type: "howmanytimes?", data: 0)
+                    action = "0"
                 }
                 .navigationTitle(title)
                 .navigationBarTitleDisplayMode(.inline)
         }
         
         .onReceive(timer) { timer in
-            action = getdata().getdefaultsdata(type: "howmanytimes?")
+            action = "\(getdata().getdefaultsdataint(type: "howmanytimes?"))"
         }
     }
 }
