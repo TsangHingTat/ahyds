@@ -32,7 +32,7 @@ struct studentView: View {
             if view != true {
                 for i in (0...chatConnectionManager.messages.count-1) {
                     if chatConnectionManager.messages[i].body == "start sport 30324290" {
-                        getdata().savedefaultsdata(type: "mlmodel", data: "sit-up")
+                        getdata().savedefaultsdata(type: "mlmodel", data: "push-up")
                         chatConnectionManager.messages.remove(at: i)
                         view = true
                         howmanytimes = "0"
