@@ -2,8 +2,10 @@
 extension ExerciseClassifier {
     
     enum Label: String, CaseIterable {
-        case up = "1"
-        case down = "0"
+        case situp_up = "01"
+        case situp_down = "00"
+        case push_up = "11"
+        case push_down = "10"
 
         
         case otherAction = "Other Action"

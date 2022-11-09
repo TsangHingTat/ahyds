@@ -23,6 +23,7 @@
 		791FD04D28AE5D1600E7845B /* welcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FD04C28AE5D1600E7845B /* welcomeView.swift */; };
 		79233074291BC32300F9B438 /* sit-up.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 79233073291BC32300F9B438 /* sit-up.mlmodel */; };
 		7923307E291BCA0D00F9B438 /* pushup.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7923307D291BCA0D00F9B438 /* pushup.mlmodel */; };
+		79233080291BD43800F9B438 /* MyActionClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7923307F291BD43800F9B438 /* MyActionClassifier.mlmodel */; };
 		792AE62B28AF379B0002F750 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792AE62A28AF379B0002F750 /* RingView.swift */; };
 		792AE62D28AF37BA0002F750 /* ActivityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792AE62C28AF37BA0002F750 /* ActivityData.swift */; };
 		792AE62F28AF37D20002F750 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792AE62E28AF37D20002F750 /* Constants.swift */; };
@@ -133,6 +134,7 @@
 		79207EBD28BAB91F00EF4461 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		79233073291BC32300F9B438 /* sit-up.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "sit-up.mlmodel"; sourceTree = "<group>"; };
 		7923307D291BCA0D00F9B438 /* pushup.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = pushup.mlmodel; sourceTree = "<group>"; };
+		7923307F291BD43800F9B438 /* MyActionClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MyActionClassifier.mlmodel; sourceTree = "<group>"; };
 		792AE62A28AF379B0002F750 /* RingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		792AE62C28AF37BA0002F750 /* ActivityData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityData.swift; sourceTree = "<group>"; };
 		792AE62E28AF37D20002F750 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -497,6 +499,7 @@
 				79EFA812291798460096B9CA /* push-up2.mlmodel */,
 				7923307D291BCA0D00F9B438 /* pushup.mlmodel */,
 				79233073291BC32300F9B438 /* sit-up.mlmodel */,
+				7923307F291BD43800F9B438 /* MyActionClassifier.mlmodel */,
 			);
 			path = "AI Model";
 			sourceTree = "<group>";
@@ -627,6 +630,7 @@
 				79996AF828AE1C0D000E1FF0 /* Calendar.swift in Sources */,
 				79E8838228DA993B0047B280 /* optionalView.swift in Sources */,
 				79AB308928ACEE200001C091 /* developerView.swift in Sources */,
+				79233080291BD43800F9B438 /* MyActionClassifier.mlmodel in Sources */,
 				79722B4828C0D1D900CC5265 /* decode utf8.swift in Sources */,
 				796F199229150ED8002D0652 /* AVCaptureVideoDataOutput+PixelFormat.swift in Sources */,
 				79C8582B28AA384A00A37B5E /* practiceView.swift in Sources */,
