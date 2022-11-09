@@ -19,6 +19,7 @@ struct dpView: View {
     @State var bool = 0
     @State var dotime = 0
     var body: some View {
+        
         VStack {
             Text("")
                 .hidden()
@@ -26,11 +27,22 @@ struct dpView: View {
         }
         .onReceive(doTime2) { _ in
             p = getdata().getdefaultsdataint(type: "confidence")
-            if getdata().getdefaultsdata(type: "action") == "0" {
-                appear = 0
-            } else {
-                appear = 1
+            
+            if getdata().getdefaultsdata(type: "mlmodel") == "pushup" {
+                if getdata().getdefaultsdata(type: "action") == "01" {
+                    appear = 0
+                } else if getdata().getdefaultsdata(type: "action") == "00" {
+                    appear = 1
+                }
+            } else if getdata().getdefaultsdata(type: "mlmodel") == "sit-up" {
+                if getdata().getdefaultsdata(type: "action") == "11" {
+                    appear = 0
+                } else if getdata().getdefaultsdata(type: "action") == "10" {
+                    appear = 1
+                }
             }
+                
+            
         }
         .onReceive(doTime) { _ in
             if appear == 1 {
