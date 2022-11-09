@@ -11,6 +11,7 @@
 		4932CD9828A4C89D000E7443 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4932CD9728A4C89D000E7443 /* ContentView.swift */; };
 		4932CD9A28A4C89E000E7443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4932CD9928A4C89E000E7443 /* Assets.xcassets */; };
 		4932CD9D28A4C89E000E7443 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4932CD9C28A4C89E000E7443 /* Preview Assets.xcassets */; };
+		495FB4CD291BD24400951812 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FB4CC291BD24400951812 /* File.swift */; };
 		4977E77B2915353F00E08057 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977E77A2915353E00E08057 /* Counter.swift */; };
 		7907ED8A291673E6002B318C /* TeacherListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7907ED81291673E6002B318C /* TeacherListView.swift */; };
 		7907ED8B291673E6002B318C /* LessonCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7907ED82291673E6002B318C /* LessonCellView.swift */; };
@@ -117,6 +118,7 @@
 		4932CD9728A4C89D000E7443 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4932CD9928A4C89E000E7443 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4932CD9C28A4C89E000E7443 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		495FB4CC291BD24400951812 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		4977E77A2915353E00E08057 /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		7907ED81291673E6002B318C /* TeacherListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherListView.swift; sourceTree = "<group>"; };
 		7907ED82291673E6002B318C /* LessonCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonCellView.swift; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 				796F196529150ED7002D0652 /* ExerciseClassifier+Label.swift */,
 				796F196629150ED7002D0652 /* ExerciseClassifier+PredictAction.swift */,
 				796F196729150ED7002D0652 /* ExerciseClassifier+Singleton.swift */,
+				495FB4CC291BD24400951812 /* File.swift */,
 				79EFA80D29176F250096B9CA /* AI Model */,
 			);
 			path = "Action Classifier";
@@ -651,6 +654,7 @@
 				7983409528D34F3D0071EF92 /* dynmaicisland.swift in Sources */,
 				4932CD9628A4C89D000E7443 /* M3_UItraApp.swift in Sources */,
 				791FD04D28AE5D1600E7845B /* welcomeView.swift in Sources */,
+				495FB4CD291BD24400951812 /* File.swift in Sources */,
 				79C8582D28AA388B00A37B5E /* errorView.swift in Sources */,
 				79575C0E29158B3100DCA7AB /* camera.swift in Sources */,
 				795C818628BA90FF0080CD26 /* langsupport.swift in Sources */,
@@ -809,7 +813,7 @@
 				CODE_SIGN_ENTITLEMENTS = "M3 UItra/M3 UItra.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				COREML_CODEGEN_LANGUAGE = Automatic;
+				COREML_CODEGEN_LANGUAGE = None;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"M3 UItra/Preview Content\"";
 				DEVELOPMENT_TEAM = UGQBX3P3M8;
@@ -848,7 +852,7 @@
 				CODE_SIGN_ENTITLEMENTS = "M3 UItra/M3 UItra.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				COREML_CODEGEN_LANGUAGE = Automatic;
+				COREML_CODEGEN_LANGUAGE = None;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"M3 UItra/Preview Content\"";
 				DEVELOPMENT_TEAM = UGQBX3P3M8;
