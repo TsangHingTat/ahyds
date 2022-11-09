@@ -11,9 +11,11 @@ struct trainingViewButtoncell: View {
     @State var needed: Int
     @State var view = false
     @State var title: String
+    @State var ai: String
     var body: some View {
         Button(action: {
             view = true
+            getdata().savedefaultsdata(type: "mlmodel", data: ai)
         }) {
             Image(title)
                 .resizable()
@@ -39,20 +41,8 @@ struct trainingViewButtoncell: View {
                 }
         }
         .fullScreenCover(isPresented: $view) {
-            if title == "仰臥起坐" {
-                aiView(onoff: $view, need: needed, title: title)
-            } else {
-                VStack {
-                    Spacer()
-                        .frame(height: 190)
-                    errorView(errorcode: "AI Model is missing.")
-                        .padding()
-                    Button("Back") {
-                        view.toggle()
-                    }
-                    Spacer()
-                }
-            }
+            aiView(onoff: $view, need: needed, title: title)
+            
         }
         
     }

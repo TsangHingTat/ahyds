@@ -16,7 +16,7 @@ struct welcomeView: View {
     @State var username = "USERNAME"
     var body: some View {
         NavigationView {
-            VStack {
+            ScrollView {
                 Spacer()
                     .frame(height: 120)
                 if getdata().getdefaultsdata(type: "firstopen") == "" {
@@ -60,10 +60,10 @@ struct welcomeView: View {
                             .padding()
                         }
                         .frame(height: 70)
-                        .background(Color.white)
+                        .background(.white)
                         .cornerRadius(15)
                         .shadow(radius: 5)
-                        .padding(.top)
+                        .padding()
                     }
                 } else {
                     Text("更新已完成")
@@ -80,37 +80,40 @@ struct welcomeView: View {
                         .padding()
                 }
                     .frame(height: 70)
-                    .background(Color.white)
+                    .background(.white)
                     .cornerRadius(15)
                     .shadow(radius: 5)
-                    .padding(.top)
+                    .padding()
                 VStack {
                     FeatureCell(image: "exclamationmark.triangle.fill", title: "develop in progress", subtitle: "This app is develop in progress.", color: .yellow)
                         .padding()
                 }
                     .frame(height: 70)
-                    .background(Color.white)
+                    .background(.white)
                     .cornerRadius(15)
                     .shadow(radius: 5)
-                    .padding(.top)
+                    .padding()
                 Spacer()
-                Button(action: {
-                    getdata().savedefaultsdata(type: "firstopen", data: UIApplication.appVersion ?? "")
-                    self.showWelcomeScreen = false
-                }) {
-                    HStack {
-                        Spacer()
-                        Text("繼續")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                        Spacer()
+                    .frame(height: 80)
+                HStack {
+                    Button(action: {
+                        getdata().savedefaultsdata(type: "firstopen", data: UIApplication.appVersion ?? "")
+                        self.showWelcomeScreen = false
+                    }) {
+                        HStack {
+                            Spacer()
+                            Text("繼續")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                            Spacer()
+                        }
                     }
+                    .frame(height: 50)
+                    .background(Color.blue)
+                    .cornerRadius(15)
                 }
-                .frame(height: 50)
-                .background(Color.blue)
-                .cornerRadius(15)
+                .padding()
             }
-            .padding()
         }
         
     }
@@ -138,8 +141,9 @@ struct FeatureCell: View {
                 Text(title)
                     .font(.subheadline)
                     .fontWeight(.semibold)
+                    .foregroundColor(.black)
                 Text(subtitle)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.gray)
                     .font(.subheadline)
             }
             

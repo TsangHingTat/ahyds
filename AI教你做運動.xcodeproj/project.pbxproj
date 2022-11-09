@@ -20,6 +20,7 @@
 		7907ED91291680C6002B318C /* studentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7907ED90291680C6002B318C /* studentView.swift */; };
 		7912388328ACFBA000CE4E0B /* trainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7912388228ACFBA000CE4E0B /* trainView.swift */; };
 		791FD04D28AE5D1600E7845B /* welcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FD04C28AE5D1600E7845B /* welcomeView.swift */; };
+		79233072291BB9E500F9B438 /* pushup.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 79233071291BB9E500F9B438 /* pushup.mlmodel */; };
 		792AE62B28AF379B0002F750 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792AE62A28AF379B0002F750 /* RingView.swift */; };
 		792AE62D28AF37BA0002F750 /* ActivityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792AE62C28AF37BA0002F750 /* ActivityData.swift */; };
 		792AE62F28AF37D20002F750 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792AE62E28AF37D20002F750 /* Constants.swift */; };
@@ -66,6 +67,7 @@
 		79996AF628AE1AA9000E1FF0 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 79996AF328AE198E000E1FF0 /* Data.json */; settings = {ASSET_TAGS = (New, ); }; };
 		79996AF828AE1C0D000E1FF0 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79996AF728AE1C0D000E1FF0 /* Calendar.swift */; };
 		799CB78C28AEB425004076AD /* notifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799CB78B28AEB425004076AD /* notifyView.swift */; };
+		79A15D4C291BA5620013BE9F /* swiftuitestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A15D4B291BA5620013BE9F /* swiftuitestView.swift */; };
 		79AB308128ACECA60001C091 /* webView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AB308028ACECA60001C091 /* webView.swift */; };
 		79AB308928ACEE200001C091 /* developerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AB308828ACEE200001C091 /* developerView.swift */; };
 		79AB308B28ACF6D90001C091 /* rewardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AB308A28ACF6D90001C091 /* rewardView.swift */; };
@@ -128,6 +130,7 @@
 		79207EBB28BAB5D700EF4461 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		79207EBC28BAB5DD00EF4461 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		79207EBD28BAB91F00EF4461 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		79233071291BB9E500F9B438 /* pushup.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = pushup.mlmodel; sourceTree = "<group>"; };
 		792AE62A28AF379B0002F750 /* RingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		792AE62C28AF37BA0002F750 /* ActivityData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityData.swift; sourceTree = "<group>"; };
 		792AE62E28AF37D20002F750 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -180,6 +183,7 @@
 		79996AF428AE19AD000E1FF0 /* decode json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "decode json.swift"; sourceTree = "<group>"; };
 		79996AF728AE1C0D000E1FF0 /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		799CB78B28AEB425004076AD /* notifyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = notifyView.swift; sourceTree = "<group>"; };
+		79A15D4B291BA5620013BE9F /* swiftuitestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftuitestView.swift; sourceTree = "<group>"; };
 		79AB308028ACECA60001C091 /* webView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webView.swift; sourceTree = "<group>"; };
 		79AB308828ACEE200001C091 /* developerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = developerView.swift; sourceTree = "<group>"; };
 		79AB308A28ACF6D90001C091 /* rewardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rewardView.swift; sourceTree = "<group>"; };
@@ -391,6 +395,7 @@
 				7983409428D34F3D0071EF92 /* dynmaicisland.swift */,
 				7994DCD928E7457C00CA0941 /* getdata func.swift */,
 				79EF93F02916DCAC00AE7F45 /* Formatters.swift */,
+				79A15D4B291BA5620013BE9F /* swiftuitestView.swift */,
 			);
 			path = "Other func";
 			sourceTree = "<group>";
@@ -491,6 +496,7 @@
 				796F199B291517E6002D0652 /* push-up1.mlmodel */,
 				79EFA812291798460096B9CA /* push-up2.mlmodel */,
 				79EFA81429179C120096B9CA /* push-up.mlmodel */,
+				79233071291BB9E500F9B438 /* pushup.mlmodel */,
 			);
 			path = "AI Model";
 			sourceTree = "<group>";
@@ -590,6 +596,7 @@
 				4932CD9828A4C89D000E7443 /* ContentView.swift in Sources */,
 				796F198629150ED8002D0652 /* ExerciseClassifier+Label.swift in Sources */,
 				796F198829150ED8002D0652 /* ExerciseClassifier+Singleton.swift in Sources */,
+				79A15D4C291BA5620013BE9F /* swiftuitestView.swift in Sources */,
 				7912388328ACFBA000CE4E0B /* trainView.swift in Sources */,
 				4977E77B2915353F00E08057 /* Counter.swift in Sources */,
 				796F199029150ED8002D0652 /* AVCaptureDeviceInput+Camera.swift in Sources */,
@@ -635,6 +642,7 @@
 				799CB78C28AEB425004076AD /* notifyView.swift in Sources */,
 				79FBAE69291587C7007056D9 /* aiView.swift in Sources */,
 				7907ED8D291673E6002B318C /* Message.swift in Sources */,
+				79233072291BB9E500F9B438 /* pushup.mlmodel in Sources */,
 				7907ED8A291673E6002B318C /* TeacherListView.swift in Sources */,
 				79996AF028ADFBEE000E1FF0 /* get today date.swift in Sources */,
 				79AB308B28ACF6D90001C091 /* rewardView.swift in Sources */,
@@ -824,7 +832,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = " 1.3.80";
+				MARKETING_VERSION = " 1.3.81";
 				PRODUCT_BUNDLE_IDENTIFIER = "hingtattsang.app.M3-UItra";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -863,7 +871,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = " 1.3.80";
+				MARKETING_VERSION = " 1.3.81";
 				PRODUCT_BUNDLE_IDENTIFIER = "hingtattsang.app.M3-UItra";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
