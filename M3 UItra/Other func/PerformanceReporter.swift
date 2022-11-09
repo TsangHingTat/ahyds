@@ -43,6 +43,7 @@ class PerformanceReporter {
         predictionCount = 0
 
         print(report)
+        print(getdata().getdefaultsdata(type: "mlmodel"))
 
     }
 }
