@@ -13,8 +13,8 @@ struct trainView: View {
     @State var aimodel = ["push-up", "pushup"]
     var body: some View {
         ScrollView(showsIndicators: false) {
-            ForEach((titles), id: \.self) { title in
-                trainingViewButtoncell(needed: 20, title: titles, ai: aimodel)
+            ForEach((0...1), id: \.self) { i in
+                trainingViewButtoncell(needed: 20, title: titles[i], ai: aimodel[i])
                 
             }
         }

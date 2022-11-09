@@ -14,8 +14,8 @@ struct trainingViewButtoncell: View {
     @State var ai: String
     var body: some View {
         Button(action: {
-            view = true
             getdata().savedefaultsdata(type: "mlmodel", data: ai)
+            view = true
         }) {
             Image(title)
                 .resizable()
