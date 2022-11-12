@@ -16,7 +16,6 @@ struct Pose {
     
     let area: CGFloat
 
-    
     static func fromObservations(_ observations: [Observation]?) -> [Pose]? {
         
         observations?.compactMap { observation in Pose(observation) }

@@ -28,13 +28,15 @@ struct dpView: View {
         .onReceive(doTime2) { _ in
             p = getdata().getdefaultsdataint(type: "confidence")
             print("data7495y: \(getdata().getdefaultsdata(type: "mlmodel"))")
-            if getdata().getdefaultsdata(type: "mlmodel") == "pushup" {
+            print("data7495y: \(getdata().getdefaultsdataint(type: "confidence"))%")
+            print("data7495y: \(getdata().getdefaultsdataint(type: "action"))")
+            if getdata().getdefaultsdata(type: "mlmodel") == "sit-up" {
                 if getdata().getdefaultsdata(type: "action") == "01" {
                     appear = 1
                 } else if getdata().getdefaultsdata(type: "action") == "00" {
                     appear = 0
                 }
-            } else if getdata().getdefaultsdata(type: "mlmodel") == "sit-up" {
+            } else if getdata().getdefaultsdata(type: "mlmodel") == "pushup" {
                 if getdata().getdefaultsdata(type: "action") == "11" {
                     appear = 1
                 } else if getdata().getdefaultsdata(type: "action") == "10" {
@@ -57,8 +59,9 @@ struct dpView: View {
                 dotime += 1
                 
             }
-            getdata().savedefaultsdataint(type: "howmanytimes?", data: dotime)
+            getdata().savedefaultsdataint(type: "howmanytimes?", data: dotime-1)
             print(getdata().getdefaultsdata(type: "action"))
         }
     }
 }
+

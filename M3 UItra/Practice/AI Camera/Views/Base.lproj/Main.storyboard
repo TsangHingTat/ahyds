@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -46,56 +46,14 @@
                                 </constraints>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="playback" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rqv-3I-Dlz">
-                                <rect key="frame" x="20" y="55" width="210" height="66"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtZ-RJ-x8n" userLabel="CameraButton">
-                                        <rect key="frame" x="8" y="8" width="50" height="50"/>
-                                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="jQ0-i0-gHm"/>
-                                            <constraint firstAttribute="width" secondItem="BtZ-RJ-x8n" secondAttribute="height" multiplier="1:1" id="rfo-h7-Zrd"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                        <color key="tintColor" systemColor="labelColor"/>
-                                        <state key="normal">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="regular"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="onCameraButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5dj-RN-msI"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="mEB-Uu-gJu">
-                                        <rect key="frame" x="66" y="8" width="136" height="50"/>
-                                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
-                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.75" height="1"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
-                                        <state key="normal" title="Summary">
-                                            <color key="titleColor" systemColor="labelColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="onSummaryButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="NTY-Ds-oyq"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" name="Button Stack Background"/>
-                                <constraints>
-                                    <constraint firstItem="mEB-Uu-gJu" firstAttribute="height" secondItem="BtZ-RJ-x8n" secondAttribute="height" priority="750" id="4qN-8b-09q"/>
-                                    <constraint firstItem="BtZ-RJ-x8n" firstAttribute="leading" secondItem="rqv-3I-Dlz" secondAttribute="leading" priority="997" constant="10" id="svQ-28-h3N"/>
-                                </constraints>
-                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                            </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ArZ-44-lD1">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="rqv-3I-Dlz" firstAttribute="top" secondItem="F1z-cx-652" secondAttribute="bottom" constant="8" symbolic="YES" id="8ih-wz-cFy"/>
                             <constraint firstItem="ArZ-44-lD1" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="Aya-zL-cj0"/>
                             <constraint firstItem="qXp-yJ-YAz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FMn-Jz-w5m"/>
-                            <constraint firstItem="rqv-3I-Dlz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="UVn-Qa-yFz"/>
                             <constraint firstItem="ArZ-44-lD1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V6k-AV-Zk2"/>
                             <constraint firstItem="ArZ-44-lD1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="WVb-lT-DVR"/>
                             <constraint firstItem="qXp-yJ-YAz" firstAttribute="bottom" secondItem="zt5-5N-S1k" secondAttribute="top" constant="-20" id="amu-JW-dob"/>
@@ -105,12 +63,9 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="actionLabel" destination="JTN-IC-lyf" id="SbF-cS-OeZ"/>
-                        <outlet property="buttonStack" destination="rqv-3I-Dlz" id="AYP-gK-Dsy"/>
-                        <outlet property="cameraButton" destination="BtZ-RJ-x8n" id="oUE-9J-a8u"/>
                         <outlet property="confidenceLabel" destination="xKf-l4-vE3" id="mCz-H2-Ccz"/>
                         <outlet property="imageView" destination="ArZ-44-lD1" id="nT5-Yu-T3h"/>
                         <outlet property="labelStack" destination="qXp-yJ-YAz" id="qmv-K0-2na"/>
-                        <outlet property="summaryButton" destination="mEB-Uu-gJu" id="Eap-av-WG2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -200,9 +155,6 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="Button Stack Background">
-            <color red="0.5" green="0.5" blue="0.5" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="Label Stack Background">
             <color red="1" green="1" blue="1" alpha="0.80000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -226,9 +178,6 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tertiarySystemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tertiarySystemFillColor">
             <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>

@@ -20,13 +20,13 @@ struct aiView: View {
                     Spacer()
                     Rectangle()
                         .foregroundColor(Color(red: 0, green: 60/255, blue: 0))
-                        .frame(width: 360, height: 120)
+                        .frame(height: 120)
                         .cornerRadius(30)
                         .padding()
                         .overlay() {
                             Group {
                                 if Int(action) ?? 0 <= need {
-                                    Text("Point: \(action)")
+                                    Text("\(title): \(action)")
                                         .font(.largeTitle)
                                         .foregroundColor(.white)
                                 } else {
@@ -69,3 +69,16 @@ struct aiView: View {
     }
 }
 
+struct Previews_Counter_Previews: PreviewProvider {
+    static var previews: some View {
+        preView()
+    }
+}
+struct preView: View {
+    @State var onoff = Bool(true)
+    @State var need = Int(0)
+    @State var title = String("Title(test)(43h79)")
+    var body: some View {
+        aiView(onoff: $onoff, need: need, title: title).barView
+    }
+}
