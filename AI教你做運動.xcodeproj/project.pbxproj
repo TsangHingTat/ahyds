@@ -12,7 +12,8 @@
 		4932CD9A28A4C89E000E7443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4932CD9928A4C89E000E7443 /* Assets.xcassets */; };
 		4932CD9D28A4C89E000E7443 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4932CD9C28A4C89E000E7443 /* Preview Assets.xcassets */; };
 		495FB4CD291BD24400951812 /* model control.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FB4CC291BD24400951812 /* model control.swift */; };
-		4977E77B2915353F00E08057 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977E77A2915353E00E08057 /* Counter.swift */; };
+		4977E77B2915353F00E08057 /* Counter2type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977E77A2915353E00E08057 /* Counter2type.swift */; };
+		49D05C3229226FD500FD9F67 /* Counter3type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D05C3129226FD500FD9F67 /* Counter3type.swift */; };
 		7907ED8A291673E6002B318C /* TeacherListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7907ED81291673E6002B318C /* TeacherListView.swift */; };
 		7907ED8B291673E6002B318C /* LessonCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7907ED82291673E6002B318C /* LessonCellView.swift */; };
 		7907ED8C291673E6002B318C /* JoinSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7907ED84291673E6002B318C /* JoinSessionView.swift */; };
@@ -113,7 +114,8 @@
 		4932CD9928A4C89E000E7443 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4932CD9C28A4C89E000E7443 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		495FB4CC291BD24400951812 /* model control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "model control.swift"; sourceTree = "<group>"; };
-		4977E77A2915353E00E08057 /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		4977E77A2915353E00E08057 /* Counter2type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter2type.swift; sourceTree = "<group>"; };
+		49D05C3129226FD500FD9F67 /* Counter3type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter3type.swift; sourceTree = "<group>"; };
 		7907ED81291673E6002B318C /* TeacherListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherListView.swift; sourceTree = "<group>"; };
 		7907ED82291673E6002B318C /* LessonCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonCellView.swift; sourceTree = "<group>"; };
 		7907ED84291673E6002B318C /* JoinSessionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinSessionView.swift; sourceTree = "<group>"; };
@@ -351,7 +353,8 @@
 			children = (
 				79FBAE68291587C7007056D9 /* aiView.swift */,
 				796F197E29150ED7002D0652 /* MainViewController.swift */,
-				4977E77A2915353E00E08057 /* Counter.swift */,
+				4977E77A2915353E00E08057 /* Counter2type.swift */,
+				49D05C3129226FD500FD9F67 /* Counter3type.swift */,
 				796F197F29150ED7002D0652 /* Main.storyboard */,
 			);
 			path = Views;
@@ -578,7 +581,7 @@
 				4932CD9828A4C89D000E7443 /* ContentView.swift in Sources */,
 				79A15D4C291BA5620013BE9F /* swiftuitestView.swift in Sources */,
 				7912388328ACFBA000CE4E0B /* trainView.swift in Sources */,
-				4977E77B2915353F00E08057 /* Counter.swift in Sources */,
+				4977E77B2915353F00E08057 /* Counter2type.swift in Sources */,
 				796F199029150ED8002D0652 /* AVCaptureDeviceInput+Camera.swift in Sources */,
 				792AE62B28AF379B0002F750 /* RingView.swift in Sources */,
 				79996AF528AE19AD000E1FF0 /* decode json.swift in Sources */,
@@ -591,6 +594,7 @@
 				796F198F29150ED8002D0652 /* VideoCapture.swift in Sources */,
 				792AE63128AF37FC0002F750 /* RingColorExtension.swift in Sources */,
 				7907ED8B291673E6002B318C /* LessonCellView.swift in Sources */,
+				49D05C3229226FD500FD9F67 /* Counter3type.swift in Sources */,
 				79575C0B29158B3100DCA7AB /* the line and view.swift in Sources */,
 				797D621D2916350600847A56 /* trainingViewButtoncell.swift in Sources */,
 				792AE62F28AF37D20002F750 /* Constants.swift in Sources */,
