@@ -25,6 +25,11 @@ struct dpView: View {
                 .hidden()
             
         }
+        .onAppear() {
+            if getdata().getdefaultsdata(type: "mlmodel") == "pushup" {
+                dotime = dotime - 1
+            } 
+        }
         .onReceive(doTime2) { _ in
             p = getdata().getdefaultsdataint(type: "confidence")
             print("data7495y: \(getdata().getdefaultsdata(type: "mlmodel"))")
