@@ -27,15 +27,16 @@ struct ContentView: View {
                     .tabItem {
                         Label("主頁", systemImage: "house")
                     }
+                    .toolbarBackground(Color.white, for: .tabBar)
                     .tag(1)
+                lessonView()
+                    .tabItem {
+                        Label("課堂", systemImage: "book")
+                    }
+                    .tag(2)
                 practiceView()
                     .tabItem {
                         Label("訓練", systemImage: "figure.walk")
-                    }
-                    .tag(2)
-                scheduleView(refresh: $refresh)
-                    .tabItem {
-                        Label("日程表", systemImage: "calendar")
                     }
                     .tag(3)
                 settingsView(refresh: $refresh)

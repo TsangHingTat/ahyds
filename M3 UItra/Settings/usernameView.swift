@@ -11,6 +11,7 @@ struct usernameView: View {
     let defaults = UserDefaults.standard
     
     @State var showwelcome = false
+    @State var teachermode =  false
     
     @Binding var username: String
     
@@ -30,17 +31,26 @@ struct usernameView: View {
                     }
                 }
             }
+            Section {
+                HStack {
+                    Toggle(isOn: $teachermode) {
+                        Text("教師模式")
+                    }
+                }
+            }
             .navigationTitle("名稱設定")
             
         }
         .onDisappear() {
             defaults.set(username, forKey: "username")
             defaults.set(showwelcome, forKey: "showwelcome")
+            defaults.set(teachermode, forKey: "teachermode")
             refresh = true
 
         }
         .onAppear() {
             showwelcome = defaults.bool(forKey: "showwelcome")
+            teachermode = defaults.bool(forKey: "teachermode")
         }
     }
 }

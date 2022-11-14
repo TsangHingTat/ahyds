@@ -11,7 +11,7 @@ class ChatConnectionManager: NSObject, ObservableObject {
   @Published var peers: [MCPeerID] = []
   @Published var connectedToChat = false
 
-  var myPeerId = MCPeerID(displayName: getdata().getdefaultsdata(type: "username"))
+  var myPeerId = MCPeerID(displayName: " \(getdata().username()) ")
   private var advertiserAssistant: MCNearbyServiceAdvertiser?
   private var session: MCSession?
   var isHosting = false
