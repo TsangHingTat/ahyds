@@ -74,6 +74,15 @@ class getdata {
         
         return alldata[datanum]
     }
+    
+    func username() -> String {
+        if getdefaultsdata(type: "username") != "" {
+            return getdefaultsdata(type: "username")
+        } else {
+            return "USERNAME"
+        }
+    }
+    
     func savedata(date: String, datanum: Int, text: String) -> Void {
         let defaults = UserDefaults.standard
         

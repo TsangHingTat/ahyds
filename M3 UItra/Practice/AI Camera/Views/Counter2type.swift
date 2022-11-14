@@ -59,7 +59,7 @@ struct dpView: View {
                 dotime += 1
                 
             }
-            getdata().savedefaultsdataint(type: "howmanytimes?", data: dotime-1)
+            getdata().savedefaultsdataint(type: "howmanytimes?", data: dotime)
             print(getdata().getdefaultsdata(type: "action"))
         }
     }

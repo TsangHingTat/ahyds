@@ -15,25 +15,13 @@ struct practiceView: View {
         ZStack {
             NavigationView {
                 trainView()
-                    .toolbar {
-                      ToolbarItem(placement: .navigationBarTrailing) {
-                          NavigationLink(destination: JoinSessionView()) {
-                              Text("連接課堂")
-                          }
-                      }
-                        
-                    }
                     .navigationTitle("訓練")
            
             }
             
             .navigationViewStyle(.stack)
         }
-        #if DEBUG
-        .onAppear() {
-            notify()
-        }
-        #endif
+
         
     }
     #if DEBUG

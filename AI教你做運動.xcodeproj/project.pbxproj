@@ -53,7 +53,7 @@
 		7971A78528B33875007302A1 /* barchartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971A78428B33875007302A1 /* barchartView.swift */; };
 		7971A78728B3460B007302A1 /* calchartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971A78628B3460B007302A1 /* calchartView.swift */; };
 		79722B4828C0D1D900CC5265 /* decode utf8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79722B4728C0D1D900CC5265 /* decode utf8.swift */; };
-		79787C0F29223D9300194840 /* homeitemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79787C0E29223D9200194840 /* homeitemView.swift */; };
+		79787C112922654500194840 /* lessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79787C102922654500194840 /* lessonView.swift */; };
 		797D621D2916350600847A56 /* trainingViewButtoncell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797D621C2916350600847A56 /* trainingViewButtoncell.swift */; };
 		7983409528D34F3D0071EF92 /* dynmaicisland.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7983409428D34F3D0071EF92 /* dynmaicisland.swift */; };
 		798EDC9528FC2C0000E2E463 /* img in Resources */ = {isa = PBXBuildFile; fileRef = 798EDC9428FC2C0000E2E463 /* img */; };
@@ -68,7 +68,7 @@
 		79AB308128ACECA60001C091 /* webView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AB308028ACECA60001C091 /* webView.swift */; };
 		79AB308928ACEE200001C091 /* developerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AB308828ACEE200001C091 /* developerView.swift */; };
 		79AB308B28ACF6D90001C091 /* rewardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AB308A28ACF6D90001C091 /* rewardView.swift */; };
-		79B1E75A291F80010024FB42 /* MyActionClassifier 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 79B1E759291F80010024FB42 /* MyActionClassifier 1.mlmodel */; };
+		79B1E75A291F80010024FB42 /* ExerciseClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 79B1E759291F80010024FB42 /* ExerciseClassifier.mlmodel */; };
 		79C8582328AA378500A37B5E /* dateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C8582228AA378500A37B5E /* dateView.swift */; };
 		79C8582528AA37C200A37B5E /* homeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C8582428AA37C200A37B5E /* homeView.swift */; };
 		79C8582928AA380B00A37B5E /* settingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C8582828AA380B00A37B5E /* settingsView.swift */; };
@@ -159,7 +159,7 @@
 		7971A78428B33875007302A1 /* barchartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barchartView.swift; sourceTree = "<group>"; };
 		7971A78628B3460B007302A1 /* calchartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calchartView.swift; sourceTree = "<group>"; };
 		79722B4728C0D1D900CC5265 /* decode utf8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "decode utf8.swift"; sourceTree = "<group>"; };
-		79787C0E29223D9200194840 /* homeitemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeitemView.swift; sourceTree = "<group>"; };
+		79787C102922654500194840 /* lessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lessonView.swift; sourceTree = "<group>"; };
 		797D621C2916350600847A56 /* trainingViewButtoncell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trainingViewButtoncell.swift; sourceTree = "<group>"; };
 		7983409428D34F3D0071EF92 /* dynmaicisland.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dynmaicisland.swift; sourceTree = "<group>"; };
 		798EDC9428FC2C0000E2E463 /* img */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; path = img; sourceTree = SOURCE_ROOT; };
@@ -179,7 +179,7 @@
 		79AB308028ACECA60001C091 /* webView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webView.swift; sourceTree = "<group>"; };
 		79AB308828ACEE200001C091 /* developerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = developerView.swift; sourceTree = "<group>"; };
 		79AB308A28ACF6D90001C091 /* rewardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rewardView.swift; sourceTree = "<group>"; };
-		79B1E759291F80010024FB42 /* MyActionClassifier 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "MyActionClassifier 1.mlmodel"; sourceTree = "<group>"; };
+		79B1E759291F80010024FB42 /* ExerciseClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ExerciseClassifier.mlmodel; sourceTree = "<group>"; };
 		79C8582228AA378500A37B5E /* dateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateView.swift; sourceTree = "<group>"; };
 		79C8582428AA37C200A37B5E /* homeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeView.swift; sourceTree = "<group>"; };
 		79C8582828AA380B00A37B5E /* settingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsView.swift; sourceTree = "<group>"; };
@@ -242,6 +242,7 @@
 				4932CD9728A4C89D000E7443 /* ContentView.swift */,
 				791FD04C28AE5D1600E7845B /* welcomeView.swift */,
 				79AB308728ACEE030001C091 /* Home */,
+				79EF93ED2916D98000AE7F45 /* lesson */,
 				79AB308428ACEDA50001C091 /* Practice */,
 				79AB308528ACEDB50001C091 /* Schedule */,
 				79AB308628ACEDD90001C091 /* Settings */,
@@ -269,6 +270,7 @@
 				7907ED81291673E6002B318C /* TeacherListView.swift */,
 				7907ED90291680C6002B318C /* studentView.swift */,
 				7907ED82291673E6002B318C /* LessonCellView.swift */,
+				79787C102922654500194840 /* lessonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -358,14 +360,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		79787C0D29223D7400194840 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				79787C0E29223D9200194840 /* homeitemView.swift */,
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		79941A8728DB24B900FA9A93 /* Widget-ai-sports */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,7 +393,6 @@
 			children = (
 				79C8582A28AA384A00A37B5E /* practiceView.swift */,
 				79EF93EC2916D96E00AE7F45 /* training */,
-				79EF93ED2916D98000AE7F45 /* lesson */,
 				796F196029150ED7002D0652 /* AI Camera */,
 			);
 			path = Practice;
@@ -474,7 +467,6 @@
 		79EF93EF2916DB3D00AE7F45 /* Ring and Chart */ = {
 			isa = PBXGroup;
 			children = (
-				79787C0D29223D7400194840 /* New Group */,
 				792AE62A28AF379B0002F750 /* RingView.swift */,
 				792AE63028AF37FC0002F750 /* RingColorExtension.swift */,
 				792AE62E28AF37D20002F750 /* Constants.swift */,
@@ -489,7 +481,7 @@
 			isa = PBXGroup;
 			children = (
 				7940D687291BE7C30073AF2D /* MyActionClassifier-old1.mlmodel */,
-				79B1E759291F80010024FB42 /* MyActionClassifier 1.mlmodel */,
+				79B1E759291F80010024FB42 /* ExerciseClassifier.mlmodel */,
 			);
 			path = "AI Model";
 			sourceTree = "<group>";
@@ -609,13 +601,13 @@
 				796F199129150ED8002D0652 /* AVCaptureDevice+FrameRate.swift in Sources */,
 				79D0AAD628AAB18F00E60B4C /* Data.xcdatamodeld in Sources */,
 				796F199429150ED8002D0652 /* Pose.swift in Sources */,
+				79787C112922654500194840 /* lessonView.swift in Sources */,
 				7994DCDA28E7457C00CA0941 /* getdata func.swift in Sources */,
 				7971A78528B33875007302A1 /* barchartView.swift in Sources */,
 				796F198E29150ED8002D0652 /* VideoProcessingChain.swift in Sources */,
 				79C8582F28AA38B500A37B5E /* scheduleView.swift in Sources */,
-				79B1E75A291F80010024FB42 /* MyActionClassifier 1.mlmodel in Sources */,
+				79B1E75A291F80010024FB42 /* ExerciseClassifier.mlmodel in Sources */,
 				79AB308128ACECA60001C091 /* webView.swift in Sources */,
-				79787C0F29223D9300194840 /* homeitemView.swift in Sources */,
 				79650C4828BF757900D5BFC2 /* supportView.swift in Sources */,
 				79996AF828AE1C0D000E1FF0 /* Calendar.swift in Sources */,
 				79E8838228DA993B0047B280 /* optionalView.swift in Sources */,
@@ -816,6 +808,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -855,6 +848,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

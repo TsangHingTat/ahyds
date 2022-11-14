@@ -78,7 +78,7 @@ class ExerciseClassifier {
     /// URL of model assuming it was installed in the same bundle as this class
     class var urlOfModelInThisBundle : URL {
         let bundle = Bundle(for: self)
-        return bundle.url(forResource: "MyActionClassifier", withExtension:"mlmodelc")!
+        return bundle.url(forResource: "ExerciseClassifier", withExtension:"mlmodelc")!
     }
 
     /**
