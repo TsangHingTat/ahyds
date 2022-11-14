@@ -60,8 +60,7 @@ struct dp3View: View {
                 dotime += 1
                 
             }
-            
-            if
+           
             
             getdata().savedefaultsdataint(type: "howmanytimes?", data: dotime-1)
             print(getdata().getdefaultsdata(type: "action"))
