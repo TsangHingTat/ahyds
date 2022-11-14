@@ -38,9 +38,9 @@ struct dpView: View {
                 }
             } else if getdata().getdefaultsdata(type: "mlmodel") == "pushup" {
                 if getdata().getdefaultsdata(type: "action") == "11" {
-                    appear = 1
-                } else if getdata().getdefaultsdata(type: "action") == "10" {
                     appear = 0
+                } else if getdata().getdefaultsdata(type: "action") == "10" {
+                    appear = 1
                 }
             }
                 
