@@ -52,6 +52,7 @@
 		7971A78528B33875007302A1 /* barchartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971A78428B33875007302A1 /* barchartView.swift */; };
 		7971A78728B3460B007302A1 /* calchartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971A78628B3460B007302A1 /* calchartView.swift */; };
 		79722B4828C0D1D900CC5265 /* decode utf8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79722B4728C0D1D900CC5265 /* decode utf8.swift */; };
+		79787C0F29223D9300194840 /* homeitemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79787C0E29223D9200194840 /* homeitemView.swift */; };
 		797D621D2916350600847A56 /* trainingViewButtoncell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797D621C2916350600847A56 /* trainingViewButtoncell.swift */; };
 		7983409528D34F3D0071EF92 /* dynmaicisland.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7983409428D34F3D0071EF92 /* dynmaicisland.swift */; };
 		798EDC9528FC2C0000E2E463 /* img in Resources */ = {isa = PBXBuildFile; fileRef = 798EDC9428FC2C0000E2E463 /* img */; };
@@ -156,6 +157,7 @@
 		7971A78428B33875007302A1 /* barchartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barchartView.swift; sourceTree = "<group>"; };
 		7971A78628B3460B007302A1 /* calchartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calchartView.swift; sourceTree = "<group>"; };
 		79722B4728C0D1D900CC5265 /* decode utf8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "decode utf8.swift"; sourceTree = "<group>"; };
+		79787C0E29223D9200194840 /* homeitemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeitemView.swift; sourceTree = "<group>"; };
 		797D621C2916350600847A56 /* trainingViewButtoncell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trainingViewButtoncell.swift; sourceTree = "<group>"; };
 		7983409428D34F3D0071EF92 /* dynmaicisland.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dynmaicisland.swift; sourceTree = "<group>"; };
 		798EDC9428FC2C0000E2E463 /* img */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; path = img; sourceTree = SOURCE_ROOT; };
@@ -353,6 +355,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		79787C0D29223D7400194840 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				79787C0E29223D9200194840 /* homeitemView.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		79941A8728DB24B900FA9A93 /* Widget-ai-sports */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,6 +471,7 @@
 		79EF93EF2916DB3D00AE7F45 /* Ring and Chart */ = {
 			isa = PBXGroup;
 			children = (
+				79787C0D29223D7400194840 /* New Group */,
 				792AE62A28AF379B0002F750 /* RingView.swift */,
 				792AE63028AF37FC0002F750 /* RingColorExtension.swift */,
 				792AE62E28AF37D20002F750 /* Constants.swift */,
@@ -600,6 +611,7 @@
 				79C8582F28AA38B500A37B5E /* scheduleView.swift in Sources */,
 				79B1E75A291F80010024FB42 /* MyActionClassifier 1.mlmodel in Sources */,
 				79AB308128ACECA60001C091 /* webView.swift in Sources */,
+				79787C0F29223D9300194840 /* homeitemView.swift in Sources */,
 				79650C4828BF757900D5BFC2 /* supportView.swift in Sources */,
 				79996AF828AE1C0D000E1FF0 /* Calendar.swift in Sources */,
 				79E8838228DA993B0047B280 /* optionalView.swift in Sources */,
