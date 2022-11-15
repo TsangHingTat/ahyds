@@ -29,7 +29,8 @@ struct barchartView: View {
                         ZStack {
                             VStack {
                                 if data != 0 {
-                                    LinearGradient(gradient: Gradient(colors: [Color.green, Color.red]),startPoint: .top, endPoint: .bottom)
+                                    Rectangle()
+                                        .foregroundColor(.yellow)
                                         .frame(width: 20*CGFloat(size), height: CGFloat(per)/CGFloat(small))
                                 } else {
                                     Rectangle()

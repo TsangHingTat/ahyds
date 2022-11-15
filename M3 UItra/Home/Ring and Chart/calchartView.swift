@@ -72,7 +72,7 @@ struct calchartView_Previews: PreviewProvider {
             Text("過去七天的卡路里消耗量")
                 .font(.title)
             HStack {
-                barchartView(data: 1920, per: 2000)
+                barchartView(data: 3000, per: 2000)
                 barchartView(data: 1368, per: 2000)
                 barchartView(data: 1080, per: 2000)
                 barchartView(data: 720, per: 2000)

@@ -37,11 +37,13 @@ struct homeView: View {
                      VStack {
                          if reward != 0 {
                              ScrollView(.horizontal, showsIndicators: false) {
-                                 HStack {
-                                     ForEach((1...reward), id: \.self) { i in
-                                         rewardView(number: i)
-                                     }
+                                 HStack(alignment: .top, spacing: 0) {
+                                     ViewView(name: "Copper 2", title: "Copper 2")
+                                     ViewView(name: "Silver", title: "Silver")
+                                     ViewView(name: "Gold", title: "Gold")
+                                     ViewView(name: "Aluminium", title: "Aluminium")
                                  }
+                                 
                              }
                              .padding(.horizontal)
                          } else {
@@ -54,12 +56,13 @@ struct homeView: View {
                      }
                     HStack {
                         VStack {
-                            
                             HStack {
                                 VStack {
                                     ForEach((0...1), id: \.self) { i in
-                                        NavigationLink(destination: aiView(onoff: $open, need: 30, title: "\(NSLocalizedString("\(supportedsport[i])", comment: "\(supportedsport[i])"))")) {
-                                            HStack {
+                                        HStack {
+                                            Button(action: {
+                                                open.toggle()
+                                            }, label: {
                                                 if supportedsportdone[i] {
                                                     Text("🔴")
                                                         .font(.largeTitle)
@@ -73,11 +76,16 @@ struct homeView: View {
                                                 }
                                                 Text(NSLocalizedString("\(supportedsport[i])", comment: "\(supportedsport[i])"))
                                                     .font(.largeTitle)
+                                                    .foregroundColor(.white)
                                                 Spacer()
-                                            }
+                                            })
+                                        }
+                                        .fullScreenCover(isPresented: $open) {
+                                            aiView(onoff: $open, need: 30, title: "\(NSLocalizedString("\(supportedsport[i])", comment: "\(supportedsport[i])"))")
                                         }
                                     }
                                 }
+                                Spacer()
                                 Group {
                                     ZStack {
                                         Rectangle()
@@ -144,6 +152,7 @@ struct homeView: View {
                 }
 
             }
+            
             .background() {
                 Image("background1")
                     .resizable()

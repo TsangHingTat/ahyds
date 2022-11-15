@@ -24,27 +24,27 @@
 //    @Published var rightHipconfidence = Float("")
 //    @Published var rightAnkleconfidence = Float("")
 //    @Published var leftAnkleconfidence = Float("")
-//    
+//
 //    @Published var rightKnee = CGPoint(x: 0, y: 0)
 //    @Published var rightAnkle = CGPoint(x: 0, y: 0)
 //    @Published var rightHip = CGPoint(x: 0, y: 0)
 //    @Published var angleOfRightLeg = Double(0)
-//    
+//
 //    @Published var lefthip = CGPoint(x: 0, y: 0)
 //    @Published var leftKnee = CGPoint(x: 0, y: 0)
 //    @Published var leftAnkle = CGPoint(x: 0, y: 0)
 //    @Published var angleOfLeftLeg = Double(0)
-//    
+//
 //    @Published var rightElbow = CGPoint(x: 0, y: 0)
 //    @Published var rightWrist = CGPoint(x: 0, y: 0)
 //    @Published var rightShoulder = CGPoint(x: 0, y: 0)
 //    @Published var angleOfRArm = Double(0)
-//    
+//
 //    @Published var leftElbow = CGPoint(x: 0, y: 0)
 //    @Published var leftWrist = CGPoint(x: 0, y: 0)
 //    @Published var leftShoulder = CGPoint(x: 0, y: 0)
 //    @Published var angleOfLArm = Double(0)
-//    
+//
 //    
 //    var subscriptions = Set<AnyCancellable>()
 //    
