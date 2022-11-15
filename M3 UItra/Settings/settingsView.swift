@@ -63,6 +63,8 @@ struct settingsView: View {
                 }
                 #endif
                 
+
+                
                 Section {
                     NavigationLink(destination: langView()) {
                         HStack {

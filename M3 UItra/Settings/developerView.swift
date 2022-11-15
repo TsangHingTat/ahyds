@@ -58,6 +58,15 @@ struct developerView: View {
                 
             }
             
+            Section {
+                NavigationLink(destination: scheduleView(refresh: $refresh)) {
+                    HStack {
+                        Image(systemName: "photo.circle")
+                        Text("test")
+                    }
+                }
+            }
+            
             Section(header: Text("getdata API (beta)")) {
                 TextField("Date", text: $text)
                 TextField("datanum", text: $textnum)

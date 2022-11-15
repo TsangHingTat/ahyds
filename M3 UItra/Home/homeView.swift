@@ -181,7 +181,7 @@ struct homeView: View {
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .frame(maxWidth: 700)
+//        .frame(maxWidth: 700)
     }
     // MARK: 刷新數據
     func loadcaldata() -> Float {
