@@ -27,7 +27,8 @@ struct ContentView: View {
                     .tabItem {
                         Label("主頁", systemImage: "house")
                     }
-                    .toolbarBackground(Color.white, for: .tabBar)
+                    .toolbar(.visible, for: .tabBar)
+                    .toolbarBackground(Color.black, for: .tabBar)
                     .tag(1)
                 lessonView()
                     .tabItem {
@@ -47,6 +48,8 @@ struct ContentView: View {
                 
             }
         }
+        
+        
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .sheet(isPresented: $welcome) {
             welcomeView(showWelcomeScreen: $welcome)
