@@ -29,9 +29,9 @@ struct developerView: View {
     @State var subtitle = ""
     var body: some View {
         List {
-            Section(header: Text("得獎等級(0-6)參數修改器")) {
+            Section(header: Text("得獎等級(0-4)參數修改器")) {
                 HStack {
-                    Slider(value: $textedit, in: 0...6)
+                    Slider(value: $textedit, in: 0...4)
                     Text("\(Int(textedit))")
                 }
             }
