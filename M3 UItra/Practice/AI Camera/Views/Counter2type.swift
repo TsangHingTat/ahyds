@@ -10,14 +10,15 @@ import SwiftUI
 
 
 struct dpView: View {
-    let doTime = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
-    let doTime2 = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
+    let doTime = Timer.publish(every: 0.03, on: .main, in: .common).autoconnect()
+    let doTime2 = Timer.publish(every: 0.03, on: .main, in: .common).autoconnect()
     @State var appear = 0
     @State var time = 0
     @State var p = 0
     @State var bool2 = 0
     @State var bool = 0
     @State var dotime = 0
+    
     var body: some View {
         
         VStack {
@@ -51,6 +52,9 @@ struct dpView: View {
                 }
             }
                 
+            
+        }
+        .onDisappear() {
             
         }
         .onReceive(doTime) { _ in
