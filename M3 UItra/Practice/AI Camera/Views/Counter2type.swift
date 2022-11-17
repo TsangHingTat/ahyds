@@ -51,7 +51,7 @@ struct dpView: View {
                     appear = 1
                 }
             }
-                
+            
             
         }
         .onDisappear() {
@@ -75,4 +75,44 @@ struct dpView: View {
         }
     }
 }
+
+struct done_and_non_done {
+    @State var calofpushup = ""
+    @State var calofsitup = ""
+    func done_and_non_done(type_of_sport: String) -> Bool {
+        let today = Date()
+        let formatter1 = DateFormatter()
+        formatter1.dateFormat = "yyyy-MM-dd"
+        let datedatanow = "\(formatter1.string(from: today))"
+//      pushup
+//      sit-up
+//      type_of_sport
+        if type_of_sport == "pushup" {
+            calofpushup = getdata().getdata(date: datedatanow, datanum: 6)
+            let calofpushupint = Int(calofpushup) ?? 0
+            if calofpushupint >= 100 {
+                return true
+            } else {
+                return false
+            }
+            
+        }
+        if type_of_sport == "sit-up" {
+            calofsitup = getdata().getdata(date: datedatanow, datanum: 5)
+            let calofsitupint = Int(calofsitup) ?? 0
+            if calofsitupint >= 100 {
+                return true
+            } else {
+                return false
+            }
+        }
+        
+//   print(datedatanow) -> "2022-01-01"
+        return false
+    }
+}
+
+
+
+
 

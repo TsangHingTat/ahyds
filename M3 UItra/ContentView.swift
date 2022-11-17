@@ -45,6 +45,11 @@ struct ContentView: View {
                         Label("設定", systemImage: "command.circle")
                     }
                     .tag(4)
+                testView()
+                    .tabItem {
+                        Label("test", systemImage: "command.circle")
+                    }
+                    .tag(5)
                 
             }
         }
@@ -95,3 +100,25 @@ struct Previews_ContentView_Previews: PreviewProvider {
 
 
 
+struct testView: View {
+    var body: some View {
+        let j = done_and_non_done().done_and_non_done(type_of_sport: "pushup")
+        let f = done_and_non_done().done_and_non_done(type_of_sport: "sit-up")
+
+        VStack {
+            Text(getdata().getdata(date: "2022-11-17", datanum: 5))
+            if j {
+                Text("true")
+            }
+            Text("")
+        }
+        .onAppear() {
+            if j {
+                getdata().notification(title: "why", subtitle: "j")
+            }
+            if f {
+                getdata().notification(title: "f", subtitle: "f")
+            }
+        }
+    }
+}
