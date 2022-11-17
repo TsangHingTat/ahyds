@@ -45,11 +45,6 @@ struct ContentView: View {
                         Label("設定", systemImage: "command.circle")
                     }
                     .tag(4)
-                testView()
-                    .tabItem {
-                        Label("test", systemImage: "command.circle")
-                    }
-                    .tag(5)
                 
             }
         }
