@@ -42,8 +42,8 @@ struct homeView: View {
                          if reward != 0 {
                              ScrollView(.horizontal, showsIndicators: false) {
                                  HStack(alignment: .top, spacing: 0) {
-                                     ForEach((1...reward), id: \.self) { i in
-                                         ViewView(name: viewnew[i-1], title: viewnew[i-1])
+                                     ForEach((0...reward), id: \.self) { i in
+                                         ViewView(name: viewnew[i], title: viewnew[i])
                                      }
                                  }
                                  
@@ -76,12 +76,12 @@ struct homeView: View {
                                                             if supportedsportdone[i] {
                                                                 Text("🔴")
                                                                     .font(.title)
-                                                                    .padding(.horizontal)
+                                                                    .padding()
                                                                     .foregroundColor(.white)
                                                             } else {
                                                                 Text("✅")
                                                                     .font(.title)
-                                                                    .padding(.horizontal)
+                                                                    .padding()
                                                                     .foregroundColor(.white)
                                                             }
                                                             Text(NSLocalizedString("\(supportedsport[i])", comment: "\(supportedsport[i])"))
@@ -169,32 +169,32 @@ struct homeView: View {
 
             }
             .sheet(isPresented: $popupViewShow) {
-                ScrollView {
-                    VStack {
-                        ZStack {
-                            HStack {
-                                // MARK: 卡路里
-                                VStack {
-                                    HStack {
-                                        Text("今天")
-                                            .foregroundColor(.black)
-                                            .font(.title3)
-                                        Text("\(Int(loadcaldata()))/2,000")
-                                            .foregroundColor(.black)
-                                            .font(.title3)
-                                        Text("卡路里")
-                                            .foregroundColor(.black)
-                                            .font(.title3)
-                                    }
+                NavigationView {
+                    
+                    ZStack {
+                        waterView(percent: $water)
+                            .mask(Rectangle().cornerRadius(25).foregroundColor(.yellow).opacity(0.7).frame(height: 140).padding())
+                        if caltoday >= 2000 {
+                            Rectangle().cornerRadius(25).foregroundColor(.green).frame(height: 140).padding()
+                        }
+                        // MARK: 任務 Pie Chart
+                        HStack {
+                            // MARK: 卡路里
+                            VStack {
+                                HStack {
+                                    Text("今天")
+                                        .foregroundColor(.black)
+                                        .font(.title3)
+                                    Text("\(Int(loadcaldata()))/2,000")
+                                        .foregroundColor(.black)
+                                        .font(.title3)
+                                    Text("卡路里")
+                                        .foregroundColor(.black)
+                                        .font(.title3)
                                 }
-                                
                             }
                             
                         }
-                    }
-                    .frame(minWidth: 500, minHeight: 200)
-                    VStack {
-                        calchartView()
                     }
                 }
             }
