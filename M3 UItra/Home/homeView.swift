@@ -26,9 +26,13 @@ struct homeView: View {
     @State var water = Double(0)
     
     @State var open = false
+    @State var popupViewShow = false
     
     @State var supportedsport = ["仰臥起坐", "掌上壓"]
     @State var supportedsportdone = [true, false]
+    
+    @State var viewnew = ["Copper", "Silver", "Gold", "Aluminium"]
+    
     
     var body: some View {
         NavigationView {
@@ -38,10 +42,9 @@ struct homeView: View {
                          if reward != 0 {
                              ScrollView(.horizontal, showsIndicators: false) {
                                  HStack(alignment: .top, spacing: 0) {
-                                     ViewView(name: "Copper 2", title: "Copper 2")
-                                     ViewView(name: "Silver", title: "Silver")
-                                     ViewView(name: "Gold", title: "Gold")
-                                     ViewView(name: "Aluminium", title: "Aluminium")
+                                     ForEach((0...reward), id: \.self) { i in
+                                         ViewView(name: viewnew[i], title: viewnew[i])
+                                     }
                                  }
                                  
                              }
@@ -63,21 +66,30 @@ struct homeView: View {
                                             Button(action: {
                                                 open.toggle()
                                             }, label: {
-                                                if supportedsportdone[i] {
-                                                    Text("🔴")
-                                                        .font(.largeTitle)
-                                                        .padding()
-                                                        .foregroundColor(.white)
-                                                } else {
-                                                    Text("✅")
-                                                        .font(.largeTitle)
-                                                        .padding()
-                                                        .foregroundColor(.white)
-                                                }
-                                                Text(NSLocalizedString("\(supportedsport[i])", comment: "\(supportedsport[i])"))
-                                                    .font(.largeTitle)
-                                                    .foregroundColor(.white)
-                                                Spacer()
+                                                Rectangle()
+                                                    .foregroundColor(.black)
+                                                    .frame(height: 50)
+                                                    .opacity(0.2)
+                                                    .cornerRadius(15)
+                                                    .overlay() {
+                                                        HStack {
+                                                            if supportedsportdone[i] {
+                                                                Text("🔴")
+                                                                    .font(.title)
+                                                                    .padding()
+                                                                    .foregroundColor(.white)
+                                                            } else {
+                                                                Text("✅")
+                                                                    .font(.title)
+                                                                    .padding()
+                                                                    .foregroundColor(.white)
+                                                            }
+                                                            Text(NSLocalizedString("\(supportedsport[i])", comment: "\(supportedsport[i])"))
+                                                                .font(.title)
+                                                                .foregroundColor(.white)
+                                                            Spacer()
+                                                        }
+                                                    }
                                             })
                                         }
                                         .fullScreenCover(isPresented: $open) {
@@ -86,63 +98,67 @@ struct homeView: View {
                                     }
                                 }
                                 Spacer()
-                                Group {
-                                    ZStack {
-                                        Rectangle()
-                                            .cornerRadius(25)
-                                            .foregroundColor(.white)
-                                            .frame(width: 140, height: 140)
-                                            .padding()
-                                        Rectangle()
-                                            .cornerRadius(25)
-                                            .foregroundColor(.yellow)
-                                            .opacity(0.7)
-                                            .frame(width: 140, height: 140)
-                                            .padding()
-                                            .overlay() {
-                                                ZStack {
-                                                    waterView(percent: $water)
-                                                        .mask(Rectangle().cornerRadius(25).foregroundColor(.yellow).opacity(0.7).frame(height: 140).padding())
-                                                    if caltoday >= 2000 {
-                                                        Rectangle().cornerRadius(25).foregroundColor(.green).frame(height: 140).padding()
-                                                    }
-                                                    // MARK: 任務 Pie Chart
-                                                    HStack {
-                                                        // MARK: 卡路里
-                                                        VStack {
-                                                            Image("cal")
-                                                                .resizable()
-                                                                .scaledToFit()
-                                                                .overlay() {
-                                                                    ZStack {
-                                                                        VStack {
-                                                                            Text("今天")
-                                                                                .foregroundColor(.black)
-                                                                                .font(.title3)
-                                                                            Text("\(Int(loadcaldata()))/2,000")
-                                                                                .foregroundColor(.black)
-                                                                                .font(.title3)
-                                                                            Text("卡路里")
-                                                                                .foregroundColor(.black)
-                                                                                .font(.title3)
-                                                                        }
-                                                                        
-                                                                    }
-                                                                }
+                                Button(action: {
+                                    popupViewShow.toggle()
+                                }, label: {
+                                    Group {
+                                        ZStack {
+                                            Rectangle()
+                                                .cornerRadius(25)
+                                                .foregroundColor(.white)
+                                                .frame(width: 140, height: 140)
+                                                .padding()
+                                            Rectangle()
+                                                .cornerRadius(25)
+                                                .foregroundColor(.yellow)
+                                                .opacity(0.7)
+                                                .frame(width: 140, height: 140)
+                                                .padding()
+                                                .overlay() {
+                                                    ZStack {
+                                                        waterView(percent: $water)
+                                                            .mask(Rectangle().cornerRadius(25).foregroundColor(.yellow).opacity(0.7).frame(height: 140).padding())
+                                                        if caltoday >= 2000 {
+                                                            Rectangle().cornerRadius(25).foregroundColor(.green).frame(height: 140).padding()
                                                         }
-                                                        
+                                                        // MARK: 任務 Pie Chart
+                                                        HStack {
+                                                            // MARK: 卡路里
+                                                            VStack {
+                                                                Image("cal")
+                                                                    .resizable()
+                                                                    .scaledToFit()
+                                                                    .overlay() {
+                                                                        ZStack {
+                                                                            VStack {
+                                                                                Text("今天")
+                                                                                    .foregroundColor(.black)
+                                                                                    .font(.title3)
+                                                                                Text("\(Int(loadcaldata()))/2,000")
+                                                                                    .foregroundColor(.black)
+                                                                                    .font(.title3)
+                                                                                Text("卡路里")
+                                                                                    .foregroundColor(.black)
+                                                                                    .font(.title3)
+                                                                            }
+                                                                            
+                                                                        }
+                                                                    }
+                                                            }
+                                                            
+                                                        }
                                                     }
                                                 }
-                                            }
-                                            .onAppear() {
-                                                water = Double((caltoday/2000)*100)
-                                                let newwater = Double(water)
-                                                printnow(message: "\(newwater)")
-                                            }
+                                                .onAppear() {
+                                                    water = Double((caltoday/2000)*100)
+                                                    let newwater = Double(water)
+                                                    printnow(message: "\(newwater)")
+                                                }
+                                        }
+                                        .environment(\.colorScheme, .light)
+                                        .shadow(radius: 5)
                                     }
-                                    .environment(\.colorScheme, .light)
-                                    .shadow(radius: 5)
-                                }
+                                })
                             }
                             todayView(year: "", month: "", istoday: true, home: true)
                                 .shadow(radius: 5)
@@ -152,7 +168,36 @@ struct homeView: View {
                 }
 
             }
-            
+            .sheet(isPresented: $popupViewShow) {
+                NavigationView {
+                    
+                    ZStack {
+                        waterView(percent: $water)
+                            .mask(Rectangle().cornerRadius(25).foregroundColor(.yellow).opacity(0.7).frame(height: 140).padding())
+                        if caltoday >= 2000 {
+                            Rectangle().cornerRadius(25).foregroundColor(.green).frame(height: 140).padding()
+                        }
+                        // MARK: 任務 Pie Chart
+                        HStack {
+                            // MARK: 卡路里
+                            VStack {
+                                HStack {
+                                    Text("今天")
+                                        .foregroundColor(.black)
+                                        .font(.title3)
+                                    Text("\(Int(loadcaldata()))/2,000")
+                                        .foregroundColor(.black)
+                                        .font(.title3)
+                                    Text("卡路里")
+                                        .foregroundColor(.black)
+                                        .font(.title3)
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
             .background() {
                 Image("background1")
                     .resizable()
@@ -230,6 +275,19 @@ struct homeView: View {
         }
         
     }
+//    func loaddatedata() -> Void {
+//        for i in (0...3) {
+//            if getdata().getdata(date: "\(DateFormatter().string(from: Date()))", datanum: i) == "" {
+//                if Int(getdata().getdata(date: "\(DateFormatter().string(from: Date()).count)", datanum: i)) ?? 0 > 7 {
+//                    if getdata().getdata(date: "\(DateFormatter().string(from: Date()))", datanum: i) == "" {
+//
+//                    } else if getdata().getdata(date: "\(DateFormatter().string(from: Date()))", datanum: i) == "" {
+//
+//                    }
+//                }
+//            }
+//        }
+//    }
     
     // MARK: 檢查是否有在設定中打開"歡迎訊息"
     func runwelcome() -> Void {

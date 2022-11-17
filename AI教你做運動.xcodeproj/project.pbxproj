@@ -23,8 +23,8 @@
 		7912388328ACFBA000CE4E0B /* trainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7912388228ACFBA000CE4E0B /* trainView.swift */; };
 		791AD3E0292396B20087968F /* try.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 791AD3DF292396B20087968F /* try.usdz */; };
 		791AD3E629239A130087968F /* 3DView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791AD3E529239A130087968F /* 3DView.swift */; };
-		791AD3E829239D960087968F /* Copper.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 791AD3E729239D960087968F /* Copper.usdz */; };
-		791AD3EB29239E0E0087968F /* Copper 2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 791AD3E929239E0E0087968F /* Copper 2.usdz */; };
+		791AD3E829239D960087968F /* Copperd.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 791AD3E729239D960087968F /* Copperd.usdz */; };
+		791AD3EB29239E0E0087968F /* Copper.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 791AD3E929239E0E0087968F /* Copper.usdz */; };
 		791AD3EC29239E0E0087968F /* Silver.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 791AD3EA29239E0E0087968F /* Silver.usdz */; };
 		791AD3EE29239F8C0087968F /* Gold.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 791AD3ED29239F8C0087968F /* Gold.usdz */; };
 		791AD3F02923B8D20087968F /* Aluminium.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 791AD3EF2923B8D20087968F /* Aluminium.usdz */; };
@@ -132,8 +132,8 @@
 		7912388228ACFBA000CE4E0B /* trainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trainView.swift; sourceTree = "<group>"; };
 		791AD3DF292396B20087968F /* try.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = try.usdz; sourceTree = "<group>"; };
 		791AD3E529239A130087968F /* 3DView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 3DView.swift; sourceTree = "<group>"; };
-		791AD3E729239D960087968F /* Copper.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Copper.usdz; sourceTree = "<group>"; };
-		791AD3E929239E0E0087968F /* Copper 2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Copper 2.usdz"; sourceTree = "<group>"; };
+		791AD3E729239D960087968F /* Copperd.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Copperd.usdz; sourceTree = "<group>"; };
+		791AD3E929239E0E0087968F /* Copper.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Copper.usdz; sourceTree = "<group>"; };
 		791AD3EA29239E0E0087968F /* Silver.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Silver.usdz; sourceTree = "<group>"; };
 		791AD3ED29239F8C0087968F /* Gold.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Gold.usdz; sourceTree = "<group>"; };
 		791AD3EF2923B8D20087968F /* Aluminium.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Aluminium.usdz; sourceTree = "<group>"; };
@@ -399,11 +399,11 @@
 				79EF93F02916DCAC00AE7F45 /* Formatters.swift */,
 				79A15D4B291BA5620013BE9F /* swiftuitestView.swift */,
 				791AD3E529239A130087968F /* 3DView.swift */,
-				791AD3E929239E0E0087968F /* Copper 2.usdz */,
+				791AD3E929239E0E0087968F /* Copper.usdz */,
 				791AD3EA29239E0E0087968F /* Silver.usdz */,
 				791AD3ED29239F8C0087968F /* Gold.usdz */,
 				791AD3EF2923B8D20087968F /* Aluminium.usdz */,
-				791AD3E729239D960087968F /* Copper.usdz */,
+				791AD3E729239D960087968F /* Copperd.usdz */,
 				791AD3DF292396B20087968F /* try.usdz */,
 			);
 			path = "Other func";
@@ -579,12 +579,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				798EDC9528FC2C0000E2E463 /* img in Resources */,
-				791AD3E829239D960087968F /* Copper.usdz in Resources */,
+				791AD3E829239D960087968F /* Copperd.usdz in Resources */,
 				796F199929150ED8002D0652 /* Main.storyboard in Resources */,
 				79996AF628AE1AA9000E1FF0 /* Data.json in Resources */,
 				791AD3E0292396B20087968F /* try.usdz in Resources */,
 				795C817F28BA8DD50080CD26 /* Localizable.strings in Resources */,
-				791AD3EB29239E0E0087968F /* Copper 2.usdz in Resources */,
+				791AD3EB29239E0E0087968F /* Copper.usdz in Resources */,
 				791AD3EE29239F8C0087968F /* Gold.usdz in Resources */,
 				4932CD9D28A4C89E000E7443 /* Preview Assets.xcassets in Resources */,
 				79650C4A28BF77D200D5BFC2 /* support.json in Resources */,
