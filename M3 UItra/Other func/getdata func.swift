@@ -120,6 +120,15 @@ class getdata {
             defaults.set(text, forKey: "\(datedatanow)datacal4")
         }
     }
+    func notification(title: String, subtitle: String) -> Void {
+        let content = UNMutableNotificationContent()
+        content.title = "\(title)"
+        content.body = "\(subtitle)"
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false)
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request)
+    }
+    
     func clear() -> Void {
         let defaults = UserDefaults.standard
         let dictionary = defaults.dictionaryRepresentation()

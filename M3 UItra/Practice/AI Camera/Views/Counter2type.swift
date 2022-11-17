@@ -79,7 +79,6 @@ struct dpView: View {
 struct done_and_non_done {
     @State var calofpushup = ""
     @State var calofsitup = ""
-    @State var booool = true
     func done_and_non_done(type_of_sport: String) -> Bool {
         let today = Date()
         let formatter1 = DateFormatter()
@@ -89,49 +88,31 @@ struct done_and_non_done {
 //      sit-up
 //      type_of_sport
         if type_of_sport == "pushup" {
-            calofpushup = getdata().getdata(date: datedatanow, datanum: 5)
+            calofpushup = getdata().getdata(date: datedatanow, datanum: 6)
             let calofpushupint = Int(calofpushup) ?? 0
             if calofpushupint >= 100 {
-                booool = true
+                return true
             } else {
-                booool = false
+                return false
             }
             
-        } else if type_of_sport == "situp" {
-            calofpushup = getdata().getdata(date: datedatanow, datanum: 6)
+        }
+        if type_of_sport == "sit-up" {
+            calofsitup = getdata().getdata(date: datedatanow, datanum: 5)
             let calofsitupint = Int(calofsitup) ?? 0
             if calofsitupint >= 100 {
-                booool = true
+                return true
             } else {
-                booool = false
+                return false
             }
-        } else {
-            //wrong a
         }
+        
 //   print(datedatanow) -> "2022-01-01"
-        return booool
+        return false
     }
 }
 
 
 
-struct Previews_Counter2type_Previews: PreviewProvider {
-    static var previews: some View {
-        newView()
-    }
-}
 
-struct newView: View {
-    var body: some View {
-        VStack {
-            if done_and_non_done().done_and_non_done(type_of_sport: "pushup") {
-                Text("True")
-            } else {
-                Text("False")
-            }
-        }
-        .onAppear() {
-            getdata().savedata(date: "2022-11-17", datanum: 5, text: "2000")
-        }
-    }
-}
+

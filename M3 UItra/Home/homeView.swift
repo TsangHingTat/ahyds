@@ -31,6 +31,8 @@ struct homeView: View {
     @State var supportedsport = ["仰臥起坐", "掌上壓"]
     @State var supportedsportdone = [true, false]
     
+    @State var supportedsportname = ["sit-up", "pushup"]
+    
     @State var viewnew = ["Copper", "Silver", "Gold", "Aluminium"]
     
     
@@ -73,13 +75,15 @@ struct homeView: View {
                                                     .cornerRadius(15)
                                                     .overlay() {
                                                         HStack {
-                                                            if supportedsportdone[i] {
-                                                                Text("🔴")
+                                                            //      pushup
+                                                            //      sit-up
+                                                            if done_and_non_done().done_and_non_done(type_of_sport: "\(supportedsportname[i])") {
+                                                                Text("✅")
                                                                     .font(.title)
                                                                     .padding()
                                                                     .foregroundColor(.white)
                                                             } else {
-                                                                Text("✅")
+                                                                Text("🔴")
                                                                     .font(.title)
                                                                     .padding()
                                                                     .foregroundColor(.white)
