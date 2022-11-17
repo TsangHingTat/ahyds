@@ -31,7 +31,7 @@ public class SupportFetcher: ObservableObject {
     }
     
     func load() {
-        let url = URL(string: "https://alwaysboringstudio.site/M3-UItra/M3%20UItra/support.json")!
+        let url = URL(string: "http://58.177.101.104:9000/TsangHingTat/ahyds/raw/branch/main/M3%20UItra/support.json")!
         URLSession.shared.dataTask(with: url) {(data,response,error) in
             do {
                 if let d = data {

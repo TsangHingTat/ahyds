@@ -637,7 +637,7 @@ struct dateView: View {
                                 .overlay() {
                                     ZStack {
                                         VStack {
-                                            Text("已編排:")
+                                            Text("已完成:")
                                                 .font(.largeTitle)
                                                 .foregroundColor(.black)
                                                 .padding()
@@ -768,7 +768,7 @@ struct dateView: View {
                         }
                     }
                 }
-                .navigationTitle("已編排")
+                .navigationTitle("已完成")
                 .navigationBarTitleDisplayMode(.inline)
                 .interactiveDismissDisabled()
                 .navigationBarItems(leading:
