@@ -4,6 +4,11 @@
       "name": "Apple Support",
       "stringurl": "https://support.apple.com",
     },
+    {
+      "id": 2,
+      "name": "Google Support",
+      "stringurl": "https://support.google.com",
+    },
 
     
 ]
