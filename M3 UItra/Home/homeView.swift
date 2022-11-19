@@ -114,14 +114,14 @@ struct homeView: View {
                                                 .padding()
                                             Rectangle()
                                                 .cornerRadius(25)
-                                                .foregroundColor(.yellow)
+                                                .foregroundColor(.white)
                                                 .opacity(0.7)
                                                 .frame(width: 140, height: 140)
                                                 .padding()
                                                 .overlay() {
                                                     ZStack {
                                                         waterView(percent: $water)
-                                                            .mask(Rectangle().cornerRadius(25).foregroundColor(.yellow).opacity(0.7).frame(height: 140).padding())
+                                                            .mask(Rectangle().cornerRadius(25).foregroundColor(.white).opacity(0.7).frame(height: 140).padding())
                                                         if caltoday >= 2000 {
                                                             Rectangle().cornerRadius(25).foregroundColor(.green).frame(height: 140).padding()
                                                         }
@@ -174,32 +174,54 @@ struct homeView: View {
             }
             .sheet(isPresented: $popupViewShow) {
                 NavigationView {
-                    
-                    ZStack {
-                        waterView(percent: $water)
-                            .mask(Rectangle().cornerRadius(25).foregroundColor(.yellow).opacity(0.7).frame(height: 140).padding())
-                        if caltoday >= 2000 {
-                            Rectangle().cornerRadius(25).foregroundColor(.green).frame(height: 140).padding()
-                        }
-                        // MARK: 任務 Pie Chart
-                        HStack {
-                            // MARK: 卡路里
-                            VStack {
-                                HStack {
-                                    Text("今天")
-                                        .foregroundColor(.black)
-                                        .font(.title3)
-                                    Text("\(Int(loadcaldata()))/2,000")
-                                        .foregroundColor(.black)
-                                        .font(.title3)
-                                    Text("卡路里")
-                                        .foregroundColor(.black)
-                                        .font(.title3)
+                    GeometryReader { proxy in
+                        TabView {
+                            LazyVStack {
+                                VStack {
+                                    VStack {
+                                        ZStack {
+                                            HStack {
+                                                // MARK: 卡路里
+                                                VStack {
+                                                    let callllll = Float(loadcaldata())
+                                                    let temp: CGFloat = CGFloat(callllll/2000)
+                                                    RingView(percentage: temp, backgroundColor: .white, startColor: .red, endColor: .green, thickness: 35)
+                                                }
+                                                .overlay() {
+                                                    ZStack {
+                                                        VStack {
+                                                            Text("今天")
+                                                                .foregroundColor(.black)
+                                                                .font(.title)
+                                                            Text("\(Int(loadcaldata()))/2,000")
+                                                                .foregroundColor(.black)
+                                                                .font(.title)
+                                                            Text("卡路里")
+                                                                .foregroundColor(.black)
+                                                                .font(.title)
+                                                        }
+                                                        
+                                                    }
+                                                    .padding()
+                                                }
+                                                
+                                            }
+                                        }
+                                        calchartView()
+                                    }
                                 }
+                                .frame(width: proxy.size.width, height: proxy.size.height)
+                                .rotationEffect(.degrees(-90))
                             }
                             
+                            
                         }
+                        .frame(width: proxy.size.height, height: proxy.size.width)
+                        .rotationEffect(.degrees(90), anchor: .topLeading)
+                        .offset(x: proxy.size.width)
+                        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                     }
+                    .navigationBarTitle("紀錄")
                 }
             }
             .background() {
@@ -279,19 +301,6 @@ struct homeView: View {
         }
         
     }
-//    func loaddatedata() -> Void {
-//        for i in (0...3) {
-//            if getdata().getdata(date: "\(DateFormatter().string(from: Date()))", datanum: i) == "" {
-//                if Int(getdata().getdata(date: "\(DateFormatter().string(from: Date()).count)", datanum: i)) ?? 0 > 7 {
-//                    if getdata().getdata(date: "\(DateFormatter().string(from: Date()))", datanum: i) == "" {
-//
-//                    } else if getdata().getdata(date: "\(DateFormatter().string(from: Date()))", datanum: i) == "" {
-//
-//                    }
-//                }
-//            }
-//        }
-//    }
     
     // MARK: 檢查是否有在設定中打開"歡迎訊息"
     func runwelcome() -> Void {
@@ -320,6 +329,13 @@ struct homeView: View {
         NSLog("homeView: \(datedatanow) \(hours):\(minutes):\(seconds) - \(message)")
         
     }
+    func getdatecalc(day: Int) -> String {
+        guard let tday = Calendar.current.date(byAdding: .day, value: day, to: Date.now) else { return "E" }
+        let formatter1 = DateFormatter()
+        formatter1.dateFormat = "yyyy-MM-dd"
+        let datedatanow = "\(formatter1.string(from: tday))"
+        return datedatanow
+    }
 
     
 }
@@ -331,3 +347,4 @@ struct homeView_Previews: PreviewProvider {
         homeView()
     }
 }
+

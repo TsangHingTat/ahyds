@@ -188,7 +188,7 @@ struct developerView: View {
                 dictionary.keys.forEach { key in
                     defaults.removeObject(forKey: key)
                 }
-                defaults.set(Int(6), forKey: "reward")
+                defaults.set(Int(3), forKey: "reward")
                 defaults.set(String("John Appleseed"), forKey: "username")
                 defaults.set(String(""), forKey: "firstopen")
                 defaults.set(Bool(true), forKey: "showwelcome")

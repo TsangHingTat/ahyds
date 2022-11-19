@@ -7,85 +7,70 @@ struct JoinSessionView: View {
   var body: some View {
       NavigationView {
           VStack {
-              NavigationLink(destination: ChatView().environmentObject(chatConnectionManager),
-                isActive: $chatConnectionManager.connectedToChat) {
-                  EmptyView()
-              }
-              if getdata().getdefaultsdatabool(type: "teachermode") == true {
-                  Button(action: {
-                      chatConnectionManager.join()
-                  }, label: {
-                      Color.orange
-                          .frame(width: 340, height: 240)
-                          .cornerRadius(15)
-                          .padding()
-                          .shadow(radius: 10)
-                          .overlay() {
-                              ZStack {
-                                  VStack {
-                                      Spacer()
-                                      HStack {
-                                          Spacer()
-                                          Text("\(NSLocalizedString("開始課堂", comment: "開始課堂"))")
-                                              .foregroundColor(.white)
-                                              .font(.title)
-                                              .bold()
-                                              .padding(25)
-                                      }
-                                  }
-                                  
-                              }
-                          }
-                  })
+              if chatConnectionManager.connectedToChat {
+                  ChatView()
+                      .environmentObject(chatConnectionManager)
               } else {
-                  Button(action: {
-                    chatConnectionManager.host()
-                  }, label: {
-                      Color.orange
-                          .frame(width: 340, height: 240)
-                          .cornerRadius(15)
-                          .padding()
-                          .shadow(radius: 10)
-                          .overlay() {
-                              ZStack {
-                                  VStack {
-                                      Spacer()
-                                      HStack {
+                  if getdata().getdefaultsdatabool(type: "teachermode") {
+                      Button(action: {
+                          chatConnectionManager.join()
+                      }, label: {
+                          Color.orange
+                              .frame(width: 340, height: 240)
+                              .cornerRadius(15)
+                              .padding()
+                              .shadow(radius: 10)
+                              .overlay() {
+                                  ZStack {
+                                      VStack {
                                           Spacer()
-                                          Text("\(NSLocalizedString("連接課堂", comment: "連接課堂"))")
-                                              .foregroundColor(.white)
-                                              .font(.title)
-                                              .bold()
-                                              .padding(25)
+                                          HStack {
+                                              Spacer()
+                                              Text("\(NSLocalizedString("開始課堂", comment: "開始課堂"))")
+                                                  .foregroundColor(.white)
+                                                  .font(.title)
+                                                  .bold()
+                                                  .padding(25)
+                                          }
                                       }
+                                      
                                   }
-                                  
                               }
-                          }
-                  })
+                      })
+                  } else {
+                      Button(action: {
+                          chatConnectionManager.host()
+                      }, label: {
+                          Color.orange
+                              .frame(width: 340, height: 240)
+                              .cornerRadius(15)
+                              .padding()
+                              .shadow(radius: 10)
+                              .overlay() {
+                                  ZStack {
+                                      VStack {
+                                          Spacer()
+                                          HStack {
+                                              Spacer()
+                                              Text("\(NSLocalizedString("連接課堂", comment: "連接課堂"))")
+                                                  .foregroundColor(.white)
+                                                  .font(.title)
+                                                  .bold()
+                                                  .padding(25)
+                                          }
+                                      }
+                                      
+                                  }
+                              }
+                      })
+                      
+                  }
               }
           }
           
       }
       
       .navigationViewStyle(StackNavigationViewStyle())
-//    .overlay() {
-//        VStack {
-//            Spacer()
-//            Text("developer preview")
-//                .foregroundColor(.red)
-//                .font(.largeTitle)
-//            Spacer()
-//            Text("beta version")
-//                .foregroundColor(.red)
-//                .font(.largeTitle)
-//            Spacer()
-//            Text("this version is unstable")
-//                .foregroundColor(.red)
-//                .font(.largeTitle)
-//            Spacer()
-//        }
-//    }
 
     .navigationTitle("課堂")
   }
