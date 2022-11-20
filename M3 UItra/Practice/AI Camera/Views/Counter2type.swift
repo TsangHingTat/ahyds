@@ -18,13 +18,14 @@ struct dpView: View {
     @State var bool2 = 0
     @State var bool = 0
     @State var dotime = 0
+    @State var temp =  ""
+    @State var doingst = ""
     
     var body: some View {
         
         VStack {
             Text("")
                 .hidden()
-            
         }
         .onAppear() {
             if getdata().getdefaultsdata(type: "mlmodel") == "pushup" {
@@ -39,22 +40,20 @@ struct dpView: View {
             print("data7495y: \(getdata().getdefaultsdataint(type: "confidence"))%")
             print("data7495y: \(getdata().getdefaultsdataint(type: "action"))")
             if getdata().getdefaultsdata(type: "mlmodel") == "sit-up" {
+                doingst = "sit-up"
                 if getdata().getdefaultsdata(type: "action") == "01" {
                     appear = 1
                 } else if getdata().getdefaultsdata(type: "action") == "00" {
                     appear = 0
                 }
             } else if getdata().getdefaultsdata(type: "mlmodel") == "pushup" {
+                doingst = "pushup"
                 if getdata().getdefaultsdata(type: "action") == "11" {
                     appear = 0
                 } else if getdata().getdefaultsdata(type: "action") == "10" {
                     appear = 1
                 }
             }
-            
-            
-        }
-        .onDisappear() {
             
         }
         .onReceive(doTime) { _ in
@@ -72,6 +71,8 @@ struct dpView: View {
             }
             getdata().savedefaultsdataint(type: "howmanytimes?", data: dotime)
             print(getdata().getdefaultsdata(type: "action"))
+        }
+        .onDisappear() {
         }
     }
 }
@@ -105,14 +106,27 @@ struct done_and_non_done {
             } else {
                 return false
             }
-        }
-        
+         }
 //   print(datedatanow) -> "2022-01-01"
-        return false
+          return false
+    }
+ }
+
+
+struct save_data {
+    @State var calofpushup = ""
+    @State var calofsitup = ""
+    func save(dotime: Int, sport_type: String) -> Void {
+        let today = Date()
+        let formatter1 = DateFormatter()
+        formatter1.dateFormat = "yyyy-MM-dd"
+        let datedatanow = "\(formatter1.string(from: today))"
+        if sport_type == "sit-up" {
+            calofpushup = getdata().getdata(date: datedatanow, datanum: 6)
+            let calofpushupint = Int(calofpushup) ?? 0
+        }
+        if sport_type == "pushup" {
+            
+        }
     }
 }
-
-
-
-
-
