@@ -20,7 +20,7 @@ struct dpView: View {
     @State var dotime = 0
     @State var temp =  ""
     @State var doingst = ""
-    
+    @State var fuckingshit: Float = 0
     var body: some View {
         
         VStack {
@@ -57,7 +57,7 @@ struct dpView: View {
             
         }
         .onReceive(doTime) { _ in
-            p += 1
+            fuckingshit += 1
             if appear == 1 {
                 
                 bool = 0
@@ -74,7 +74,8 @@ struct dpView: View {
             print(getdata().getdefaultsdata(type: "action"))
         }
         .onDisappear() {
-            save_data().save(dotime: p, sport_type: "sit-up")
+            fuckingshit = fuckingshit * Float(0.03)
+            save_data().save(dotime: fuckingshit, sport_type: "sit-up" , doinftime: Float(dotime))
         }
     }
 }
@@ -117,23 +118,25 @@ struct done_and_non_done {
 
 
 struct save_data {
+    
+    
+    
     @State var calofpushup = ""
     @State var calofsitup = ""
     @State var fucku: Float = 0
     @State var calofsitupint: Float = 0
-    func save(dotime: Int , sport_type: String) -> Void {
+    func save(dotime: Float , sport_type: String , doinftime: Float) -> Void {
         getdata().notification(title: "func done", subtitle: "yo")
         let today = Date()
         let formatter1 = DateFormatter()
         formatter1.dateFormat = "yyyy-MM-dd"
         let datedatanow = "\(formatter1.string(from: today))"
-        fucku = Float(Float(dotime)/Float(0.03))
         if sport_type == "sit-up" {
+            
             calofsitup = getdata().getdata(date: datedatanow, datanum: 5)
-            calofsitupint = Float (calofsitup) ?? 0
-            let age = Float(getdata().getdefaultsdataint(type: "age"))
-            let Fuck = Float(getdata().getdefaultsdataint(type: "weight"))
-            calofsitupint += Float(Float(Float(age) * Float(0.2017) + Fuck * Float(0.6309) + Float(107) * Float(0.6309) - Float(55.0969)) * (Float(fucku)/Float(60))/Float(4.184))
+
+            getdata().savedata(date: datedatanow, datanum: 5, text: "\(doinftime * 1.1 + calofsitupint)")
+            getdata().notification(title: "", subtitle: "\(Float(dotime)) s   \(doinftime)time   cal =  \(doinftime * 1.1) last \(calofsitup)") // test
         }
         if sport_type == "pushup" {
             calofpushup = getdata().getdata(date: datedatanow, datanum: 6)

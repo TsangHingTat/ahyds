@@ -46,7 +46,8 @@ struct JoinSessionView: View {
                           Button(action: {
                               chatConnectionManager.host()
                           }, label: {
-                              Color.orange
+                              Image("classroomView")
+                                  .resizable()
                                   .frame(width: 340, height: 240)
                                   .cornerRadius(15)
                                   .padding()

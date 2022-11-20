@@ -95,28 +95,28 @@ class getdata {
         formatter1.dateFormat = "dd/MM/yyyy"
         let datedatanow = "\(formatter1.string(from: today!))"
         
-        if datanum == 0 {
+        if datanum == 1 {
             defaults.set(text, forKey: "\(datedatanow)dataitem1")
         }
-        if datanum == 1 {
+        if datanum == 2 {
             defaults.set(text, forKey: "\(datedatanow)dataitem2")
         }
-        if datanum == 2 {
+        if datanum == 3 {
             defaults.set(text, forKey: "\(datedatanow)dataitem3")
         }
-        if datanum == 3 {
+        if datanum == 4 {
             defaults.set(text, forKey: "\(datedatanow)dataitem4")
         }
-        if datanum == 4 {
+        if datanum == 5 {
             defaults.set(text, forKey: "\(datedatanow)datacal1")
         }
-        if datanum == 5 {
+        if datanum == 6 {
             defaults.set(text, forKey: "\(datedatanow)datacal2")
         }
-        if datanum == 6 {
+        if datanum == 7 {
             defaults.set(text, forKey: "\(datedatanow)datacal3")
         }
-        if datanum == 7 {
+        if datanum == 8 {
             defaults.set(text, forKey: "\(datedatanow)datacal4")
         }
     }
