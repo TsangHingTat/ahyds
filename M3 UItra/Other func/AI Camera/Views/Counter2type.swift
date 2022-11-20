@@ -74,6 +74,7 @@ struct dpView: View {
             print(getdata().getdefaultsdata(type: "action"))
         }
         .onDisappear() {
+            save_data().save(dotime: p, sport_type: "sit-up")
         }
     }
 }
@@ -104,6 +105,7 @@ struct done_and_non_done {
             let calofsitupint = Int(calofsitup) ?? 0
             if calofsitupint >= 100 {
                 return true
+                
             } else {
                 return false
             }
@@ -118,7 +120,9 @@ struct save_data {
     @State var calofpushup = ""
     @State var calofsitup = ""
     @State var fucku: Float = 0
+    @State var calofsitupint: Float = 0
     func save(dotime: Int , sport_type: String) -> Void {
+        getdata().notification(title: "func done", subtitle: "yo")
         let today = Date()
         let formatter1 = DateFormatter()
         formatter1.dateFormat = "yyyy-MM-dd"
@@ -126,14 +130,14 @@ struct save_data {
         fucku = Float(Float(dotime)/Float(0.03))
         if sport_type == "sit-up" {
             calofsitup = getdata().getdata(date: datedatanow, datanum: 5)
-            let calofsitupint = Int(calofsitup) ?? 0
+            calofsitupint = Float (calofsitup) ?? 0
             let age = Float(getdata().getdefaultsdataint(type: "age"))
             let Fuck = Float(getdata().getdefaultsdataint(type: "weight"))
-            calofsitupint += Float(Float(age * 0.2017 + Fuck * 0.6309 + 107 * 0.6309 - 55.0969) * (Float(fucku)/60)/4.184)
+            calofsitupint += Float(Float(Float(age) * Float(0.2017) + Fuck * Float(0.6309) + Float(107) * Float(0.6309) - Float(55.0969)) * (Float(fucku)/Float(60))/Float(4.184))
         }
         if sport_type == "pushup" {
             calofpushup = getdata().getdata(date: datedatanow, datanum: 6)
-            let calofpushupint = Int(calofpushup) ?? 0
+ //           let calofpushupint = Int(calofpushup) ?? 0
         }
     }
 }

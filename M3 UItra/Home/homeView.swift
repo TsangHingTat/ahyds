@@ -154,7 +154,7 @@ struct homeView: View {
                                                     }
                                                 }
                                                 .onAppear() {
-                                                    water = Double((Int(caltoday)/getdata().getdefaultsdataint(type: "caldef"))*100)
+                                                    water = Double((Int(caltoday)/2000)*100)
                                                     let newwater = Double(water)
                                                     printnow(message: "\(newwater)")
                                                 }
