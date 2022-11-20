@@ -138,6 +138,5 @@ struct save_data {
     }
 }
 //savedata(date: String, datanum: Int, text: String) -> Void
-
 //getdata().savedefaultsdataint(type: "fufuyg", data: Int(0))
 
