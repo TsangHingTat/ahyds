@@ -38,7 +38,6 @@ struct usernameView: View {
                 }
             }
             .navigationTitle("名稱設定")
-            
         }
         
         .onDisappear() {

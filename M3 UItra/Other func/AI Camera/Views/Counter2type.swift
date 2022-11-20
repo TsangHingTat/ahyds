@@ -57,6 +57,7 @@ struct dpView: View {
             
         }
         .onReceive(doTime) { _ in
+            p += 1
             if appear == 1 {
                 
                 bool = 0
@@ -116,17 +117,27 @@ struct done_and_non_done {
 struct save_data {
     @State var calofpushup = ""
     @State var calofsitup = ""
-    func save(dotime: Int, sport_type: String) -> Void {
+    @State var fucku: Float = 0
+    func save(dotime: Int , sport_type: String) -> Void {
         let today = Date()
         let formatter1 = DateFormatter()
         formatter1.dateFormat = "yyyy-MM-dd"
         let datedatanow = "\(formatter1.string(from: today))"
+        fucku = Float(Float(dotime)/Float(0.03))
         if sport_type == "sit-up" {
+            calofsitup = getdata().getdata(date: datedatanow, datanum: 5)
+            let calofsitupint = Int(calofsitup) ?? 0
+            let age = Float(getdata().getdefaultsdataint(type: "age"))
+            let Fuck = Float(getdata().getdefaultsdataint(type: "weight"))
+            calofsitupint += Float(Float(age * 0.2017 + Fuck * 0.6309 + 107 * 0.6309 - 55.0969) * (Float(fucku)/60)/4.184)
+        }
+        if sport_type == "pushup" {
             calofpushup = getdata().getdata(date: datedatanow, datanum: 6)
             let calofpushupint = Int(calofpushup) ?? 0
         }
-        if sport_type == "pushup" {
-            
-        }
     }
 }
+//savedata(date: String, datanum: Int, text: String) -> Void
+
+//getdata().savedefaultsdataint(type: "fufuyg", data: Int(0))
+
