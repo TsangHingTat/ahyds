@@ -123,8 +123,7 @@ struct save_data {
     
     @State var calofpushup = ""
     @State var calofsitup = ""
-    @State var fucku: Float = 0
-    @State var calofsitupint: Float = 0
+    @State var calofsitupFloat: Float = 0
     func save(dotime: Float , sport_type: String , doinftime: Float) -> Void {
         getdata().notification(title: "func done", subtitle: "yo")
         let today = Date()
@@ -132,11 +131,9 @@ struct save_data {
         formatter1.dateFormat = "yyyy-MM-dd"
         let datedatanow = "\(formatter1.string(from: today))"
         if sport_type == "sit-up" {
-            
-            calofsitup = getdata().getdata(date: datedatanow, datanum: 5)
 
-            getdata().savedata(date: datedatanow, datanum: 5, text: "\(doinftime * 1.1 + calofsitupint)")
-            getdata().notification(title: "", subtitle: "\(Float(dotime)) s   \(doinftime)time   cal =  \(doinftime * 1.1) last \(calofsitup)") // test
+            getdata().savedata(date: datedatanow, datanum: 5, text: "\(Float(getdata().getdata(date: datedatanow, datanum: 5))! + (doinftime * 1.1))")
+            getdata().savedata(date: datedatanow, datanum: 5, text: "\(Float(getdata().getdata(date: datedatanow, datanum: 1))! + doinftime)")
         }
         if sport_type == "pushup" {
             calofpushup = getdata().getdata(date: datedatanow, datanum: 6)
