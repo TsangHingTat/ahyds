@@ -34,6 +34,7 @@
 		792AE62F28AF37D20002F750 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792AE62E28AF37D20002F750 /* Constants.swift */; };
 		792AE63128AF37FC0002F750 /* RingColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792AE63028AF37FC0002F750 /* RingColorExtension.swift */; };
 		792AE63328AF3E920002F750 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792AE63228AF3E920002F750 /* HealthKit.framework */; };
+		7938CFCF2928B92400CF2906 /* health.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7938CFCE2928B92400CF2906 /* health.swift */; };
 		7940D688291BE7C30073AF2D /* MyActionClassifier-old1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7940D687291BE7C30073AF2D /* MyActionClassifier-old1.mlmodel */; };
 		7943A97A28AFAE5E006E7F19 /* AirplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943A97928AFAE5E006E7F19 /* AirplayView.swift */; };
 		79575C0B29158B3100DCA7AB /* the line and view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79575C0629158B3100DCA7AB /* the line and view.swift */; };
@@ -146,6 +147,7 @@
 		792AE62E28AF37D20002F750 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		792AE63028AF37FC0002F750 /* RingColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingColorExtension.swift; sourceTree = "<group>"; };
 		792AE63228AF3E920002F750 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		7938CFCE2928B92400CF2906 /* health.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = health.swift; sourceTree = "<group>"; };
 		7940D687291BE7C30073AF2D /* MyActionClassifier-old1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "MyActionClassifier-old1.mlmodel"; sourceTree = "<group>"; };
 		7943A97928AFAE5E006E7F19 /* AirplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirplayView.swift; sourceTree = "<group>"; };
 		79575C0629158B3100DCA7AB /* the line and view.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "the line and view.swift"; sourceTree = "<group>"; };
@@ -387,6 +389,7 @@
 		79AB308328ACED2C0001C091 /* Other func */ = {
 			isa = PBXGroup;
 			children = (
+				796F196029150ED7002D0652 /* AI Camera */,
 				79C8582C28AA388B00A37B5E /* errorView.swift */,
 				79AB308028ACECA60001C091 /* webView.swift */,
 				79996AEF28ADFBEE000E1FF0 /* get today date.swift */,
@@ -414,7 +417,6 @@
 			children = (
 				79C8582A28AA384A00A37B5E /* practiceView.swift */,
 				79EF93EC2916D96E00AE7F45 /* training */,
-				796F196029150ED7002D0652 /* AI Camera */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -438,6 +440,7 @@
 				79DC432B28AEA2E500E1853E /* usernameView.swift */,
 				79AB308828ACEE200001C091 /* developerView.swift */,
 				795C818528BA90FF0080CD26 /* langsupport.swift */,
+				7938CFCE2928B92400CF2906 /* health.swift */,
 				79650C4728BF757900D5BFC2 /* supportView.swift */,
 			);
 			path = Settings;
@@ -612,6 +615,7 @@
 				796F199029150ED8002D0652 /* AVCaptureDeviceInput+Camera.swift in Sources */,
 				792AE62B28AF379B0002F750 /* RingView.swift in Sources */,
 				79996AF528AE19AD000E1FF0 /* decode json.swift in Sources */,
+				7938CFCF2928B92400CF2906 /* health.swift in Sources */,
 				796F199629150ED8002D0652 /* Pose+Empty.swift in Sources */,
 				7971A78728B3460B007302A1 /* calchartView.swift in Sources */,
 				79C8582528AA37C200A37B5E /* homeView.swift in Sources */,
