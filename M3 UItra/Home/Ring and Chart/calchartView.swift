@@ -18,12 +18,9 @@ struct calchartView: View {
                 Spacer()
             }
             HStack {
-                barchartView(data: loaddata(datecal: yesterDay(pre: 6)), per: 2000)
-                barchartView(data: loaddata(datecal: yesterDay(pre: 5)), per: 2000)
-                barchartView(data: loaddata(datecal: yesterDay(pre: 4)), per: 2000)
-                barchartView(data: loaddata(datecal: yesterDay(pre: 3)), per: 2000)
-                barchartView(data: loaddata(datecal: yesterDay(pre: 2)), per: 2000)
-                barchartView(data: loaddata(datecal: yesterDay(pre: 1)), per: 2000)
+                ForEach((1...6), id: \.self) { i in
+                    barchartView(data: loaddata(datecal: yesterDay(pre: i)), per: 2000)
+                }
                 barchartView(data: loaddata(datecal: Date()), per: 2000, text: true)
             }
         }

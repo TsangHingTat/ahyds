@@ -13,7 +13,7 @@ struct ChatListView: View {
           Section {
               ForEach(chatConnectionManager.messages) { message in
                 HStack {
-                  Text("\(message.displayName)在 \(DateFormatter.timestampFormatter.string(from: message.time)) \(message.body)")
+                  Text("\(message.displayName)\(DateFormatter.timestampFormatter.string(from: message.time)) \(message.body)")
                 }
                 
               }
@@ -42,12 +42,3 @@ struct ChatListView: View {
     }
   }
 }
-
-#if DEBUG
-struct ChatListView_Previews: PreviewProvider {
-  static var previews: some View {
-    ChatListView()
-      .environmentObject(ChatConnectionManager())
-  }
-}
-#endif

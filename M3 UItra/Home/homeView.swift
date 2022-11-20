@@ -122,7 +122,7 @@ struct homeView: View {
                                                     ZStack {
                                                         waterView(percent: $water)
                                                             .mask(Rectangle().cornerRadius(25).foregroundColor(.white).opacity(0.7).frame(height: 140).padding())
-                                                        if caltoday >= 2000 {
+                                                        if caltoday >= Float(getdata().getdefaultsdataint(type: "caldef")) {
                                                             Rectangle().cornerRadius(25).foregroundColor(.green).frame(height: 140).padding()
                                                         }
                                                         // MARK: 任務 Pie Chart
@@ -154,7 +154,7 @@ struct homeView: View {
                                                     }
                                                 }
                                                 .onAppear() {
-                                                    water = Double((caltoday/2000)*100)
+                                                    water = Double((Int(caltoday)/getdata().getdefaultsdataint(type: "caldef"))*100)
                                                     let newwater = Double(water)
                                                     printnow(message: "\(newwater)")
                                                 }
@@ -184,7 +184,7 @@ struct homeView: View {
                                                 // MARK: 卡路里
                                                 VStack {
                                                     let callllll = Float(loadcaldata())
-                                                    let temp: CGFloat = CGFloat(callllll/2000)
+                                                    let temp: CGFloat = CGFloat(callllll/Float(getdata().getdefaultsdataint(type: "caldef")))
                                                     RingView(percentage: temp, backgroundColor: .white, startColor: .red, endColor: .green, thickness: 35)
                                                 }
                                                 .overlay() {
@@ -243,7 +243,7 @@ struct homeView: View {
         // MARK: 載入數據
         .onAppear() {
             runwelcome()
-            health = loadcaldata()/2000
+            health = loadcaldata()/Float(getdata().getdefaultsdataint(type: "caldef"))
             caltoday = loadcaldata()
             reward = getdata().getdefaultsdataint(type: "reward")
             showdateload()

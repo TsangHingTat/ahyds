@@ -21,7 +21,8 @@ struct ChatView: View {
                         .bold()
                         .font(.largeTitle)
                         .padding()
-                    Text("\(NSLocalizedString("你的名稱:", comment: "你的名稱:")) \(getdata().getdefaultsdata(type: "username"))")
+                  //  \(NSLocalizedString("你的名稱:", comment: "你的名稱:")) 
+                    Text("\(peerid())")
                         .padding()
                     ProgressView()
                         .padding()
@@ -83,6 +84,14 @@ struct ChatView: View {
       }
     }
   }
+    
+    func peerid() -> String {
+        let string = "\(chatConnectionManager.myPeerId)"
+        let array = string.components(separatedBy: "DisplayName = ")
+        let new = array[1]
+        let new2 = new.replacingOccurrences(of: " >", with: "")
+        return "\(new2)"
+    }
 
 }
 
