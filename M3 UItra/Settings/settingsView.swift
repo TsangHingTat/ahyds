@@ -49,7 +49,16 @@ struct settingsView: View {
                         }
                     }
                 }
-                
+                Section {
+                    NavigationLink(destination: healthView(refresh: $refresh)) {
+                        HStack {
+                            Image(systemName: "heart")
+                            Text("健康")
+                        }
+                    }
+                    
+                    
+                }
                 #if DEBUG
                 Section {
                     NavigationLink(destination: notifyView(notifyon: $notifyon)) {

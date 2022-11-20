@@ -9,7 +9,6 @@ import SwiftUI
 
 struct usernameView: View {
     let defaults = UserDefaults.standard
-    
     @State var showwelcome = false
     @State var teachermode =  false
     
@@ -41,6 +40,7 @@ struct usernameView: View {
             .navigationTitle("名稱設定")
             
         }
+        
         .onDisappear() {
             defaults.set(username, forKey: "username")
             defaults.set(showwelcome, forKey: "showwelcome")
