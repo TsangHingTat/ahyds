@@ -20,10 +20,30 @@ struct ChatListView: View {
             // chatConnectionManager.messages.body
             VStack {
                 ForEach(chatConnectionManager.messages) { i in
-                    HStack {
-                        Text(i.displayName)
-                        Text("\(DateFormatter.timestampFormatter.string(from: i.time))")
-                        Text(i.body)
+                    //HStack {
+                    //    Text(i.displayName)
+                    //    Text("\(DateFormatter.timestampFormatter.string(from: i.time))")
+                    //    Text(i.body)
+                   // }
+                   Color.Orange
+                        .frame(height: 70, weight: 100)
+                        .overlay() {
+                            VStack {
+                            HStack {
+                                Text(i.displayName)
+                                    .font(.title)
+                                    .padding()
+                                Spacer()
+                            }
+                            Spacer()
+                            HStack {
+                                Text("\(DateFormatter.timestampFormatter.string(from: i.time))")
+                                    .font(.title)
+                                Spacer()
+                                Text(i.body)
+                                    .font(.title)
+                            }
+                        }
                     }
                 }
             }
