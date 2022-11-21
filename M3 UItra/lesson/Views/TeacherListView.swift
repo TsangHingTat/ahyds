@@ -11,6 +11,10 @@ struct ChatListView: View {
             Button("發放練習") {
                 worksheet.toggle()
             }
+            Button("離開") {
+                chatConnectionManager.send("stop0234879385")
+                chatConnectionManager.leaveChat()
+            }
             //here
             // chatConnectionManager.messages.displayName
             // chatConnectionManager.messages.body
@@ -44,10 +48,24 @@ struct ChatListView: View {
                 }, label: {
                     Text("停止")
                 })
+                Section {
+                    Text("fuck")
+                }
+                Section {
+                    Text("fuck")
+                    Text("fuck")
+                }
             }
         }
     }
     func name(name: String) -> Void {
         
+    }
+}
+
+
+struct Previews_TeacherListView_Previews: PreviewProvider {
+    static var previews: some View {
+        ChatListView()
     }
 }

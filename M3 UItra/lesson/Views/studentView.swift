@@ -19,9 +19,6 @@ struct studentView: View {
                 .bold()
                 .font(.largeTitle)
                 .padding()
-            Button("離開") {
-                leave = true
-            }
         }
         
         .fullScreenCover(isPresented: $view) {
@@ -33,6 +30,14 @@ struct studentView: View {
                 for i in (0...chatConnectionManager.messages.count-1) {
                     if chatConnectionManager.messages[i].body == "start sport 30324290" {
                         getdata().savedefaultsdata(type: "mlmodel", data: "sit-up")
+                        chatConnectionManager.messages.remove(at: i)
+                        view = true
+                        howmanytimes = "0"
+                    }
+                }
+                for i in (0...chatConnectionManager.messages.count-1) {
+                    if chatConnectionManager.messages[i].body == "stop0234879385" {
+                        chatConnectionManager.leaveChat()
                         chatConnectionManager.messages.remove(at: i)
                         view = true
                         howmanytimes = "0"
