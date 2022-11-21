@@ -33,7 +33,7 @@ struct homeView: View {
     
     @State var supportedsportname = ["sit-up", "pushup"]
     
-    @State var viewnew = ["Sliver", "Gold", "Aluminium", "Aluminium", "Aluminium"]
+    @State var viewnew = ["Sliver", "Gold", "Copper", "Aluminium", "Aluminium"]
     
     
     var body: some View {

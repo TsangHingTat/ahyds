@@ -74,6 +74,7 @@
 		79A6E533292B1FFD00736CA9 /* walker.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 79A6E532292B1FFD00736CA9 /* walker.usdz */; };
 		79A6E535292B238500736CA9 /* Gold.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 79A6E534292B238500736CA9 /* Gold.usdz */; };
 		79A6E537292B247600736CA9 /* Sliver.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 79A6E536292B247600736CA9 /* Sliver.usdz */; };
+		79A6E539292B2EFD00736CA9 /* Copper.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 79A6E538292B2EFD00736CA9 /* Copper.usdz */; };
 		79AB308128ACECA60001C091 /* webView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AB308028ACECA60001C091 /* webView.swift */; };
 		79AB308928ACEE200001C091 /* developerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AB308828ACEE200001C091 /* developerView.swift */; };
 		79AB308B28ACF6D90001C091 /* rewardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AB308A28ACF6D90001C091 /* rewardView.swift */; };
@@ -194,6 +195,7 @@
 		79A6E532292B1FFD00736CA9 /* walker.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = walker.usdz; sourceTree = "<group>"; };
 		79A6E534292B238500736CA9 /* Gold.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = Gold.usdz; path = ../../../Downloads/Gold.usdz; sourceTree = "<group>"; };
 		79A6E536292B247600736CA9 /* Sliver.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Sliver.usdz; sourceTree = "<group>"; };
+		79A6E538292B2EFD00736CA9 /* Copper.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = Copper.usdz; path = ../../../Downloads/Copper.usdz; sourceTree = "<group>"; };
 		79AB308028ACECA60001C091 /* webView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webView.swift; sourceTree = "<group>"; };
 		79AB308828ACEE200001C091 /* developerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = developerView.swift; sourceTree = "<group>"; };
 		79AB308A28ACF6D90001C091 /* rewardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rewardView.swift; sourceTree = "<group>"; };
@@ -408,6 +410,7 @@
 				791AD3EF2923B8D20087968F /* Aluminium.usdz */,
 				79A6E534292B238500736CA9 /* Gold.usdz */,
 				79A6E536292B247600736CA9 /* Sliver.usdz */,
+				79A6E538292B2EFD00736CA9 /* Copper.usdz */,
 				791AD3E729239D960087968F /* Copperd.usdz */,
 				791AD3DF292396B20087968F /* try.usdz */,
 				79A6E532292B1FFD00736CA9 /* walker.usdz */,
@@ -585,6 +588,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				798EDC9528FC2C0000E2E463 /* img in Resources */,
+				79A6E539292B2EFD00736CA9 /* Copper.usdz in Resources */,
 				79A6E537292B247600736CA9 /* Sliver.usdz in Resources */,
 				791AD3E829239D960087968F /* Copperd.usdz in Resources */,
 				79A6E533292B1FFD00736CA9 /* walker.usdz in Resources */,
