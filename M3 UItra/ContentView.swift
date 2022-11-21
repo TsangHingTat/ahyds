@@ -109,10 +109,10 @@ struct testView: View {
         }
         .onAppear() {
             if j {
-                getdata().notification(title: "why", subtitle: "j")
+              //  getdata().notification(title: "why", subtitle: "j")
             }
             if f {
-                getdata().notification(title: "f", subtitle: "f")
+             //   getdata().notification(title: "f", subtitle: "f")
             }
         }
     }

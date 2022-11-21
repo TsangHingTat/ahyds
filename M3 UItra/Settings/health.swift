@@ -18,19 +18,6 @@ struct healthView: View {
         List {
             Section {
                 HStack {
-                    Text("卡路里目標")
-                    TextEditor(text: $cal2)
-                        .keyboardType(.numberPad)
-                        .onReceive(Just(cal2)) { newValue in
-                            let filtered = newValue.filter { "0123456789".contains($0) }
-                            if filtered != newValue {
-                                self.cal2 = filtered
-                            }
-                        }
-                }
-            }
-            Section {
-                HStack {
                     Text("身高")
                     TextEditor(text: $high)
                         .keyboardType(.numberPad)

@@ -20,7 +20,7 @@ struct dpView: View {
     @State var dotime = 0
     @State var temp =  ""
     @State var doingst = ""
-    @State var fuckingshit: Float = 0
+    @State var goodmoring: Float = 0
     var body: some View {
         
         VStack {
@@ -33,6 +33,7 @@ struct dpView: View {
             } else {
                 dotime = dotime - 1
             }
+            
         }
         .onReceive(doTime2) { _ in
             p = getdata().getdefaultsdataint(type: "confidence")
@@ -57,7 +58,7 @@ struct dpView: View {
             
         }
         .onReceive(doTime) { _ in
-            fuckingshit += 1
+            goodmoring += 1
             if appear == 1 {
                 
                 bool = 0
@@ -74,8 +75,8 @@ struct dpView: View {
             print(getdata().getdefaultsdata(type: "action"))
         }
         .onDisappear() {
-            fuckingshit = fuckingshit * Float(0.03)
-            save_data().save(dotime: fuckingshit, sport_type: "sit-up" , doinftime: Float(dotime))
+            goodmoring = goodmoring * Float(0.03)
+            save_data().save(dotime: goodmoring, sport_type: "sit-up" , doinftime: Float(dotime))
         }
     }
 }
@@ -125,14 +126,15 @@ struct save_data {
     @State var calofsitup = ""
     @State var calofsitupFloat: Float = 0
     func save(dotime: Float , sport_type: String , doinftime: Float) -> Void {
-        getdata().notification(title: "func done", subtitle: "yo")
+        //getdata().notification(title: "func done", subtitle: "yo")
         let today = Date()
         let formatter1 = DateFormatter()
         formatter1.dateFormat = "yyyy-MM-dd"
         let datedatanow = "\(formatter1.string(from: today))"
         if sport_type == "sit-up" {
-            getdata().savedata(date: datedatanow, datanum: 5, text: "\(Float(getdata().getdata(date: datedatanow, datanum: 5))! + (doinftime * 1.1))")
-            getdata().savedata(date: datedatanow, datanum: 5, text: "\(Float(getdata().getdata(date: datedatanow, datanum: 1))! + doinftime)")
+            getdata().savedata(date: datedatanow, datanum: 5, text: "\(Float(getdata().getdata(date: datedatanow, datanum: 5)) ?? 0 + (doinftime * 1.1))")
+            getdata().savedata(date: datedatanow, datanum: 5, text: "\(Float(getdata().getdata(date: datedatanow, datanum: 1)) ?? 0  + doinftime)")
+            getdata().notification(title: "done", subtitle: "\(NSLocalizedString("時間", comment: "時間")) = \(dotime) , \(NSLocalizedString("次數", comment: "次數")) = \(doinftime) , \(NSLocalizedString("卡路里", comment: "卡路里")) = \(dotime * 2)")
         }
         if sport_type == "pushup" {
             getdata().savedata(date: datedatanow, datanum: 6, text: "\(Float(getdata().getdata(date: datedatanow, datanum: 5)) ?? 0 + (doinftime * 1.1))")
@@ -142,4 +144,7 @@ struct save_data {
 }
 //savedata(date: String, datanum: Int, text: String) -> Void
 //getdata().savedefaultsdataint(type: "fufuyg", data: Int(0))
-
+//goo morning
+//good morningr
+// good morning
+// good morning
