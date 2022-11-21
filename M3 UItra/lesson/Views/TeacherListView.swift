@@ -1,11 +1,15 @@
 
 
 import SwiftUI
-
+import Combine
 struct ChatListView: View {
     @EnvironmentObject var chatConnectionManager: ChatConnectionManager
     @State var worksheet = false
     @State var names = [""]
+    @State var yo = ""
+    @State var hour = ""
+    @State var min = ""
+    @State var s = ""
     var body: some View {
         VStack {
             Button("發放練習") {
@@ -20,13 +24,8 @@ struct ChatListView: View {
             // chatConnectionManager.messages.body
             VStack {
                 ForEach(chatConnectionManager.messages) { i in
-                    //HStack {
-                    //    Text(i.displayName)
-                    //    Text("\(DateFormatter.timestampFormatter.string(from: i.time))")
-                    //    Text(i.body)
-                   // }
-                   Color.Orange
-                        .frame(height: 70, weight: 100)
+                   Color.orange
+                        .frame(width: 100, height: 70)
                         .overlay() {
                             VStack {
                             HStack {
@@ -49,9 +48,23 @@ struct ChatListView: View {
             }
             //here
         }
+        .onDisappear() {
+            let yo2 = Int(yo) ?? 0
+            getdata().savedefaultsdataint(type: "yo", data: yo2)
+            let hour2 = Int(hour) ?? 0
+            getdata().savedefaultsdataint(type: "hour", data: hour2)
+            let min2 = Int(min) ?? 0
+            getdata().savedefaultsdataint(type: "min", data: min2)
+            let s2 = Int(s) ?? 0
+            getdata().savedefaultsdataint(type: "s", data: s2)
+        }
         .onAppear() {
             chatConnectionManager.send("start")
             chatConnectionManager.messages.removeLast()
+            yo = String(getdata().getdefaultsdataint(type: "yo"))
+            hour = String(getdata().getdefaultsdataint(type: "hour"))
+            min = String(getdata().getdefaultsdataint(type: "min"))
+            s = String(getdata().getdefaultsdataint(type: "s"))
         }
         .sheet(isPresented: $worksheet) {
             List {
@@ -69,11 +82,55 @@ struct ChatListView: View {
                     Text("停止")
                 })
                 Section {
-                    Text("fuck")
+                    HStack {
+                        Text("duration : ")
+                        TextEditor(text: $yo)
+                            .keyboardType(.numberPad)
+                            .onReceive(Just(yo)) { newValue in
+                                let filtered = newValue.filter { "0123456789".contains($0) }
+                                if filtered != newValue {
+                                    self.yo = filtered
+                                }
+                            }
+                    }
                 }
                 Section {
-                    Text("fuck")
-                    Text("fuck")
+                    HStack {
+                        Text("times")
+                    }
+                    HStack {
+                        Text("")
+                        TextEditor(text: $hour)
+                            .keyboardType(.numberPad)
+                            .onReceive(Just(hour)) { newValue in
+                                let filtered = newValue.filter { "0123456789".contains($0) }
+                                if filtered != newValue {
+                                    self.hour = filtered
+                                }
+                            }
+                    }
+                    HStack {
+                        Text("")
+                        TextEditor(text: $min)
+                            .keyboardType(.numberPad)
+                            .onReceive(Just(min)) { newValue in
+                                let filtered = newValue.filter { "0123456789".contains($0) }
+                                if filtered != newValue {
+                                    self.min = filtered
+                                }
+                            }
+                    }
+                    HStack {
+                        Text("")
+                        TextEditor(text: $s)
+                            .keyboardType(.numberPad)
+                            .onReceive(Just(s)) { newValue in
+                                let filtered = newValue.filter { "0123456789".contains($0) }
+                                if filtered != newValue {
+                                    self.s = filtered
+                                }
+                            }
+                    }
                 }
             }
         }
@@ -84,8 +141,9 @@ struct ChatListView: View {
 }
 
 
-struct Previews_TeacherListView_Previews: PreviewProvider {
-    static var previews: some View {
-        ChatListView()
-    }
+struct ChatListView_Previews: PreviewProvider {
+  static var previews: some View {
+    ChatListView()
+      .environmentObject(ChatConnectionManager())
+  }
 }
