@@ -11,16 +11,19 @@ struct ChatListView: View {
             Button("發放練習") {
                 worksheet.toggle()
             }
+            //here
+            // chatConnectionManager.messages.displayName
+            // chatConnectionManager.messages.body
             VStack {
                 ForEach(chatConnectionManager.messages) { i in
-                    if names.contains(i.displayName) {
-                        Text("  ")
-                            
-                    } else {
-                        
+                    HStack {
+                        Text(i.displayName)
+                        Text("\(DateFormatter.timestampFormatter.string(from: i.time))")
+                        Text(i.body)
                     }
                 }
             }
+            //here
         }
         .onAppear() {
             chatConnectionManager.send("start")
