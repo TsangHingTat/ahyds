@@ -131,9 +131,10 @@ struct save_data {
         formatter1.dateFormat = "yyyy-MM-dd"
         let datedatanow = "\(formatter1.string(from: today))"
         if sport_type == "sit-up" {
-
-            getdata().savedata(date: datedatanow, datanum: 5, text: "\(Float(getdata().getdata(date: datedatanow, datanum: 5))! + (doinftime * 1.1))")
-            getdata().savedata(date: datedatanow, datanum: 5, text: "\(Float(getdata().getdata(date: datedatanow, datanum: 1))! + doinftime)")
+            getdata().savedata(date: datedatanow, datanum: 5, text: "\(Float(getdata().getdata(date: datedatanow, datanum: 5)) ?? 0 + (doinftime * 1.1))")
+            getdata().savedata(date: datedatanow, datanum: 5, text: "\(Float(getdata().getdata(date: datedatanow, datanum: 1)) ?? 0 + doinftime)")
+                
+            
         }
         if sport_type == "pushup" {
             calofpushup = getdata().getdata(date: datedatanow, datanum: 6)
