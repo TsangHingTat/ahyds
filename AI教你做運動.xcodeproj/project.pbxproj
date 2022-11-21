@@ -25,8 +25,6 @@
 		791AD3E629239A130087968F /* 3DView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791AD3E529239A130087968F /* 3DView.swift */; };
 		791AD3E829239D960087968F /* Copperd.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 791AD3E729239D960087968F /* Copperd.usdz */; };
 		791AD3EB29239E0E0087968F /* Copper.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 791AD3E929239E0E0087968F /* Copper.usdz */; };
-		791AD3EC29239E0E0087968F /* Silver.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 791AD3EA29239E0E0087968F /* Silver.usdz */; };
-		791AD3EE29239F8C0087968F /* Gold.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 791AD3ED29239F8C0087968F /* Gold.usdz */; };
 		791AD3F02923B8D20087968F /* Aluminium.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 791AD3EF2923B8D20087968F /* Aluminium.usdz */; };
 		791FD04D28AE5D1600E7845B /* welcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FD04C28AE5D1600E7845B /* welcomeView.swift */; };
 		792AE62B28AF379B0002F750 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792AE62A28AF379B0002F750 /* RingView.swift */; };
@@ -73,6 +71,9 @@
 		79996AF828AE1C0D000E1FF0 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79996AF728AE1C0D000E1FF0 /* Calendar.swift */; };
 		799CB78C28AEB425004076AD /* notifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799CB78B28AEB425004076AD /* notifyView.swift */; };
 		79A15D4C291BA5620013BE9F /* swiftuitestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A15D4B291BA5620013BE9F /* swiftuitestView.swift */; };
+		79A6E533292B1FFD00736CA9 /* walker.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 79A6E532292B1FFD00736CA9 /* walker.usdz */; };
+		79A6E535292B238500736CA9 /* Gold.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 79A6E534292B238500736CA9 /* Gold.usdz */; };
+		79A6E537292B247600736CA9 /* Sliver.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 79A6E536292B247600736CA9 /* Sliver.usdz */; };
 		79AB308128ACECA60001C091 /* webView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AB308028ACECA60001C091 /* webView.swift */; };
 		79AB308928ACEE200001C091 /* developerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AB308828ACEE200001C091 /* developerView.swift */; };
 		79AB308B28ACF6D90001C091 /* rewardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AB308A28ACF6D90001C091 /* rewardView.swift */; };
@@ -135,8 +136,6 @@
 		791AD3E529239A130087968F /* 3DView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 3DView.swift; sourceTree = "<group>"; };
 		791AD3E729239D960087968F /* Copperd.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Copperd.usdz; sourceTree = "<group>"; };
 		791AD3E929239E0E0087968F /* Copper.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Copper.usdz; sourceTree = "<group>"; };
-		791AD3EA29239E0E0087968F /* Silver.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Silver.usdz; sourceTree = "<group>"; };
-		791AD3ED29239F8C0087968F /* Gold.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Gold.usdz; sourceTree = "<group>"; };
 		791AD3EF2923B8D20087968F /* Aluminium.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Aluminium.usdz; sourceTree = "<group>"; };
 		791FD04C28AE5D1600E7845B /* welcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeView.swift; sourceTree = "<group>"; };
 		79207EBB28BAB5D700EF4461 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -192,6 +191,9 @@
 		79996AF728AE1C0D000E1FF0 /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		799CB78B28AEB425004076AD /* notifyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = notifyView.swift; sourceTree = "<group>"; };
 		79A15D4B291BA5620013BE9F /* swiftuitestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftuitestView.swift; sourceTree = "<group>"; };
+		79A6E532292B1FFD00736CA9 /* walker.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = walker.usdz; sourceTree = "<group>"; };
+		79A6E534292B238500736CA9 /* Gold.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = Gold.usdz; path = ../../../Downloads/Gold.usdz; sourceTree = "<group>"; };
+		79A6E536292B247600736CA9 /* Sliver.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Sliver.usdz; sourceTree = "<group>"; };
 		79AB308028ACECA60001C091 /* webView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webView.swift; sourceTree = "<group>"; };
 		79AB308828ACEE200001C091 /* developerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = developerView.swift; sourceTree = "<group>"; };
 		79AB308A28ACF6D90001C091 /* rewardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rewardView.swift; sourceTree = "<group>"; };
@@ -403,11 +405,12 @@
 				79A15D4B291BA5620013BE9F /* swiftuitestView.swift */,
 				791AD3E529239A130087968F /* 3DView.swift */,
 				791AD3E929239E0E0087968F /* Copper.usdz */,
-				791AD3EA29239E0E0087968F /* Silver.usdz */,
-				791AD3ED29239F8C0087968F /* Gold.usdz */,
 				791AD3EF2923B8D20087968F /* Aluminium.usdz */,
+				79A6E534292B238500736CA9 /* Gold.usdz */,
+				79A6E536292B247600736CA9 /* Sliver.usdz */,
 				791AD3E729239D960087968F /* Copperd.usdz */,
 				791AD3DF292396B20087968F /* try.usdz */,
+				79A6E532292B1FFD00736CA9 /* walker.usdz */,
 			);
 			path = "Other func";
 			sourceTree = "<group>";
@@ -582,16 +585,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				798EDC9528FC2C0000E2E463 /* img in Resources */,
+				79A6E537292B247600736CA9 /* Sliver.usdz in Resources */,
 				791AD3E829239D960087968F /* Copperd.usdz in Resources */,
+				79A6E533292B1FFD00736CA9 /* walker.usdz in Resources */,
 				796F199929150ED8002D0652 /* Main.storyboard in Resources */,
 				79996AF628AE1AA9000E1FF0 /* Data.json in Resources */,
 				791AD3E0292396B20087968F /* try.usdz in Resources */,
 				795C817F28BA8DD50080CD26 /* Localizable.strings in Resources */,
 				791AD3EB29239E0E0087968F /* Copper.usdz in Resources */,
-				791AD3EE29239F8C0087968F /* Gold.usdz in Resources */,
 				4932CD9D28A4C89E000E7443 /* Preview Assets.xcassets in Resources */,
 				79650C4A28BF77D200D5BFC2 /* support.json in Resources */,
-				791AD3EC29239E0E0087968F /* Silver.usdz in Resources */,
+				79A6E535292B238500736CA9 /* Gold.usdz in Resources */,
 				791AD3F02923B8D20087968F /* Aluminium.usdz in Resources */,
 				4932CD9A28A4C89E000E7443 /* Assets.xcassets in Resources */,
 			);

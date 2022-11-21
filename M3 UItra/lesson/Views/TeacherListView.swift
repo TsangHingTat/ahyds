@@ -2,20 +2,32 @@
 
 import SwiftUI
 
+struct ChatListCellView: View {
+    var bodymessage: Array<Any>
+    var body: some View {
+        VStack {
+            List {
+                
+            }
+        }
+    }
+    func getbody(string: String) -> Int {
+        
+        return 0
+    }
+}
+
 struct ChatListView: View {
   @EnvironmentObject var chatConnectionManager: ChatConnectionManager
   @State var worksheet = false
   var body: some View {
-      List {
+      VStack {
           Button("發放練習") {
               worksheet.toggle()
           }
-          Section {
-              ForEach(chatConnectionManager.messages) { message in
-                HStack {
-                  Text("\(message.displayName)\(DateFormatter.timestampFormatter.string(from: message.time)) \(message.body)")
-                }
-                
+          Group {
+              VStack {
+                  ChatListCellView(bodymessage: chatConnectionManager.messages)
               }
           }
       }
