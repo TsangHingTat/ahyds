@@ -548,7 +548,7 @@ struct dateView: View {
                                 .overlay() {
                                     ZStack {
                                         VStack {
-                                            Text("已編排:")
+                                            Text("已完成:")
                                                 .font(.largeTitle)
                                                 .foregroundColor(.black)
                                                 .padding()
@@ -557,7 +557,7 @@ struct dateView: View {
                                         VStack {
                                             if isnil() == true {
                                                 HStack {
-                                                    Text("未編排任何活動")
+                                                    Text("未完成任何活動")
                                                         .font(.largeTitle)
                                                         .foregroundColor(.black)
                                                     
@@ -682,7 +682,7 @@ struct dateView: View {
                     }
                     .allowsHitTesting(blocktouch)
                 }
-                .navigationTitle("已編排")
+                .navigationTitle("記錄")
                 .navigationBarTitleDisplayMode(.inline)
                 .interactiveDismissDisabled()
                 .navigationBarItems(leading:
