@@ -37,7 +37,6 @@
 		795C817F28BA8DD50080CD26 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 795C818128BA8DD50080CD26 /* Localizable.strings */; };
 		795C818628BA90FF0080CD26 /* langsupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C818528BA90FF0080CD26 /* langsupport.swift */; };
 		79650C4828BF757900D5BFC2 /* supportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79650C4728BF757900D5BFC2 /* supportView.swift */; };
-		79650C4A28BF77D200D5BFC2 /* support.json in Resources */ = {isa = PBXBuildFile; fileRef = 79650C4928BF77D200D5BFC2 /* support.json */; };
 		796AC94728BDEA8F0014BBE3 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 796AC94628BDEA8F0014BBE3 /* NetworkExtension.framework */; };
 		796F198729150ED8002D0652 /* ExerciseClassifier+PredictAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F196629150ED7002D0652 /* ExerciseClassifier+PredictAction.swift */; };
 		796F198E29150ED8002D0652 /* VideoProcessingChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F197129150ED7002D0652 /* VideoProcessingChain.swift */; };
@@ -153,7 +152,6 @@
 		795C818428BA8E0F0080CD26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		795C818528BA90FF0080CD26 /* langsupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = langsupport.swift; sourceTree = "<group>"; };
 		79650C4728BF757900D5BFC2 /* supportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = supportView.swift; sourceTree = "<group>"; };
-		79650C4928BF77D200D5BFC2 /* support.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = support.json; sourceTree = "<group>"; };
 		796AC94628BDEA8F0014BBE3 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		796F196629150ED7002D0652 /* ExerciseClassifier+PredictAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExerciseClassifier+PredictAction.swift"; sourceTree = "<group>"; };
 		796F197129150ED7002D0652 /* VideoProcessingChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoProcessingChain.swift; sourceTree = "<group>"; };
@@ -268,7 +266,6 @@
 				79AB308628ACEDD90001C091 /* Settings */,
 				79AB308328ACED2C0001C091 /* Other func */,
 				79996AF328AE198E000E1FF0 /* Data.json */,
-				79650C4928BF77D200D5BFC2 /* support.json */,
 				4932CD9928A4C89E000E7443 /* Assets.xcassets */,
 				79D0AAD428AAB18F00E60B4C /* Data.xcdatamodeld */,
 				4932CD9B28A4C89E000E7443 /* Preview Content */,
@@ -605,7 +602,6 @@
 				7988FF0E292B458D00DE2FA3 /* Sliver.usdz in Resources */,
 				7988FF15292B458D00DE2FA3 /* Copper.usdz in Resources */,
 				4932CD9D28A4C89E000E7443 /* Preview Assets.xcassets in Resources */,
-				79650C4A28BF77D200D5BFC2 /* support.json in Resources */,
 				7988FF13292B458D00DE2FA3 /* Aluminium.usdz in Resources */,
 				4932CD9A28A4C89E000E7443 /* Assets.xcassets in Resources */,
 				7988FF14292B458D00DE2FA3 /* walker.usdz in Resources */,
@@ -862,7 +858,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = " 1.4.2";
+				MARKETING_VERSION = " 1.4.3";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ios.m2-ultra";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -902,7 +898,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = " 1.4.2";
+				MARKETING_VERSION = " 1.4.3";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ios.m2-ultra";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
