@@ -53,6 +53,8 @@ struct ContentView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .sheet(isPresented: $welcome) {
             welcomeView(showWelcomeScreen: $welcome)
+            
+            .interactiveDismissDisabled(true)
         }
         .onAppear() {
             if getdata().getdefaultsdata(type: "firstopen") != UIApplication.appVersion {

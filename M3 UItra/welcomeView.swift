@@ -18,7 +18,7 @@ struct welcomeView: View {
         NavigationView {
             ScrollView {
                 Spacer()
-                    .frame(height: 120)
+                    .frame(height: 30)
                 if getdata().getdefaultsdata(type: "firstopen") == "" {
                     Text("歡迎使用")
                         .font(.largeTitle)
@@ -47,6 +47,40 @@ struct welcomeView: View {
                                     }
                                     HStack {
                                         Text("設定你的名稱")
+                                            .font(.subheadline)
+                                            .foregroundColor(.gray)
+                                        Spacer()
+                                    }
+                                }
+                                Spacer()
+                                Image(systemName: "arrow.right")
+                                    .foregroundColor(.gray)
+                                    .padding(.horizontal)
+                            }
+                            .padding()
+                        }
+                        .frame(height: 70)
+                        .background(.white)
+                        .cornerRadius(15)
+                        .shadow(radius: 5)
+                        .padding()
+                    }
+                    NavigationLink(destination: healthView(refresh: $reno).navigationTitle("健康數據")) {
+                        HStack {
+                            HStack {
+                                Image(systemName: "heart.circle")
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                                    .foregroundColor(.black)
+                                VStack {
+                                    HStack {
+                                        Text("健康數據")
+                                            .font(.title3)
+                                            .foregroundColor(.black)
+                                        Spacer()
+                                    }
+                                    HStack {
+                                        Text("設定你的健康數據")
                                             .font(.subheadline)
                                             .foregroundColor(.gray)
                                         Spacer()
@@ -94,7 +128,7 @@ struct welcomeView: View {
                     .shadow(radius: 5)
                     .padding()
                 Spacer()
-                    .frame(height: 80)
+                    .frame(height: 50)
                 HStack {
                     Button(action: {
                         getdata().savedefaultsdata(type: "firstopen", data: UIApplication.appVersion ?? "")
