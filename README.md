@@ -26,20 +26,10 @@
 git clone http://58.177.101.104:9000/TsangHingTat/AHYDS.git
 ```
 - Xcode 13
-- iOS 15 SDK
-- iOS 15.0
+- iOS 16 SDK
+- iOS 16.0
 - macOS 13.0
 
-# 需要新增的功能:
-- Apple Watch 加速器
-- Airpods Pro 陀螺儀
-- 勳章
-- 體適能
-- tabata
-- 課程
-- 預錄
-- 發布作業
-- 在代碼中加入註解
 
 # 數據閱讀及編輯-API
 ## String:
