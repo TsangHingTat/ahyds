@@ -251,7 +251,7 @@ struct homeView: View {
         }
         // MARK: 自動更變標題文字
         .onReceive(timer) { input in
-            if showwelcome == true {
+            if showwelcome {
                 if message != 3 {
                     message = message+1
                 } else {
@@ -307,7 +307,7 @@ struct homeView: View {
         printnow(message: "runwelcome()")
         username = defaults.string(forKey: "username") ?? "USERNAME"
         showwelcome = defaults.bool(forKey: "showwelcome")
-        if showwelcome == true {
+        if showwelcome {
             navtitle = "\(NSLocalizedString("歡迎", comment: "歡迎")), \(username)"
         }
     }

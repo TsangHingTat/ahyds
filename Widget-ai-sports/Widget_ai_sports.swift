@@ -80,9 +80,9 @@ struct todayView: View {
     @State var refresh = false
     var body: some View {
         // MARK: Today
-        if istoday == true {
+        if istoday {
             ZStack {
-                if refresh == true {
+                if refresh {
                     refreshhelper(refresh: $refresh)
                 } else {
                     dateView(date: getday(), month: getmonth(), fullyear: getyear(), today: true, home: home)
@@ -218,7 +218,7 @@ struct dateView: View {
     
     var body: some View {
         VStack {
-            if home == true {
+            if home {
                 ZStack {
                     HStack {
                         VStack {
@@ -249,7 +249,7 @@ struct dateView: View {
                                                 .frame(width: 173.5)
                                             }
                                             VStack {
-                                                if isnil() == true {
+                                                if isnil() {
                                                     HStack {
                                                         Text("未編排任何活動")
                                                             .bold()
@@ -304,7 +304,7 @@ struct dateView: View {
                     
                     }
                 }
-            } else if today == true {
+            } else if today {
                 HStack {
                     VStack {
                         Spacer()
@@ -337,7 +337,7 @@ struct dateView: View {
                                             .frame(width: 173.5)
                                         }
                                         VStack {
-                                            if isnil() == true {
+                                            if isnil() {
                                                 HStack {
                                                     Text("未編排任何活動")
                                                         .bold()
@@ -393,7 +393,7 @@ struct dateView: View {
                 
                 }
             } else {
-                if holiday == true {
+                if holiday {
                     Rectangle()
                         .foregroundColor(.red)
                         .opacity(0.8)
@@ -476,7 +476,7 @@ struct dateView: View {
                                         .frame(width: 170, height: 100)
                                         .overlay() {
                                             VStack {
-                                                if isnil() == true {
+                                                if isnil() {
                                                     HStack {
                                                         Text("未編排任何活動")
                                                             .bold()
@@ -584,7 +584,7 @@ struct dateView: View {
                                 .padding(.horizontal)
                                 .overlay() {
                                     VStack {
-                                        if today == true {
+                                        if today {
                                             VStack {
                                                 Spacer()
                                                 Text("\(NSLocalizedString("今天", comment: "今天")) (\(getdayofweeknow()))")
@@ -644,7 +644,7 @@ struct dateView: View {
                                             Spacer()
                                         }
                                         VStack {
-                                            if isnil() == true {
+                                            if isnil() {
                                                 HStack {
                                                     Text("未編排任何活動")
                                                         .font(.largeTitle)

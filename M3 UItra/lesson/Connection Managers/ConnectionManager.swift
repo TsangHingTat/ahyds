@@ -43,6 +43,9 @@ class ChatConnectionManager: NSObject, ObservableObject {
     }
   }
 
+  func removeall() {
+    messages.removeAll()
+  }
   func join() {
     peers.removeAll()
     messages.removeAll()

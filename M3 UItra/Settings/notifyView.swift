@@ -16,7 +16,7 @@ struct notifyView: View {
     var body: some View {
         ZStack {
             VStack {
-                if notifyon == true {
+                if notifyon {
                     backgroundView()
                 }
             }

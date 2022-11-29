@@ -39,12 +39,12 @@ struct developerView: View {
                 Text("String: username = \(username)")
                 Text("String: firseopen = \(firstopen)")
                 Text("Int: reward = \(reward)")
-                if notifyon == true {
+                if notifyon {
                     Text("Bool: notifyon = true")
                 } else {
                     Text("Bool: notifyon = false")
                 }
-                if showwelcome == true {
+                if showwelcome {
                     Text("Bool: showwelcome = true")
                 } else {
                     Text("Bool: showwelcome = false")
@@ -77,7 +77,7 @@ struct developerView: View {
                         gettextnum = Int(textnum) ?? 0
                     }
                 }
-                if get == true {
+                if get {
                     Text("Output: \(getdata().getdata(date: gettext, datanum: gettextnum))")
                 } else {
                     Text("Output: (nil : N/A)")

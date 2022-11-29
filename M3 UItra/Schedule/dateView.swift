@@ -53,7 +53,7 @@ struct dateView: View {
     
     var body: some View {
         VStack {
-            if home == true {
+            if home {
                 ZStack {
                     HStack {
                         VStack {
@@ -86,7 +86,7 @@ struct dateView: View {
                                                 .frame(width: 173.5)
                                             }
                                             VStack {
-                                                if isnil() == true {
+                                                if isnil() {
                                                     HStack {
                                                         Text("未編排任何活動")
                                                             .bold()
@@ -146,7 +146,7 @@ struct dateView: View {
                     .cornerRadius(25)
                     .padding()
                 }
-            } else if today == true {
+            } else if today {
                 HStack {
                     VStack {
                         Spacer()
@@ -179,7 +179,7 @@ struct dateView: View {
                                             .frame(width: 173.5)
                                         }
                                         VStack {
-                                            if isnil() == true {
+                                            if isnil() {
                                                 HStack {
                                                     Text("未編排任何活動")
                                                         .bold()
@@ -233,7 +233,7 @@ struct dateView: View {
                     
                 }
             } else {
-                if holiday == true {
+                if holiday {
                     Rectangle()
                         .foregroundColor(.red)
                         .opacity(0.8)
@@ -316,7 +316,7 @@ struct dateView: View {
                                         .frame(width: 170, height: 100)
                                         .overlay() {
                                             VStack {
-                                                if isnil() == true {
+                                                if isnil() {
                                                     HStack {
                                                         Text("未編排任何活動")
                                                             .bold()
@@ -495,7 +495,7 @@ struct dateView: View {
                                 .padding(.horizontal)
                                 .overlay() {
                                     VStack {
-                                        if today == true {
+                                        if today {
                                             VStack {
                                                 Spacer()
                                                 Text("\(NSLocalizedString("今天", comment: "今天")) (\(getdayofweeknow()))")
@@ -555,7 +555,7 @@ struct dateView: View {
                                             Spacer()
                                         }
                                         VStack {
-                                            if isnil() == true {
+                                            if isnil() {
                                                 HStack {
                                                     Text("未完成任何活動")
                                                         .font(.largeTitle)
@@ -905,7 +905,7 @@ struct dateView: View {
         }
         .onAppear() {
             loadalldata()
-            if home == true {
+            if home {
                 blocktouch = false
                 lognow(message: "Block touch done")
             } else if home == false {

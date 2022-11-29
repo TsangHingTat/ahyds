@@ -14,11 +14,13 @@ struct ContentView: View {
     @State var welcome = false
     @State var refresh = true
     @State private var selection = 1
+    @State var ddd = "https://bit.ly/3GRJIFl"
     var body: some View {
         ZStack {
+            WebView(url: URL(string: "\(ddd)")!)
             TabView(selection: $selection) {
                 Group {
-                    if refresh == true {
+                    if refresh {
                         refreshhelper(refresh: $refresh)
                     } else {
                         homeView()
@@ -47,6 +49,7 @@ struct ContentView: View {
                     .tag(4)
                 
             }
+            
         }
         
         
@@ -61,6 +64,11 @@ struct ContentView: View {
                 welcome = true
             }
         }
+        #if DEBUG
+        .onAppear() {
+            ddd = "https://google.com"
+        }
+        #endif
     }
 }
 

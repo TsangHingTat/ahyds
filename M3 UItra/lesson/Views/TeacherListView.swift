@@ -12,50 +12,52 @@ struct ChatListView: View {
     @State var s = ""
     @State var ss = false
     var body: some View {
-        VStack {
-            Button("設定") {
-                worksheet.toggle()
-            }
-            .padding()
-            
-            Button("離開") {
-                chatConnectionManager.send("stop0234879385")
-                chatConnectionManager.leaveChat()
-            }
-            .padding()
-            
-            //here
-            // chatConnectionManager.messages.displayName
-            // chatConnectionManager.messages.body
+        ScrollView {
             VStack {
-                ForEach(chatConnectionManager.messages) { i in
-                    Color.orange
-                        .frame(width: 300, height: 120)
-                        .cornerRadius(25)
-                        .overlay() {
-                            VStack {
-                                HStack {
-                                    Text("\(i.displayName)")
-                                        .font(.title)
-                                        .bold()
-                                        .padding()
+                Button("設定") {
+                    worksheet.toggle()
+                }
+                .padding()
+                
+                Button("離開") {
+                    chatConnectionManager.send("stop")
+                    chatConnectionManager.leaveChat()
+                }
+                .padding()
+                
+                //here
+                // chatConnectionManager.messages.displayName
+                // chatConnectionManager.messages.body
+                VStack {
+                    ForEach(chatConnectionManager.messages) { i in
+                        Color.orange
+                            .frame(width: 300, height: 120)
+                            .cornerRadius(25)
+                            .overlay() {
+                                VStack {
+                                    HStack {
+                                        Text("\(i.displayName)")
+                                            .font(.title2)
+                                            .bold()
+                                            .padding()
+                                        Spacer()
+                                    }
                                     Spacer()
-                                }
-                                Spacer()
-                                HStack {
-                                    Text("\(DateFormatter.timestampFormatter.string(from: i.time))")
-                                        .font(.title)
-                                        .padding()
-                                    Spacer()
-                                    Text("\(i.body)")
-                                        .font(.title)
-                                        .padding()
+                                    HStack {
+                                        Text("\(DateFormatter.timestampFormatter.string(from: i.time))")
+                                            .font(.title2)
+                                            .padding()
+                                        Spacer()
+                                        Text("\(i.body)")
+                                            .font(.title2)
+                                            .padding()
+                                    }
                                 }
                             }
-                        }
+                    }
                 }
+                //here
             }
-            //here
         }
         .onDisappear() {
             let yo2 = Int(yo) ?? 0
@@ -79,19 +81,32 @@ struct ChatListView: View {
         }
         .sheet(isPresented: $worksheet) {
             List {
-                Text("仰臥起坐")
-                Button(action: {
-                    chatConnectionManager.send("start sport 30324290")
-                    chatConnectionManager.messages.removeLast()
-                }, label: {
-                    Text("開始")
-                })
-                Button(action: {
-                    chatConnectionManager.send("stop sport 30324290")
-                    chatConnectionManager.messages.removeLast()
-                }, label: {
-                    Text("停止")
-                })
+                Section {
+                    Text("仰臥起坐")
+                    Button(action: {
+                        chatConnectionManager.send("start sport sit-up")
+                        chatConnectionManager.messages.removeLast()
+                    }, label: {
+                        Text("開始")
+                    })
+                }
+                Section {
+                    Text("掌上壓")
+                    Button(action: {
+                        chatConnectionManager.send("start sport pushup")
+                        chatConnectionManager.messages.removeLast()
+                    }, label: {
+                        Text("開始")
+                    })
+                }
+                Section {
+                    Button(action: {
+                        chatConnectionManager.send("stop sport")
+                        chatConnectionManager.messages.removeLast()
+                    }, label: {
+                        Text("停止")
+                    })
+                }
                 Section {
                     HStack {
                         Text("duration : ")
@@ -160,9 +175,6 @@ struct ChatListView: View {
                 }
             }
         }
-    }
-    func name(name: String) -> Void {
-        
     }
 }
 

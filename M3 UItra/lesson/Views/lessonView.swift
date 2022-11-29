@@ -10,18 +10,23 @@ import SwiftUI
 struct lessonView: View {
     @State var showbeta: Bool = true
     var body: some View {
-        NavigationView {
-            List {
-                Text("Classroom is still under development, therefore some services may not work as expected and data may not be backward compatible.")
-                    .font(.title2)
-                    .foregroundColor(.red)
-                NavigationLink(destination: JoinSessionView().navigationBarBackButtonHidden(true)) {
-                    Text("Continue")
-                        .foregroundColor(.red)
+        JoinSessionView()
+            .sheet(isPresented: $showbeta) {
+                NavigationView {
+                    List {
+                        Text("Classroom is still under development, therefore some services may not work as expected and data may not be backward compatible.")
+                            .font(.title)
+                            .foregroundColor(.red)
+                    }
+                    .toolbar() {
+                        Button("Continue") {
+                            showbeta.toggle()
+                        }
+                    }
+                    .navigationTitle("Pre-alpha version")
                 }
+                
             }
-            .navigationTitle("Pre-alpha version")
-        }
         
     }
 }

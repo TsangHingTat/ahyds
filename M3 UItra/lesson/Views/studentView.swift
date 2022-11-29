@@ -22,13 +22,26 @@ struct studentView: View {
         }
         
         .fullScreenCover(isPresented: $view) {
-            stuaiView(onoff: $view, title: "仰臥起坐", howmanytimes: $howmanytimes)
+            stuaiView(onoff: $view, title: "\(getdata().getdefaultsdata(type: "mlmodel"))", howmanytimes: $howmanytimes)
         }
         
-        .onReceive(timer) { input in
-            if view != true {
+        .onChange(of: chatConnectionManager.messages, perform: { _ in
+            if view {
                 for i in (0...chatConnectionManager.messages.count-1) {
-                    if chatConnectionManager.messages[i].body == "start sport 30324290" {
+                    if chatConnectionManager.messages[i].body == "stop sport" {
+                        if getdata().getdefaultsdata(type: "mlmodel") == "sit-up" {
+                            chatConnectionManager.send("仰臥起坐 X \("\(getdata().getdefaultsdataint(type: "howmanytimes?"))")")
+                        } else if getdata().getdefaultsdata(type: "mlmodel") == "pushup" {
+                            chatConnectionManager.send("掌上壓 X \("\(getdata().getdefaultsdataint(type: "howmanytimes?"))")")
+                        }
+                        chatConnectionManager.messages.remove(at: i)
+                        view = false
+                        howmanytimes = "0"
+                    }
+                }
+            } else {
+                for i in (0...chatConnectionManager.messages.count-1) {
+                    if chatConnectionManager.messages[i].body == "start sport sit-up" {
                         getdata().savedefaultsdata(type: "mlmodel", data: "sit-up")
                         chatConnectionManager.messages.remove(at: i)
                         view = true
@@ -36,24 +49,22 @@ struct studentView: View {
                     }
                 }
                 for i in (0...chatConnectionManager.messages.count-1) {
-                    if chatConnectionManager.messages[i].body == "stop0234879385" {
-                        chatConnectionManager.leaveChat()
+                    if chatConnectionManager.messages[i].body == "start sport pushup" {
+                        getdata().savedefaultsdata(type: "mlmodel", data: "pushup")
                         chatConnectionManager.messages.remove(at: i)
                         view = true
                         howmanytimes = "0"
                     }
                 }
-            } else {
-                for i in (0...chatConnectionManager.messages.count-1) {
-                    if chatConnectionManager.messages[i].body == "stop sport 30324290" {
-                        chatConnectionManager.messages.remove(at: i)
-                        chatConnectionManager.send("仰臥起坐 X \("\(getdata().getdefaultsdataint(type: "howmanytimes?"))")")
-                        view = false
-                        howmanytimes = "0"
-                    }
+            }
+            for i in (0...chatConnectionManager.messages.count-1) {
+                if chatConnectionManager.messages[i].body == "stop" {
+                    chatConnectionManager.messages.remove(at: i)
+                    view = false
+                    chatConnectionManager.leaveChat()
                 }
             }
-        }
+        })
         
     }
 }

@@ -16,9 +16,9 @@ struct todayView: View {
     @State var refresh = false
     var body: some View {
         // MARK: Today
-        if istoday == true {
+        if istoday {
             ZStack {
-                if refresh == true {
+                if refresh {
                     refreshhelper(refresh: $refresh)
                 } else {
                     dateView(date: getday(), month: getmonth(), fullyear: getyear(), today: true, home: home)

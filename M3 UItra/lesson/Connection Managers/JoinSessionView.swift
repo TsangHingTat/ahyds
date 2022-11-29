@@ -8,7 +8,7 @@ struct JoinSessionView: View {
   var body: some View {
       VStack {
           VStack {
-              if refresh == true {
+              if refresh {
                   refreshhelper(refresh: $refresh)
               } else {
                   if chatConnectionManager.connectedToChat {

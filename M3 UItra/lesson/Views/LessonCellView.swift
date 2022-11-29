@@ -11,8 +11,8 @@ struct ChatView: View {
   let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
   var body: some View {
     Group {
-        if chatConnectionManager.isHosting == true {
-            if connected == true {
+        if chatConnectionManager.isHosting {
+            if connected {
                 studentView(leave: $leave)
                     .environmentObject(chatConnectionManager)
             } else {
@@ -31,7 +31,7 @@ struct ChatView: View {
                     }
                 }
             }
-            if leave == true {
+            if leave {
                 Text("loading...")
                     .onAppear() {
                         chatConnectionManager.leaveChat()
@@ -43,12 +43,17 @@ struct ChatView: View {
             VStack {
               ChatListView()
                 .environmentObject(chatConnectionManager)
+                .onAppear() {
+                    chatConnectionManager.removeall()
+                }
             }
             .navigationBarTitle("課堂")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("離開") {
+                        chatConnectionManager.send("stop")
                         chatConnectionManager.leaveChat()
+                        
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {

@@ -56,7 +56,7 @@ struct barchartView: View {
                                         Spacer()
                                     }
                                 }
-                                if text == true {
+                                if text {
                                     VStack {
                                         Spacer()
                                         Text("今")
