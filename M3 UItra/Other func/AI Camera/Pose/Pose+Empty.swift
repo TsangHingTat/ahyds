@@ -11,11 +11,11 @@ extension Pose {
                                             dataType: .double) else {
             fatalError("Creating a multiarray with \(shape) shouldn't fail.")
         }
-
+        
         guard let pointer = try? UnsafeMutableBufferPointer<Double>(array) else {
             fatalError("Unable to initialize multiarray with zeros.")
         }
-
+        
         pointer.initialize(repeating: 0.0)
         return array
     }

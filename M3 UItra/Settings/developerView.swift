@@ -19,7 +19,7 @@ struct developerView: View {
     @State var caltoday = Float(0)
     @State var reward: Int = 0
     @State var textedit = Float(0)
-    @State var demo = false
+    @State var demo: Bool = false
     @State var text = ""
     @State var textnum = ""
     @State var gettext = ""
@@ -159,7 +159,7 @@ struct developerView: View {
             username = defaults.string(forKey: "username") ?? "USERNAME"
             notifyon = defaults.bool(forKey: "notifyon")
             health = defaults.float(forKey: "health")
-            firstopen = defaults.string(forKey: "firstopen") ?? "ERROR"
+            firstopen = defaults.string(forKey: "firstopen1.1") ?? "ERROR"
             showwelcome = defaults.bool(forKey: "showwelcome")
             caltoday = defaults.float(forKey: "caltoday")
             reward = defaults.integer(forKey: "reward")
@@ -173,7 +173,7 @@ struct developerView: View {
             username = defaults.string(forKey: "username") ?? "USERNAME"
             notifyon = defaults.bool(forKey: "notifyon")
             health = defaults.float(forKey: "health")
-            firstopen = defaults.string(forKey: "firstopen") ?? "ERROR"
+            firstopen = defaults.string(forKey: "firstopen1.1") ?? "ERROR"
             showwelcome = defaults.bool(forKey: "showwelcome")
             caltoday = defaults.float(forKey: "caltoday")
             reward = defaults.integer(forKey: "reward")
@@ -190,7 +190,7 @@ struct developerView: View {
                 }
                 defaults.set(Int(3), forKey: "reward")
                 defaults.set(String("John Appleseed"), forKey: "username")
-                defaults.set(String(""), forKey: "firstopen")
+                defaults.set(String(""), forKey: "firstopen1.1")
                 defaults.set(Bool(true), forKey: "showwelcome")
                 defaults.set(Bool(false), forKey: "notifyon")
                 for i in 0...366 {

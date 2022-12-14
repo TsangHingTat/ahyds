@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct lessonView: View {
-    @State var showbeta: Bool = true
+    @State var showbeta: Bool = false
     var body: some View {
-        JoinSessionView()
+        NavigationView {
+            JoinSessionView()
+        }.navigationViewStyle(StackNavigationViewStyle())
             .sheet(isPresented: $showbeta) {
                 NavigationView {
                     List {

@@ -60,7 +60,7 @@ struct ContentView: View {
             .interactiveDismissDisabled(true)
         }
         .onAppear() {
-            if getdata().getdefaultsdata(type: "firstopen") != UIApplication.appVersion {
+            if getdata().getdefaultsdata(type: "firstopen1.1") != UIApplication.appVersion {
                 welcome = true
             }
         }

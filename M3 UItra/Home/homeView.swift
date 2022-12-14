@@ -221,7 +221,7 @@ struct homeView: View {
                         .offset(x: proxy.size.width)
                         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                     }
-                    .navigationBarTitle("紀錄")
+                    .navigationBarTitle("記錄")
                 }
             }
             .background() {
@@ -347,4 +347,3 @@ struct homeView_Previews: PreviewProvider {
         homeView()
     }
 }
-

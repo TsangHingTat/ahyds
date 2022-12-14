@@ -557,7 +557,7 @@ struct dateView: View {
                                         VStack {
                                             if isnil() {
                                                 HStack {
-                                                    Text("未完成任何活動")
+                                                    Text("\(NSLocalizedString("未完成任何活動", comment: "未完成任何活動"))")
                                                         .font(.largeTitle)
                                                         .foregroundColor(.black)
                                                     

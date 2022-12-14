@@ -84,17 +84,18 @@ struct settingsView: View {
                     
                     
                 }
-                Section {
-                    NavigationLink(destination: supportView().navigationBarTitle("支援")) {
-                        HStack {
-                            Image(systemName: "questionmark.circle")
-                            Text("支援")
-                            Spacer()
-                        }
-                    }
-                    
-                    
-                }
+//                Section {
+//                    NavigationLink(destination: supportView().navigationBarTitle("支援")) {
+//                        HStack {
+//                            Image(systemName: "questionmark.circle")
+//                            Text("支援")
+//                            Spacer()
+//                        }
+//                    }
+//                    
+//                    
+//                }
+                
                 Section {
                     Button(action: {
                         if developermode == 0 {
@@ -123,6 +124,11 @@ struct settingsView: View {
                     
                     
                 }
+                Section {
+                    NavigationLink(destination: WebView(url: URL(string: "https://docs.google.com/forms/d/e/1FAIpQLSe6Z_yDtXuK-ARoWycvXWmWZyBPG0-Va5ajDeEgy6gMlLAlGw/viewform?usp=sf_link")!).navigationBarTitleDisplayMode(.inline)) {
+                        Text("建議反饋")
+                    }
+                }
                 
 
                 
@@ -149,6 +155,7 @@ struct settingsView: View {
                         }
                     })
                 }
+                
                 
                 
             }
@@ -186,7 +193,7 @@ struct settingsView: View {
                     defaults.removeObject(forKey: key)
                 }
                 refresh = true
-                exit(0)
+                exit(-1)
                 
                 
             }
@@ -221,6 +228,12 @@ struct infoView: View {
                     Spacer()
                 }
                     
+            }
+            Section {
+                Section {
+                    Text("Copyright © 2022 TsangHingTat")
+                    Text("Copyright © 2022 Tse Pok Fun")
+                }
             }
         }
         .navigationTitle("版本資訊")

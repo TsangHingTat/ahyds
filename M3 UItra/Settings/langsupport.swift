@@ -48,7 +48,9 @@ struct langView: View {
         .alert("退出此App以保存更改", isPresented: $quit, actions: {
             Button("退出") {
                 exit(0)
+                
             }
         })
     }
 }
+

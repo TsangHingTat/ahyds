@@ -112,5 +112,14 @@
 "體重" = "weight";
 "時間" = "time";
 "次數" = "times";
+"記錄" = "Record";
+"已完成:" = "Completed:";
+"未完成任何活動" = "No activity completed";
+"開始使用" = "Get Started";
+"繼續" = "Continue";
+"離開" = "Leave";
+"學生" = "Students";
+"分鐘: " = "Minutes: ";
+"秒: " = "Seconds: ";
 
 
