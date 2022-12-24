@@ -137,7 +137,7 @@ time 格式必須為 __String__: “yyyy-MM-dd HH:mm:ss”
 ```swift
 import Foundation
 notification(title: "title", subtitle: "hi")
-notificationwithtime(title: "title", subtitle: "subtitle", time: "2022-12-247 02:22:00")
+notificationwithtime(title: "title", subtitle: "subtitle", time: "2022-12-24 02:22:00")
 ```
 
 
