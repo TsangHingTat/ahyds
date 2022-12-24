@@ -127,17 +127,11 @@ print(getdata().getdata(date: "2022-08-28", datanum: 1))
 ```swift
 notification(title: String, subtitle: String) -> Void 
 ```
-### 排程：
-```swift
-notificationwithtime(title: String, subtitle: String, time: String) -> Void 
-```
-time 格式必須為 __String__: “yyyy-MM-dd HH:mm:ss”
 
 ### 範例：
 ```swift
 import Foundation
 notification(title: "title", subtitle: "hi")
-notificationwithtime(title: "title", subtitle: "subtitle", time: "2022-12-24 02:22:00")
 ```
 
 
