@@ -178,69 +178,37 @@ ___
 
 # 支援的裝置:
 ## iPhone
-- iPhone 14 Pro Max
-- iPhone 14 Pro
-- iPhone 14 Plus
-- iPhone 14 
-- iPhone 13 Pro Max
-- iPhone 13 Pro
-- iPhone 13 
-- iPhone 13 mini 
-- iPhone 12 Pro Max
-- iPhone 12 Pro
-- iPhone 12 
-- iPhone 12 mini 
-- iPhone 11 Pro Max 
-- iPhone 11 Pro
-- iPhone 11
-- iPhone XS Max
-- iPhone XS
-- iPhone XR
-- iPhone X
-- iPhone 8 Plus
-- iPhone 8
-- iPhone 7 Plus
-- iPhone 7
-- iPhone SE (3nd Generation)
-- iPhone SE (2nd Generation)
-- iPhone SE
-- iPhone 6s Plus
-- iPhone 6s
-- iPod touch (7th generation)
+- iPhone Pro Max (11 and newer)
+- iPhone Pro (11 and newer)
+- iPhone (11 and newer)
+- iPhone mini (12 and newer)
+- iPhone SE (2nd generation and newer)
+- iPhone X & XR
+- iPhone XS & XS Max
+- iPhone 8 & 8 Plus
 
 ## iPad
-- iPad Pro 6th generation
-- iPad Pro 5th generation
-- iPad Pro 4th generation
-- iPad Pro 3rd generation
-- iPad Pro 2nd generation
-- iPad Pro 1st generation
-- iPad 10th generation
-- iPad 9th generation
-- iPad 8th generation
-- iPad 7th generation
-- iPad 6th generation
-- iPad 5th generation
-- iPad mini 6th generation
-- iPad mini 5th generation
-- iPad mini 4
-- iPad Air 5th generation
-- iPad Air 4th generation
-- iPad Air 3rd generation
-- iPad Air 2
+- iPad mini (6th generation)
+- iPad (10th generation)
+- iPad Air (4th generation)
+- iPad Air (5th generation)
+- iPad Pro 11-inch (1st, 2nd, 3rd, 4th, and 5th generations)
+- iPad Pro 12.9-inch (2nd, 3rd, 4th, and 5th generations)
+- iPad Pro 10.5-inch
+- iPad (8th generation)
 
 ## Mac
-- MacBook Air ( 2020 )
-- MacBook Pro ( 13 吋 2020 )
-- Mac mini ( 2020 )
-- iMac ( 24 吋 2021 )
-- MacBook Pro ( 14寸 2021 )
-- MacBook Pro ( 16寸 2021 )
-- Mac Studio ( 2022 )
-- MacBook Air ( 2022 )
-- MacBook Pro ( 13 吋 2022 )
+- iMac (2017 and later)
+- iMac Pro (2017 and later)
+- MacBook (2017 and later)
+- MacBook Air (2018 and later)
+- MacBook Pro (2017 and later)
+- Mac Mini (2018 and later)
+- Mac Pro (2019 and later)
+- Mac Studio (2022)
 
 # 許可證:
-MIT
 
-Copyright (c) 2021 - 2022, M2-Ultra
+
+Copyright (c) 2021 - 2023, M2-Ultra
+- 
