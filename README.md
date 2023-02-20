@@ -208,7 +208,7 @@ ___
 - Mac Studio (2022)
 
 # 許可證:
-
+Apache License 2.0
 
 Copyright (c) 2021 - 2023, M2-Ultra
 - 
