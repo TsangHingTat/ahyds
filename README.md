@@ -192,6 +192,7 @@ ___
 ## iPad
 - iPad mini (6th generation)
 - iPad (10th generation)
+- iPad (9th generation)
 - iPad Air (4th generation)
 - iPad Air (5th generation)
 - iPad Pro 11-inch (1st, 2nd, 3rd, 4th, and 5th generations)
