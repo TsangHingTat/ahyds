@@ -215,7 +215,8 @@ ___
 <a href="https://github.com/TsangHingTat/ahyds/blob/main/LICENSE.md">Apache License</a>
 
 
+
 Copyright © 2021 - 2022, M2-Ultra
 
-Copyright © 2021 - 2023, TsangHingTat
+Copyright © 2023, TsangHingTat
 
