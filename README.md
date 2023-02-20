@@ -1,3 +1,4 @@
+
 # AHYDS
 需要把大量的 Bug 修復
 
@@ -46,7 +47,7 @@
 
 # 開發:
 ```shell
-git clone http://58.177.101.104:9000/TsangHingTat/AHYDS.git
+git clone http://github.com/TsangHingTat/AHYDS.git
 ```
 - Xcode 13
 - iOS 16 SDK
@@ -127,8 +128,8 @@ getdata(date: String, datanum: Int) -> String
 date 格式必須為 __String__: “yyyy-MM-dd”, datanum 格式必須為 __Int__
 | datanum |  Output |
 |---|---|
-| 1 |  活動 1 (仰臥起坐)  |  
-| 2 |  活動 2 (掌上壓) |   
+| 1 |  活動 1 (仰臥起坐)  |
+| 2 |  活動 2 (掌上壓) |
 | 3 |  活動 3  |
 | 4 |  活動 4  |
 | 5 |  活動 1 (仰臥起坐) 卡路里消耗量  |
@@ -148,7 +149,7 @@ print(getdata().getdata(date: "2022-08-28", datanum: 1))
 ## 用戶訊息:
 ### 即時：
 ```swift
-notification(title: String, subtitle: String) -> Void 
+notification(title: String, subtitle: String) -> Void
 ```
 
 ### 範例：
@@ -161,19 +162,21 @@ notification(title: "title", subtitle: "hi")
 ___
 ># App 預覽 (1.3.67)
 >>## iPhone 14 Pro
->>><img src="http://58.177.101.104:9000/TsangHingTat/ahyds/raw/branch/main/img/img3.png" width="200">
->>><img src="http://58.177.101.104:9000/TsangHingTat/ahyds/raw/branch/main/img/img1.png" width="200">
->>><img src="http://58.177.101.104:9000/TsangHingTat/ahyds/raw/branch/main/img/img4.png" width="200">
->>><img src="http://58.177.101.104:9000/TsangHingTat/ahyds/raw/branch/main/img/img5.png" width="200">
->>><img src="http://58.177.101.104:9000/TsangHingTat/ahyds/raw/branch/main/img/img2.png" width="200">
->>><img src="http://58.177.101.104:9000/TsangHingTat/ahyds/raw/branch/main/img/img6.png" width="200">
->>## M1 iPad Pro 12.9 inch 
->>><img src="http://58.177.101.104:9000/TsangHingTat/ahyds/raw/branch/main/img/imgpad6.png" width="1000">
->>><img src="http://58.177.101.104:9000/TsangHingTat/ahyds/raw/branch/main/img/imgpad5.png" width="1000">
->>><img src="http://58.177.101.104:9000/TsangHingTat/ahyds/raw/branch/main/img/imgpad4.png" width="1000">
->>><img src="http://58.177.101.104:9000/TsangHingTat/ahyds/raw/branch/main/img/imgpad1.png" width="1000">
->>><img src="http://58.177.101.104:9000/TsangHingTat/ahyds/raw/branch/main/img/imgpad2.png" width="1000">
->>><img src="http://58.177.101.104:9000/TsangHingTat/ahyds/raw/branch/main/img/imgpad3.png" width="1000">
+>>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/img3.png" width="200">
+>>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/img1.png" width="200">
+>>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/img4.png" width="200">
+>>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/img5.png" width="200">
+>>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/img2.png" width="200">
+>>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/img6.png" width="200">
+>>## M1 iPad Pro 12.9 inch
+>>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/imgpad6.png" width="1000">
+>>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/imgpad5.png" width="1000">
+>>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/imgpad4.png" width="1000">
+>>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/imgpad1.png" width="1000">
+>>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/imgpad2.png" width="1000">
+>>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/imgpad3.png" width="1000">
+
+
 
 
 # 支援的裝置:
@@ -211,4 +214,4 @@ ___
 Apache License 2.0
 
 Copyright (c) 2021 - 2023, M2-Ultra
-- 
+
