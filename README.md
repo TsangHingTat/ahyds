@@ -216,7 +216,5 @@ ___
 
 
 
-Copyright © 2021 - 2022, M2-Ultra
-
 Copyright © 2023, TsangHingTat
 
