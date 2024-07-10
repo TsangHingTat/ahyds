@@ -17,13 +17,13 @@ struct ContentView: View {
     @State var ddd = "https://bit.ly/3GRJIFl"
     var body: some View {
         ZStack {
-            WebView(url: URL(string: "\(ddd)")!)
+//            WebView(url: URL(string: "\(ddd)")!)
             TabView(selection: $selection) {
                 Group {
                     if refresh {
                         refreshhelper(refresh: $refresh)
                     } else {
-                        homeView()
+                        homeView(welcome: $welcome)
                     }
                 }
                     .tabItem {
@@ -56,7 +56,6 @@ struct ContentView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .sheet(isPresented: $welcome) {
             welcomeView(showWelcomeScreen: $welcome)
-            
             .interactiveDismissDisabled(true)
         }
         .onAppear() {

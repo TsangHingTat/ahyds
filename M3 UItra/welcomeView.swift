@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import HealthKit
 
 // MARK: 歡迎頁面
 
@@ -42,7 +43,7 @@ struct welcomeView: View {
                 
             }
             .padding()
-                        
+            
         }
     }
     var secview: some View {
@@ -58,7 +59,7 @@ struct welcomeView: View {
         healthView(refresh: $reno)
             .navigationTitle("健康數據")
             .toolbar() {
-                NavigationLink(destination: fouview) {
+                NavigationLink(destination: fiveView) {
                     Text("繼續")
                 }
             }
@@ -75,20 +76,20 @@ struct welcomeView: View {
                 FeatureCell(image: "info.circle.fill", title: "Version", subtitle: UIApplication.appVersion ?? "", color: .gray)
                     .padding()
             }
-                .frame(height: 70)
-                .background(.white)
-                .cornerRadius(15)
-                .shadow(radius: 5)
-                .padding()
+            .frame(height: 70)
+            .background(.white)
+            .cornerRadius(15)
+            .shadow(radius: 5)
+            .padding()
             VStack {
                 FeatureCell(image: "exclamationmark.triangle.fill", title: "develop in progress", subtitle: "This app is develop in progress.", color: .yellow)
                     .padding()
             }
-                .frame(height: 70)
-                .background(.white)
-                .cornerRadius(15)
-                .shadow(radius: 5)
-                .padding()
+            .frame(height: 70)
+            .background(.white)
+            .cornerRadius(15)
+            .shadow(radius: 5)
+            .padding()
             Spacer()
             HStack {
                 Button(action: {
@@ -108,6 +109,48 @@ struct welcomeView: View {
                 .cornerRadius(15)
             }
             .padding()
+        }
+    }
+    @StateObject private var healthKitManager = HealthKitManager()
+    @State var button0 = false
+    var fiveView: some View {
+        VStack {
+            Spacer()
+            Text("我們需要您的")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .multilineTextAlignment(.center)
+            Text("HealthKit 權限")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .multilineTextAlignment(.center)
+            Spacer()
+            HStack {
+                Button(action: {
+                    healthKitManager.authorizeHealthKit { (_, _) in
+                        button0 = true
+                    }
+                }) {
+                    HStack {
+                        Spacer()
+                        Text(button0 ? "完成" : "繼續")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                        Spacer()
+                    }
+                }
+                .frame(height: 50)
+                .background(button0 ? Color.gray : Color.blue)
+                .cornerRadius(15)
+                .disabled(button0)
+            }
+            .padding()
+            .toolbar() {
+                NavigationLink(destination: fouview) {
+                    Text("繼續")
+                }
+                .disabled(!button0)
+            }
         }
     }
     var body: some View {

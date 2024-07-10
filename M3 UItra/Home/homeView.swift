@@ -11,6 +11,7 @@ import Combine
 struct homeView: View {
     let defaults = UserDefaults.standard
     let timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
+    @Binding var welcome: Bool
     @State var showwelcome = false
     @State var username = ""
     @State var navtitle = NSLocalizedString("成就", comment: "成就")
@@ -52,9 +53,18 @@ struct homeView: View {
                             Text("請求跑步速度中...")
                         }
                     }
+                    .onChange(of: welcome) { _ in
+                        healthKitManager.fetchRunningSpeed { (speed, error) in
+                            if let speed = speed {
+                                runningSpeed = speed
+                            } else if let error = error {
+                                errorMessage = error.localizedDescription
+                            }
+                        }
+                    }
                     .onAppear {
-                        healthKitManager.authorizeHealthKit { (authorized, error) in
-                            if authorized {
+//                        healthKitManager.authorizeHealthKit { (authorized, error) in
+//                            if authorized {
                                 healthKitManager.fetchRunningSpeed { (speed, error) in
                                     if let speed = speed {
                                         runningSpeed = speed
@@ -62,10 +72,10 @@ struct homeView: View {
                                         errorMessage = error.localizedDescription
                                     }
                                 }
-                            } else {
-                                errorMessage = error?.localizedDescription ?? "未獲得 HealthKit 授權"
-                            }
-                        }
+//                            } else {
+//                                errorMessage = error?.localizedDescription ?? "未獲得 HealthKit 授權"
+//                            }
+//                        }
                     }
                     VStack {
                         if reward != 0 {
@@ -371,6 +381,6 @@ struct homeView: View {
 
 struct homeView_Previews: PreviewProvider {
     static var previews: some View {
-        homeView()
+        homeView(welcome: .constant(false))
     }
 }
