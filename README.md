@@ -167,15 +167,6 @@ ___
 >>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/img5.png" width="200">
 >>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/img2.png" width="200">
 >>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/img6.png" width="200">
->>## M1 iPad Pro 12.9 inch
->>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/imgpad6.png" width="1000">
->>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/imgpad5.png" width="1000">
->>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/imgpad4.png" width="1000">
->>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/imgpad1.png" width="1000">
->>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/imgpad2.png" width="1000">
->>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/imgpad3.png" width="1000">
-
-
 
 
 # 支援的裝置:
