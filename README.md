@@ -159,8 +159,8 @@ getdata().notification(title: "title", subtitle: "hi")
 
 
 ___
-># App 預覽 (1.3.67)
->>## iPhone 14 Pro
+># App 預覽 (2.0.3)
+>>## iPhone 15
 >>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/img3.png" width="200">
 >>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/img1.png" width="200">
 >>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/img4.png" width="200">
@@ -180,35 +180,37 @@ ___
 
 # 支援的裝置:
 ## iPhone
-- iPhone Pro Max (11 and newer)
-- iPhone Pro (11 and newer)
-- iPhone (11 and newer)
-- iPhone mini (12 and newer)
-- iPhone SE (2nd generation and newer)
-- iPhone X & XR
-- iPhone XS & XS Max
-- iPhone 8 & 8 Plus
+- iPhone 14
+- iPhone 14 Plus
+- iPhone 14 Pro
+- iPhone 14 Pro Max
+- iPhone 13
+- iPhone 13 mini
+- iPhone 13 Pro
+- iPhone 13 Pro Max
+- iPhone 12
+- iPhone 12 mini
+- iPhone 12 Pro
+- iPhone 12 Pro Max
+- iPhone 11
+- iPhone 11 Pro
+- iPhone 11 Pro Max
+- iPhone XS
+- iPhone XS Max
+- iPhone XR
+- iPhone X
+- iPhone 8
+- iPhone 8 Plus
+- iPhone SE (3rd generation)
+- iPhone SE (2nd generation)
 
 ## iPad
 - iPad mini (6th generation)
-- iPad (10th generation)
-- iPad (9th generation)
-- iPad Air (4th generation)
-- iPad Air (5th generation)
+- iPad (6th generation and newer)
+- iPad Air (4th generation and newer)
 - iPad Pro 11-inch (1st, 2nd, 3rd, 4th, and 5th generations)
 - iPad Pro 12.9-inch (2nd, 3rd, 4th, and 5th generations)
-- iPad Pro 10.5-inch
-- iPad (8th generation)
-
-## Mac
-- iMac (2017 and later)
-- iMac Pro (2017 and later)
-- MacBook (2017 and later)
-- MacBook Air (2018 and later)
-- MacBook Pro (2017 and later)
-- Mac Mini (2018 and later)
-- Mac Pro (2019 and later)
-- Mac Studio (2022)
+- Pad Pro 10.5-inch
 
 # 許可證:
 
