@@ -35,30 +35,57 @@ struct homeView: View {
     
     @State var viewnew = ["Sliver", "Gold", "Copper", "Aluminium", "Aluminium"]
     
+    @StateObject private var healthKitManager = HealthKitManager()
+    @State private var runningSpeed: Double?
+    @State private var errorMessage: String?
     
     var body: some View {
         NavigationView {
             ScrollView {
-                 VStack {
-                     VStack {
-                         if reward != 0 {
-                             ScrollView(.horizontal, showsIndicators: false) {
-                                 HStack(alignment: .top, spacing: 0) {
-                                     ForEach((0...reward), id: \.self) { i in
-                                         ViewView(name: viewnew[i], title: viewnew[i])
-                                     }
-                                 }
-                                 
-                             }
-                             .padding(.horizontal)
-                         } else {
-                             Text("獎勵將顯示在這裡...")
-                                 .font(.system(size: 30))
-                                 .frame(height: 120)
-                                 .padding(.horizontal)
-                         }
-                         
-                     }
+                VStack {
+                    VStack {
+                        if let speed = runningSpeed {
+                            Text("最後一次跑步速度：\(speed) 米/秒")
+                        } else if let error = errorMessage {
+                            Text("錯誤：\(error)")
+                        } else {
+                            Text("請求跑步速度中...")
+                        }
+                    }
+                    .onAppear {
+                        healthKitManager.authorizeHealthKit { (authorized, error) in
+                            if authorized {
+                                healthKitManager.fetchRunningSpeed { (speed, error) in
+                                    if let speed = speed {
+                                        runningSpeed = speed
+                                    } else if let error = error {
+                                        errorMessage = error.localizedDescription
+                                    }
+                                }
+                            } else {
+                                errorMessage = error?.localizedDescription ?? "未獲得 HealthKit 授權"
+                            }
+                        }
+                    }
+                    VStack {
+                        if reward != 0 {
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack(alignment: .top, spacing: 0) {
+                                    ForEach((0...reward), id: \.self) { i in
+                                        ViewView(name: viewnew[i], title: viewnew[i])
+                                    }
+                                }
+                                
+                            }
+                            .padding(.horizontal)
+                        } else {
+                            Text("獎勵將顯示在這裡...")
+                                .font(.system(size: 30))
+                                .frame(height: 120)
+                                .padding(.horizontal)
+                        }
+                        
+                    }
                     HStack {
                         VStack {
                             HStack {
@@ -170,7 +197,7 @@ struct homeView: View {
                     }
                     .frame(maxWidth: 500)
                 }
-
+                
             }
             .sheet(isPresented: $popupViewShow) {
                 NavigationView {
@@ -270,7 +297,7 @@ struct homeView: View {
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
-//        .frame(maxWidth: 700)
+        //        .frame(maxWidth: 700)
     }
     // MARK: 刷新數據
     func loadcaldata() -> Float {
@@ -317,7 +344,7 @@ struct homeView: View {
         let numberFloatValue = number?.floatValue ?? 0
         return numberFloatValue
     }
-
+    
     func printnow(message: String) {
         let today = Date()
         let hours   = (Calendar.current.component(.hour, from: today))
@@ -336,7 +363,7 @@ struct homeView: View {
         let datedatanow = "\(formatter1.string(from: tday))"
         return datedatanow
     }
-
+    
     
 }
 

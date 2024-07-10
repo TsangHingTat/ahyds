@@ -78,6 +78,7 @@
 		79AB308928ACEE200001C091 /* developerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AB308828ACEE200001C091 /* developerView.swift */; };
 		79AB308B28ACF6D90001C091 /* rewardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AB308A28ACF6D90001C091 /* rewardView.swift */; };
 		79B1E75A291F80010024FB42 /* ExerciseClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 79B1E759291F80010024FB42 /* ExerciseClassifier.mlmodel */; };
+		79BFE2E22C3EF5FB00F29578 /* get_health_datas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BFE2E12C3EF5FB00F29578 /* get_health_datas.swift */; };
 		79C8582328AA378500A37B5E /* dateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C8582228AA378500A37B5E /* dateView.swift */; };
 		79C8582528AA37C200A37B5E /* homeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C8582428AA37C200A37B5E /* homeView.swift */; };
 		79C8582928AA380B00A37B5E /* settingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C8582828AA380B00A37B5E /* settingsView.swift */; };
@@ -198,6 +199,7 @@
 		79AB308828ACEE200001C091 /* developerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = developerView.swift; sourceTree = "<group>"; };
 		79AB308A28ACF6D90001C091 /* rewardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rewardView.swift; sourceTree = "<group>"; };
 		79B1E759291F80010024FB42 /* ExerciseClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ExerciseClassifier.mlmodel; sourceTree = "<group>"; };
+		79BFE2E12C3EF5FB00F29578 /* get_health_datas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = get_health_datas.swift; sourceTree = "<group>"; };
 		79C8582228AA378500A37B5E /* dateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateView.swift; sourceTree = "<group>"; };
 		79C8582428AA37C200A37B5E /* homeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeView.swift; sourceTree = "<group>"; };
 		79C8582828AA380B00A37B5E /* settingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsView.swift; sourceTree = "<group>"; };
@@ -464,6 +466,7 @@
 				79C8582428AA37C200A37B5E /* homeView.swift */,
 				79AB308A28ACF6D90001C091 /* rewardView.swift */,
 				79FFB77528D436CE00F1FBDC /* waterView.swift */,
+				79BFE2E12C3EF5FB00F29578 /* get_health_datas.swift */,
 				79EF93EF2916DB3D00AE7F45 /* Ring and Chart */,
 			);
 			path = Home;
@@ -627,6 +630,7 @@
 				4977E77B2915353F00E08057 /* Counter2type.swift in Sources */,
 				796F199029150ED8002D0652 /* AVCaptureDeviceInput+Camera.swift in Sources */,
 				792AE62B28AF379B0002F750 /* RingView.swift in Sources */,
+				79BFE2E22C3EF5FB00F29578 /* get_health_datas.swift in Sources */,
 				79996AF528AE19AD000E1FF0 /* decode json.swift in Sources */,
 				7938CFCF2928B92400CF2906 /* health.swift in Sources */,
 				796F199629150ED8002D0652 /* Pose+Empty.swift in Sources */,
@@ -847,6 +851,9 @@
 				INFOPLIST_FILE = "M3-UItra-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "AI教你做運動";
 				INFOPLIST_KEY_NSCameraUsageDescription = Camera;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "We need to access HealthKit to know your datas.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires access to Health data to display your running speed.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "We need to access HealthKit to know your datas.";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Data transfer";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -887,6 +894,9 @@
 				INFOPLIST_FILE = "M3-UItra-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "AI教你做運動";
 				INFOPLIST_KEY_NSCameraUsageDescription = Camera;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "We need to access HealthKit to know your datas.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires access to Health data to display your running speed.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "We need to access HealthKit to know your datas.";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Data transfer";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
