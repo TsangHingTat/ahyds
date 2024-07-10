@@ -82,9 +82,9 @@ struct developerView: View {
                 } else {
                     Text("Output: (nil : N/A)")
                 }
-//                NavigationLink(destination: WebView(url: URL(string: "http://58.177.101.104:9000/TsangHingTat/ahyds/src/branch/main/README.md")!).navigationTitle("API Help").navigationBarTitleDisplayMode(.inline)) {
-//                    Text("API Help")
-//                }
+                NavigationLink(destination: WebView(url: URL(string: "https://github.com/TsangHingTat/ahyds/blob/main/README.md#%E6%95%B8%E6%93%9A%E9%96%B1%E8%AE%80%E5%8F%8A%E7%B7%A8%E8%BC%AF-api")!).navigationTitle("API Help").navigationBarTitleDisplayMode(.inline)) {
+                    Text("API Help")
+                }
             }
             Section(header: Text("sent message api (beta)")) {
                 TextField("title", text: $title)
@@ -95,37 +95,37 @@ struct developerView: View {
                     }
                 }
             }
-//            Section(header: Text("Git")) {
-//                NavigationLink(destination: WebView(url: URL(string: "http://58.177.101.104:9000/TsangHingTat/ahyds")!).navigationTitle("Git").navigationBarTitleDisplayMode(.inline)) {
-//                    Text("Git")
-//                }
-//                
-//            }
-//            Section(header: Text("Bug")) {
-//                NavigationLink(destination: WebView(url: URL(string: "http://58.177.101.104:9000/TsangHingTat/ahyds/issues")!).navigationTitle("Bug").navigationBarTitleDisplayMode(.inline)) {
-//                    HStack {
-//                        Image(systemName: "exclamationmark.triangle.fill")
-//                            .resizable()
-//                            .foregroundColor(.red)
-//                            .padding(5)
-//                            .frame(width: 50, height: 50)
-//                            
-//                        VStack {
-//                            HStack {
-//                                Text("已知的Bug")
-//                                    .font(.title3)
-//                                Spacer()
-//                            }
-//                            HStack {
-//                                Text("按此查看已知的Bug")
-//                                    .font(.subheadline)
-//                                    .foregroundColor(.gray)
-//                                Spacer()
-//                            }
-//                        }
-//                    }
-//                }
-//            }
+            Section(header: Text("Git")) {
+                NavigationLink(destination: WebView(url: URL(string: "https://github.com/TsangHingTat/ahyds")!).navigationTitle("Git").navigationBarTitleDisplayMode(.inline)) {
+                    Text("Git")
+                }
+                
+            }
+            Section(header: Text("Bug")) {
+                NavigationLink(destination: WebView(url: URL(string: "https://github.com/TsangHingTat/ahyds/issues")!).navigationTitle("Bug").navigationBarTitleDisplayMode(.inline)) {
+                    HStack {
+                        Image(systemName: "exclamationmark.triangle.fill")
+                            .resizable()
+                            .foregroundColor(.red)
+                            .padding(5)
+                            .frame(width: 50, height: 50)
+                            
+                        VStack {
+                            HStack {
+                                Text("已知的Bug")
+                                    .font(.title3)
+                                Spacer()
+                            }
+                            HStack {
+                                Text("按此查看已知的Bug")
+                                    .font(.subheadline)
+                                    .foregroundColor(.gray)
+                                Spacer()
+                            }
+                        }
+                    }
+                }
+            }
             Section(header: Text("TEST")) {
                 HStack {
                     Spacer()
