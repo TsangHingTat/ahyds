@@ -82,7 +82,7 @@ struct developerView: View {
                 } else {
                     Text("Output: (nil : N/A)")
                 }
-                NavigationLink(destination: WebView(url: URL(string: "https://github.com/TsangHingTat/ahyds/blob/main/README.md#%E6%95%B8%E6%93%9A%E9%96%B1%E8%AE%80%E5%8F%8A%E7%B7%A8%E8%BC%AF-api")!).navigationTitle("API Help").navigationBarTitleDisplayMode(.inline)) {
+                NavigationLink(destination: WebView(url: URL(string: "https://github.com/TsangHingTat/ahyds/blob/main/README.md#%E6%97%A5%E6%9B%86")!).navigationTitle("API Help").navigationBarTitleDisplayMode(.inline)) {
                     Text("API Help")
                 }
             }
