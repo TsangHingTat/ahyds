@@ -49,9 +49,10 @@ struct homeView: View {
                             Text("最後一次跑步速度：\(speed) 米/秒")
                         } else if let error = errorMessage {
                             Text("錯誤：\(error)")
-                        } else {
-                            Text("請求跑步速度中...")
-                        }
+                        } 
+//                        else {
+//                            Text("請求跑步速度中...")
+//                        }
                     }
                     .onChange(of: welcome) { _ in
                         healthKitManager.fetchRunningSpeed { (speed, error) in

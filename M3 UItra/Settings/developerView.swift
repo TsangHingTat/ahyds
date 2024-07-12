@@ -20,6 +20,7 @@ struct developerView: View {
     @State var reward: Int = 0
     @State var textedit = Float(0)
     @State var demo: Bool = false
+    @State var demo1: Bool = false
     @State var text = ""
     @State var textnum = ""
     @State var gettext = ""
@@ -147,6 +148,33 @@ struct developerView: View {
                     }
                 })
             }
+            Section(header: Text("HealthKit 調試")) {
+                Button(action: {
+                    let healthKitManager = HealthKitManager()
+
+                    healthKitManager.authorizeHealthKit { (authorized, error) in
+                        if authorized {
+                            healthKitManager.generateTestData { (success, error) in
+                                if success {
+                                    print("測試數據生成成功")
+                                } else if let error = error {
+                                    print("生成測試數據時出錯：\(error.localizedDescription)")
+                                }
+                            }
+                        } else {
+                            print("未獲得 HealthKit 授權")
+                        }
+                    }
+                    demo1.toggle()
+                }, label: {
+                    HStack {
+                        Spacer()
+                        Text("生成 HealthKit 跑步數據")
+                            .foregroundColor(.red)
+                        Spacer()
+                    }
+                })
+            }
             
         }
         .navigationTitle("開發人員選項")
@@ -179,27 +207,17 @@ struct developerView: View {
             reward = defaults.integer(forKey: "reward")
             textedit = Float(reward)
         }
+        .alert("生成成功 !", isPresented: $demo1, actions: {
+            Button("完成") {
+                
+            }
+        })
+               
         .alert("演示模式將清除此應用的所有數據，是否繼續 ?", isPresented: $demo, actions: {
             Button("取消") {
                 
             }
             Button("是") {
-                let healthKitManager = HealthKitManager()
-
-                healthKitManager.authorizeHealthKit { (authorized, error) in
-                    if authorized {
-                        healthKitManager.generateTestData { (success, error) in
-                            if success {
-                                print("測試數據生成成功")
-                            } else if let error = error {
-                                print("生成測試數據時出錯：\(error.localizedDescription)")
-                            }
-                        }
-                    } else {
-                        print("未獲得 HealthKit 授權")
-                    }
-                }
-                
                 let dictionary = defaults.dictionaryRepresentation()
                 dictionary.keys.forEach { key in
                     defaults.removeObject(forKey: key)
