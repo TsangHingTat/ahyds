@@ -6,9 +6,6 @@
 //
 
 import SwiftUI
-import HealthKit
-
-// MARK: 歡迎頁面
 
 struct welcomeView: View {
     @Binding var showWelcomeScreen: Bool

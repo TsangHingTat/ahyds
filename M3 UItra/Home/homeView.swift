@@ -63,8 +63,6 @@ struct homeView: View {
                         }
                     }
                     .onAppear {
-//                        healthKitManager.authorizeHealthKit { (authorized, error) in
-//                            if authorized {
                                 healthKitManager.fetchRunningSpeed { (speed, error) in
                                     if let speed = speed {
                                         runningSpeed = speed
@@ -72,10 +70,6 @@ struct homeView: View {
                                         errorMessage = error.localizedDescription
                                     }
                                 }
-//                            } else {
-//                                errorMessage = error?.localizedDescription ?? "未獲得 HealthKit 授權"
-//                            }
-//                        }
                     }
                     VStack {
                         if reward != 0 {
@@ -309,6 +303,7 @@ struct homeView: View {
         .navigationViewStyle(StackNavigationViewStyle())
         //        .frame(maxWidth: 700)
     }
+    
     // MARK: 刷新數據
     func loadcaldata() -> Float {
         printnow(message: "loadcaldata()")
@@ -324,6 +319,7 @@ struct homeView: View {
         let loaddata = datacal
         return Float(loaddata) ?? 0
     }
+    
     func showdateload() -> Void {
         printnow(message: "loadcaldata()")
         let today = Date()

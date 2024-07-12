@@ -1,5 +1,5 @@
 //
-//  lessonView.swift
+//  LessonView.swift
 //  AI教你做運動
 //
 //  Created by HingTatTsang on 14/11/2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct lessonView: View {
+struct LessonView: View {
     @State var showbeta: Bool = false
     var body: some View {
         NavigationView {
@@ -33,8 +33,8 @@ struct lessonView: View {
     }
 }
 
-struct lessonView_Previews: PreviewProvider {
+struct LessonView_Previews: PreviewProvider {
     static var previews: some View {
-        lessonView()
+        LessonView()
     }
 }

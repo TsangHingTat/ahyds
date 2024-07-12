@@ -20,6 +20,8 @@
 		7907ED8D291673E6002B318C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7907ED86291673E6002B318C /* Message.swift */; };
 		7907ED8E291673E6002B318C /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7907ED87291673E6002B318C /* ConnectionManager.swift */; };
 		7907ED91291680C6002B318C /* studentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7907ED90291680C6002B318C /* studentView.swift */; };
+		7910690B2C413DA1004CE3B9 /* CoachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7910690A2C413DA1004CE3B9 /* CoachView.swift */; };
+		791069102C415063004CE3B9 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 7910690F2C415063004CE3B9 /* GoogleGenerativeAI */; };
 		7912388328ACFBA000CE4E0B /* trainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7912388228ACFBA000CE4E0B /* trainView.swift */; };
 		791AD3E629239A130087968F /* 3DView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791AD3E529239A130087968F /* 3DView.swift */; };
 		791FD04D28AE5D1600E7845B /* welcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FD04C28AE5D1600E7845B /* welcomeView.swift */; };
@@ -90,6 +92,7 @@
 		79DC432C28AEA2E500E1853E /* usernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC432B28AEA2E500E1853E /* usernameView.swift */; };
 		79E8838228DA993B0047B280 /* optionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E8838128DA993B0047B280 /* optionalView.swift */; };
 		79EF93F12916DCAC00AE7F45 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EF93F02916DCAC00AE7F45 /* Formatters.swift */; };
+		79F28A082C3F7DE5001EF10D /* refreshHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F28A072C3F7DE5001EF10D /* refreshHelper.swift */; };
 		79FBAE69291587C7007056D9 /* aiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FBAE68291587C7007056D9 /* aiView.swift */; };
 		79FFB77628D436CE00F1FBDC /* waterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FFB77528D436CE00F1FBDC /* waterView.swift */; };
 /* End PBXBuildFile section */
@@ -132,6 +135,7 @@
 		7907ED86291673E6002B318C /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		7907ED87291673E6002B318C /* ConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		7907ED90291680C6002B318C /* studentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = studentView.swift; sourceTree = "<group>"; };
+		7910690A2C413DA1004CE3B9 /* CoachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachView.swift; sourceTree = "<group>"; };
 		7912388228ACFBA000CE4E0B /* trainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trainView.swift; sourceTree = "<group>"; };
 		791AD3E529239A130087968F /* 3DView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 3DView.swift; sourceTree = "<group>"; };
 		791FD04C28AE5D1600E7845B /* welcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeView.swift; sourceTree = "<group>"; };
@@ -214,6 +218,7 @@
 		79DC432B28AEA2E500E1853E /* usernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usernameView.swift; sourceTree = "<group>"; };
 		79E8838128DA993B0047B280 /* optionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = optionalView.swift; sourceTree = "<group>"; };
 		79EF93F02916DCAC00AE7F45 /* Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		79F28A072C3F7DE5001EF10D /* refreshHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = refreshHelper.swift; sourceTree = "<group>"; };
 		79FBAE68291587C7007056D9 /* aiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aiView.swift; sourceTree = "<group>"; };
 		79FFB77528D436CE00F1FBDC /* waterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -226,6 +231,7 @@
 				796AC94728BDEA8F0014BBE3 /* NetworkExtension.framework in Frameworks */,
 				79D0AAD328AAAB5000E60B4C /* CloudKit.framework in Frameworks */,
 				792AE63328AF3E920002F750 /* HealthKit.framework in Frameworks */,
+				791069102C415063004CE3B9 /* GoogleGenerativeAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,11 +266,13 @@
 				79D0AACF28AA3B9A00E60B4C /* M3-UItra-Info.plist */,
 				4932CD9528A4C89D000E7443 /* M3_UItraApp.swift */,
 				4932CD9728A4C89D000E7443 /* ContentView.swift */,
+				79F28A072C3F7DE5001EF10D /* refreshHelper.swift */,
 				791FD04C28AE5D1600E7845B /* welcomeView.swift */,
 				79AB308728ACEE030001C091 /* Home */,
-				79EF93ED2916D98000AE7F45 /* lesson */,
+				79EF93ED2916D98000AE7F45 /* Lesson */,
 				79AB308428ACEDA50001C091 /* Practice */,
 				79AB308528ACEDB50001C091 /* Schedule */,
+				791069082C413D3E004CE3B9 /* Coach */,
 				79AB308628ACEDD90001C091 /* Settings */,
 				79AB308328ACED2C0001C091 /* Other func */,
 				79996AF328AE198E000E1FF0 /* Data.json */,
@@ -302,6 +310,14 @@
 				7907ED86291673E6002B318C /* Message.swift */,
 			);
 			path = "Connection Managers";
+			sourceTree = "<group>";
+		};
+		791069082C413D3E004CE3B9 /* Coach */ = {
+			isa = PBXGroup;
+			children = (
+				7910690A2C413DA1004CE3B9 /* CoachView.swift */,
+			);
+			path = Coach;
 			sourceTree = "<group>";
 		};
 		79575C0529158B3100DCA7AB /* old */ = {
@@ -494,13 +510,13 @@
 			path = training;
 			sourceTree = "<group>";
 		};
-		79EF93ED2916D98000AE7F45 /* lesson */ = {
+		79EF93ED2916D98000AE7F45 /* Lesson */ = {
 			isa = PBXGroup;
 			children = (
 				7907ED80291673E6002B318C /* Views */,
 				7907ED83291673E6002B318C /* Connection Managers */,
 			);
-			path = lesson;
+			path = Lesson;
 			sourceTree = "<group>";
 		};
 		79EF93EF2916DB3D00AE7F45 /* Ring and Chart */ = {
@@ -544,6 +560,7 @@
 			);
 			name = "AI教你做運動";
 			packageProductDependencies = (
+				7910690F2C415063004CE3B9 /* GoogleGenerativeAI */,
 			);
 			productName = "M3 UItra";
 			productReference = 4932CD9228A4C89D000E7443 /* AI教你做運動.app */;
@@ -581,6 +598,7 @@
 			);
 			mainGroup = 4932CD8928A4C89D000E7443;
 			packageReferences = (
+				7910690E2C415063004CE3B9 /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
 			);
 			productRefGroup = 4932CD9328A4C89D000E7443 /* Products */;
 			projectDirPath = "";
@@ -633,6 +651,7 @@
 				79BFE2E22C3EF5FB00F29578 /* get_health_datas.swift in Sources */,
 				79996AF528AE19AD000E1FF0 /* decode json.swift in Sources */,
 				7938CFCF2928B92400CF2906 /* health.swift in Sources */,
+				7910690B2C413DA1004CE3B9 /* CoachView.swift in Sources */,
 				796F199629150ED8002D0652 /* Pose+Empty.swift in Sources */,
 				7971A78728B3460B007302A1 /* calchartView.swift in Sources */,
 				79C8582528AA37C200A37B5E /* homeView.swift in Sources */,
@@ -660,6 +679,7 @@
 				79650C4828BF757900D5BFC2 /* supportView.swift in Sources */,
 				79996AF828AE1C0D000E1FF0 /* Calendar.swift in Sources */,
 				79E8838228DA993B0047B280 /* optionalView.swift in Sources */,
+				79F28A082C3F7DE5001EF10D /* refreshHelper.swift in Sources */,
 				79AB308928ACEE200001C091 /* developerView.swift in Sources */,
 				79722B4828C0D1D900CC5265 /* decode utf8.swift in Sources */,
 				796F199229150ED8002D0652 /* AVCaptureVideoDataOutput+PixelFormat.swift in Sources */,
@@ -941,6 +961,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7910690E2C415063004CE3B9 /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google-gemini/generative-ai-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7910690F2C415063004CE3B9 /* GoogleGenerativeAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7910690E2C415063004CE3B9 /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
+			productName = GoogleGenerativeAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		79D0AAD428AAB18F00E60B4C /* Data.xcdatamodeld */ = {
