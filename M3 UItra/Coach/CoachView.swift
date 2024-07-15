@@ -200,10 +200,10 @@ struct CoachView: View {
                 let response = try await chat.sendMessage(message)
                 let ans = response.text ?? "No response received"
                 messages.append(chatMessage(user: "ai", message: ans, time: Date()))
-                loading = true
+                loading = false
             } catch {
                 messages.append(chatMessage(user: "ai", message: "Error: \(error)", time: Date()))
-                loading = true
+                loading = false
             }
             
         }

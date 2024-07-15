@@ -158,7 +158,7 @@ getdata().notification(title: "title", subtitle: "hi")
 ```
 
 ___
-># App 預覽 (3.1.0)
+># App 預覽 (3.1.1)
 >>## iPhone 15
 >>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/img1.png" width="200">
 >>><img src="https://raw.githubusercontent.com/TsangHingTat/ahyds/main/img/img2.png" width="200">
