@@ -201,7 +201,7 @@ ___
 - iPad Air (4th generation and newer)
 - iPad Pro 11-inch (1st, 2nd, 3rd, 4th, and 5th generations)
 - iPad Pro 12.9-inch (2nd, 3rd, 4th, and 5th generations)
-- Pad Pro 10.5-inch
+- iPad Pro 10.5-inch
 
 # 許可證:
 
