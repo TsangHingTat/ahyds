@@ -157,7 +157,6 @@ import Foundation
 getdata().notification(title: "title", subtitle: "hi")
 ```
 
-
 ___
 ># App 預覽 (2.0.3)
 >>## iPhone 15
@@ -202,10 +201,6 @@ ___
 - iPad Pro 11-inch (1st, 2nd, 3rd, 4th, and 5th generations)
 - iPad Pro 12.9-inch (2nd, 3rd, 4th, and 5th generations)
 - iPad Pro 10.5-inch
-
-# 許可證:
-
-<a href="https://github.com/TsangHingTat/ahyds/blob/main/LICENSE.md">Apache License</a>
 
 
 
