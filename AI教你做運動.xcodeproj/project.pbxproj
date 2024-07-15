@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4932CD9628A4C89D000E7443 /* M3_UItraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4932CD9528A4C89D000E7443 /* M3_UItraApp.swift */; };
+		4932CD9628A4C89D000E7443 /* AHYDSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4932CD9528A4C89D000E7443 /* AHYDSApp.swift */; };
 		4932CD9828A4C89D000E7443 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4932CD9728A4C89D000E7443 /* ContentView.swift */; };
 		4932CD9A28A4C89E000E7443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4932CD9928A4C89E000E7443 /* Assets.xcassets */; };
 		4932CD9D28A4C89E000E7443 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4932CD9C28A4C89E000E7443 /* Preview Assets.xcassets */; };
@@ -127,7 +127,7 @@
 
 /* Begin PBXFileReference section */
 		4932CD9228A4C89D000E7443 /* AI教你做運動.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AI教你做運動.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4932CD9528A4C89D000E7443 /* M3_UItraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M3_UItraApp.swift; sourceTree = "<group>"; };
+		4932CD9528A4C89D000E7443 /* AHYDSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHYDSApp.swift; sourceTree = "<group>"; };
 		4932CD9728A4C89D000E7443 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4932CD9928A4C89E000E7443 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4932CD9C28A4C89E000E7443 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -274,7 +274,7 @@
 			children = (
 				79D0AAD028AA95A000E60B4C /* M3 UItra.entitlements */,
 				79D0AACF28AA3B9A00E60B4C /* M3-UItra-Info.plist */,
-				4932CD9528A4C89D000E7443 /* M3_UItraApp.swift */,
+				4932CD9528A4C89D000E7443 /* AHYDSApp.swift */,
 				4932CD9728A4C89D000E7443 /* ContentView.swift */,
 				79F28A072C3F7DE5001EF10D /* RefreshHelper.swift */,
 				791FD04C28AE5D1600E7845B /* WelcomeView.swift */,
@@ -738,7 +738,7 @@
 				7907ED8E291673E6002B318C /* ConnectionManager.swift in Sources */,
 				7943A97A28AFAE5E006E7F19 /* AirplayView.swift in Sources */,
 				7983409528D34F3D0071EF92 /* NotifitionValue.swift in Sources */,
-				4932CD9628A4C89D000E7443 /* M3_UItraApp.swift in Sources */,
+				4932CD9628A4C89D000E7443 /* AHYDSApp.swift in Sources */,
 				791FD04D28AE5D1600E7845B /* WelcomeView.swift in Sources */,
 				495FB4CD291BD24400951812 /* ModelControl.swift in Sources */,
 				79C8582D28AA388B00A37B5E /* ErrorView.swift in Sources */,

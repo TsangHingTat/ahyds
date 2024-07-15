@@ -9,7 +9,7 @@ import SwiftUI
 import UserNotifications
 
 @main
-struct M3_UItraApp: App {
+struct AHYDSApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @State var notifications: [NotifitionValue] = []
     var body: some Scene {
