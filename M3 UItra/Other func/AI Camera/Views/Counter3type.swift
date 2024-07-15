@@ -7,11 +7,11 @@
 
 import Foundation
 import SwiftUI
-
+import Combine
 
 struct dp3View: View {
-    let doTime = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
-    let doTime2 = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
+    let doTime = Timer.publish(every: 0.1, on: .main, in: .default).autoconnect()
+    let doTime2 = Timer.publish(every: 0.01, on: .main, in: .default).autoconnect()
     @State var appear = 0
     @State var time = 0
     @State var p = 0
@@ -26,20 +26,20 @@ struct dp3View: View {
             
         }
         .onReceive(doTime2) { _ in
-            p = getdata().getdefaultsdataint(type: "confidence")
-            print("data7495y: \(getdata().getdefaultsdata(type: "mlmodel"))")
-            print("data7495y: \(getdata().getdefaultsdataint(type: "confidence"))%")
-            print("data7495y: \(getdata().getdefaultsdataint(type: "action"))")
-            if getdata().getdefaultsdata(type: "mlmodel") == "sit-up" {
-                if getdata().getdefaultsdata(type: "action") == "01" {
+            p = GetData().getdefaultsdataint(type: "confidence")
+            print("data7495y: \(GetData().getdefaultsdata(type: "mlmodel"))")
+            print("data7495y: \(GetData().getdefaultsdataint(type: "confidence"))%")
+            print("data7495y: \(GetData().getdefaultsdataint(type: "action"))")
+            if GetData().getdefaultsdata(type: "mlmodel") == "sit-up" {
+                if GetData().getdefaultsdata(type: "action") == "01" {
                     appear = 1
-                } else if getdata().getdefaultsdata(type: "action") == "00" {
+                } else if GetData().getdefaultsdata(type: "action") == "00" {
                     appear = 0
                 }
-            } else if getdata().getdefaultsdata(type: "mlmodel") == "pushup" {
-                if getdata().getdefaultsdata(type: "action") == "11" {
+            } else if GetData().getdefaultsdata(type: "mlmodel") == "pushup" {
+                if GetData().getdefaultsdata(type: "action") == "11" {
                     appear = 0
-                } else if getdata().getdefaultsdata(type: "action") == "10" {
+                } else if GetData().getdefaultsdata(type: "action") == "10" {
                     appear = 1
                 }
             }
@@ -62,8 +62,8 @@ struct dp3View: View {
             }
            
             
-            getdata().savedefaultsdataint(type: "howmanytimes?", data: dotime-1)
-            print(getdata().getdefaultsdata(type: "action"))
+            GetData().savedefaultsdataint(type: "howmanytimes?", data: dotime-1)
+            print(GetData().getdefaultsdata(type: "action"))
         }
     }
 }

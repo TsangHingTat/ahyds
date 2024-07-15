@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct todayView: View {
+struct TodayView: View {
     var year: String
     var month: String
     var istoday = false
@@ -19,7 +19,7 @@ struct todayView: View {
         if istoday {
             ZStack {
                 if refresh {
-                    refreshhelper(refresh: $refresh)
+                    Refreshhelper(refresh: $refresh)
                 } else {
                     dateView(date: getday(), month: getmonth(), fullyear: getyear(), today: true, home: home)
                     
@@ -105,7 +105,7 @@ struct todayView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.black
-            todayView(year: "2022", month: "08", istoday: true, home: true)
+            TodayView(year: "2022", month: "08", istoday: true, home: true)
         }
         
     }

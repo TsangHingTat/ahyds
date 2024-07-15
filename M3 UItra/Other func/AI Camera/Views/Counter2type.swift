@@ -7,11 +7,11 @@
 
 import Foundation
 import SwiftUI
-
+import Combine
 
 struct dpView: View {
-    let doTime = Timer.publish(every: 0.03, on: .main, in: .common).autoconnect()
-    let doTime2 = Timer.publish(every: 0.03, on: .main, in: .common).autoconnect()
+    let doTime = Timer.publish(every: 0.03, on: .main, in: .default).autoconnect()
+    let doTime2 = Timer.publish(every: 0.03, on: .main, in: .default).autoconnect()
     @State var appear = 0
     @State var time = 0
     @State var p = 0
@@ -28,7 +28,7 @@ struct dpView: View {
                 .hidden()
         }
         .onAppear() {
-            if getdata().getdefaultsdata(type: "mlmodel") == "pushup" {
+            if GetData().getdefaultsdata(type: "mlmodel") == "pushup" {
                 dotime = dotime - 1
             } else {
                 dotime = dotime - 1
@@ -36,22 +36,22 @@ struct dpView: View {
             
         }
         .onReceive(doTime2) { _ in
-            p = getdata().getdefaultsdataint(type: "confidence")
-            print("data7495y: \(getdata().getdefaultsdata(type: "mlmodel"))")
-            print("data7495y: \(getdata().getdefaultsdataint(type: "confidence"))%")
-            print("data7495y: \(getdata().getdefaultsdataint(type: "action"))")
-            if getdata().getdefaultsdata(type: "mlmodel") == "sit-up" {
+            p = GetData().getdefaultsdataint(type: "confidence")
+            print("data7495y: \(GetData().getdefaultsdata(type: "mlmodel"))")
+            print("data7495y: \(GetData().getdefaultsdataint(type: "confidence"))%")
+            print("data7495y: \(GetData().getdefaultsdataint(type: "action"))")
+            if GetData().getdefaultsdata(type: "mlmodel") == "sit-up" {
                 doingst = "sit-up"
-                if getdata().getdefaultsdata(type: "action") == "01" {
+                if GetData().getdefaultsdata(type: "action") == "01" {
                     appear = 1
-                } else if getdata().getdefaultsdata(type: "action") == "00" {
+                } else if GetData().getdefaultsdata(type: "action") == "00" {
                     appear = 0
                 }
-            } else if getdata().getdefaultsdata(type: "mlmodel") == "pushup" {
+            } else if GetData().getdefaultsdata(type: "mlmodel") == "pushup" {
                 doingst = "pushup"
-                if getdata().getdefaultsdata(type: "action") == "11" {
+                if GetData().getdefaultsdata(type: "action") == "11" {
                     appear = 0
-                } else if getdata().getdefaultsdata(type: "action") == "10" {
+                } else if GetData().getdefaultsdata(type: "action") == "10" {
                     appear = 1
                 }
             }
@@ -71,8 +71,8 @@ struct dpView: View {
                 dotime += 1
                 
             }
-            getdata().savedefaultsdataint(type: "howmanytimes?", data: dotime)
-            print(getdata().getdefaultsdata(type: "action"))
+            GetData().savedefaultsdataint(type: "howmanytimes?", data: dotime)
+            print(GetData().getdefaultsdata(type: "action"))
         }
         .onDisappear() {
             goodmoring = goodmoring * Float(0.03)
@@ -93,7 +93,7 @@ struct done_and_non_done {
 //      sit-up
 //      type_of_sport
         if type_of_sport == "pushup" {
-            calofpushup = getdata().getdata(date: datedatanow, datanum: 6)
+            calofpushup = GetData().getdata(date: datedatanow, datanum: 6)
             let calofpushupint = Int(calofpushup) ?? 0
             if calofpushupint >= 100 {
                 return true
@@ -103,7 +103,7 @@ struct done_and_non_done {
             
         }
         if type_of_sport == "sit-up" {
-            calofsitup = getdata().getdata(date: datedatanow, datanum: 5)
+            calofsitup = GetData().getdata(date: datedatanow, datanum: 5)
             let calofsitupint = Int(calofsitup) ?? 0
             if calofsitupint >= 100 {
                 return true
@@ -126,24 +126,24 @@ struct save_data {
     @State var calofsitup = ""
     @State var calofsitupFloat: Float = 0
     func save(dotime: Float , sport_type: String , doinftime: Float) -> Void {
-        //getdata().notification(title: "func done", subtitle: "yo")
+        //GetData().notification(title: "func done", subtitle: "yo")
         let today = Date()
         let formatter1 = DateFormatter()
         formatter1.dateFormat = "yyyy-MM-dd"
         let datedatanow = "\(formatter1.string(from: today))"
         if sport_type == "sit-up" {
-            getdata().savedata(date: datedatanow, datanum: 5, text: "\(Float(getdata().getdata(date: datedatanow, datanum: 5)) ?? 0 + (doinftime * 1.1))")
-            getdata().savedata(date: datedatanow, datanum: 5, text: "\(Float(getdata().getdata(date: datedatanow, datanum: 1)) ?? 0  + doinftime)")
-            getdata().notification(title: "done", subtitle: "\(NSLocalizedString("時間", comment: "時間")) = \(dotime) , \(NSLocalizedString("次數", comment: "次數")) = \(doinftime) , \(NSLocalizedString("卡路里", comment: "卡路里")) = \(dotime * 2)")
+            GetData().savedata(date: datedatanow, datanum: 5, text: "\(Float(GetData().getdata(date: datedatanow, datanum: 5)) ?? 0 + (doinftime * 1.1))")
+            GetData().savedata(date: datedatanow, datanum: 5, text: "\(Float(GetData().getdata(date: datedatanow, datanum: 1)) ?? 0  + doinftime)")
+            GetData().notification(title: "done", subtitle: "\(NSLocalizedString("時間", comment: "時間")) = \(dotime) , \(NSLocalizedString("次數", comment: "次數")) = \(doinftime) , \(NSLocalizedString("卡路里", comment: "卡路里")) = \(dotime * 2)")
         }
         if sport_type == "pushup" {
-            getdata().savedata(date: datedatanow, datanum: 6, text: "\(Float(getdata().getdata(date: datedatanow, datanum: 5)) ?? 0 + (doinftime * 1.1))")
-            getdata().savedata(date: datedatanow, datanum: 2, text: "pushup - \(Float(getdata().getdata(date: datedatanow, datanum: 1)) ?? 0 + doinftime)")
+            GetData().savedata(date: datedatanow, datanum: 6, text: "\(Float(GetData().getdata(date: datedatanow, datanum: 5)) ?? 0 + (doinftime * 1.1))")
+            GetData().savedata(date: datedatanow, datanum: 2, text: "pushup - \(Float(GetData().getdata(date: datedatanow, datanum: 1)) ?? 0 + doinftime)")
         }
     }
 }
 //savedata(date: String, datanum: Int, text: String) -> Void
-//getdata().savedefaultsdataint(type: "fufuyg", data: Int(0))
+//GetData().savedefaultsdataint(type: "fufuyg", data: Int(0))
 //goo morning
 //good morningr
 // good morning

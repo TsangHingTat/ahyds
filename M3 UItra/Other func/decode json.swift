@@ -39,7 +39,7 @@ public class UserFetcher: ObservableObject {
     }
 }
 
-struct jsondatatest: View {
+struct JsonDataTest: View {
     @ObservedObject var fetcher = UserFetcher()
     var body: some View {
         List {

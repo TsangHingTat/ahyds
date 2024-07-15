@@ -1,3 +1,9 @@
+//
+//  ExerciseClassifier+PredictAction.swift
+//  AI教你做運動
+//
+//  Created by HingTatTsang on 31/8/2022.
+//
 
 import CoreML
 
@@ -8,8 +14,8 @@ extension ExerciseClassifier {
             let output = try prediction(poses: window)
             let action = Label(output.label)
             let confidence = output.labelProbabilities[output.label]!
-            getdata().savedefaultsdata(type: "action", data: output.label)
-            getdata().savedefaultsdataint(type: "confidence", data: Int(Int((output.labelProbabilities[output.label] ?? 0)*100)))
+            GetData().savedefaultsdata(type: "action", data: output.label)
+            GetData().savedefaultsdataint(type: "confidence", data: Int(Int((output.labelProbabilities[output.label] ?? 0)*100)))
             return ActionPrediction(label: action.rawValue, confidence: confidence)
 
         } catch {

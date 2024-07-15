@@ -1,6 +1,6 @@
 //
 //  3DView.swift
-//  AppleDeviceInfo
+//  AI教你做運動
 //
 //  Created by Hing Tat Tsang on 5/4/2022.
 //
@@ -114,9 +114,3 @@ struct ViewView: View {
 }
 
 
-
-struct Previews_3DView_Previews: PreviewProvider {
-    static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
-    }
-}

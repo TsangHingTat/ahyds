@@ -8,7 +8,7 @@
 import SwiftUI
 import Foundation
 
-struct scheduleView: View {
+struct ScheduleView: View {
     @Binding var refresh: Bool
     var month = nowdate(format: "MM")
     var year = nowdate(format: "yyyy")
@@ -18,16 +18,16 @@ struct scheduleView: View {
         TabView(selection:$selection) {
             ForEach((1..<(monthInt ?? 12)), id: \.self) {
                 let new = correctdate(num: "\($0)")
-                monthView(year: year, month: new)
+                MonthView(year: year, month: new)
                     .tag($0)
             }
             let new = correctdate(num: nowdate(format: "MM"))
-            monthView(year: year, month: new, istoday: true)
+            MonthView(year: year, month: new, istoday: true)
                 .tag(nowdate(format: "MM"))
             
             ForEach((((monthInt ?? 1)+1)...12), id: \.self) {
                 let new = correctdate(num: "\($0)")
-                monthView(year: year, month: new)
+                MonthView(year: year, month: new)
                     .tag($0)
             }
             
@@ -51,7 +51,7 @@ struct scheduleView: View {
 }
 
 
-struct monthView: View {
+struct MonthView: View {
     var year: String
     var month: String
     var istoday = false
@@ -86,7 +86,7 @@ struct monthView: View {
                 VStack {
                     Group {
                         VStack {
-                            todayView(year: year, month: month, istoday: istoday)
+                            TodayView(year: year, month: month, istoday: istoday)
                             LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.01), Color.white]),startPoint: .bottom, endPoint: .top)
                                 .frame(height: 15)
 
