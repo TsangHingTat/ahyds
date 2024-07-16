@@ -213,7 +213,7 @@ ___
 - iPad Pro 12.9-inch (2nd generations and newer)
 - iPad Pro 10.5-inch
 
-## Vision (VisionOS 1 or older)
+## Apple Vision (VisionOS 1 or older)
 - Apple Vision Pro
 
 
