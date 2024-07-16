@@ -144,6 +144,9 @@ struct WelcomeView: View {
             .padding()
             .toolbar() {
                 NavigationLink(destination: fouview) {
+                    Text("跳過")
+                }
+                NavigationLink(destination: fouview) {
                     Text("繼續")
                 }
                 .disabled(!button0)
