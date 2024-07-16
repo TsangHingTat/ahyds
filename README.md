@@ -177,7 +177,11 @@ ___
 
 
 # 支援的裝置:
-## iPhone
+## iPhone (iOS 16 or older)
+- iPhone 15
+- iPhone 15 Plus
+- iPhone 15 Pro
+- iPhone 15 Pro Max
 - iPhone 14
 - iPhone 14 Plus
 - iPhone 14 Pro
@@ -202,15 +206,17 @@ ___
 - iPhone SE (3rd generation)
 - iPhone SE (2nd generation)
 
-## iPad
+## iPad (iPadOS 16 or older)
 - iPad mini (6th generation)
 - iPad (6th generation and newer)
 - iPad Air (4th generation and newer)
-- iPad Pro 11-inch (1st, 2nd, 3rd, 4th, and 5th generations)
-- iPad Pro 12.9-inch (2nd, 3rd, 4th, and 5th generations)
+- iPad Pro 11-inch (1st generations and newer)
+- iPad Pro 12.9-inch (2nd generations and newer)
 - iPad Pro 10.5-inch
 
+## Vision (VisionOS 1 or older)
+- Apple Vision Pro
 
 
-Copyright © 2023, TsangHingTat
+Copyright © 2023-2024, TsangHingTat
 
