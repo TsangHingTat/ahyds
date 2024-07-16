@@ -139,7 +139,6 @@ date 格式必須為 __String__: “yyyy-MM-dd”, datanum 格式必須為 __Int
 ### 範例：
 ```swift
 import Foundation
-getdata().savedata(date: "2022-08-28", datanum: 1, text: "跳高")
 print(getdata().getdata(date: "2022-08-28", datanum: 1))
 ```
 ```shell
