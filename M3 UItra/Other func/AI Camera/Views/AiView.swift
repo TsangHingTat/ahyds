@@ -13,61 +13,80 @@ struct AiView: View {
     @Binding var onoff: Bool
     @State var need: Int
     @State var title: String
+    @State var warning = false
     var barView: some View {
+        VStack {
+            Spacer()
             VStack {
                 Spacer()
-                VStack {
-                    Spacer()
-                    Rectangle()
-                        .foregroundColor(Color(red: 0, green: 60/255, blue: 0))
-                        .frame(height: 120)
-                        .cornerRadius(30)
-                        .padding()
-                        .overlay() {
-                            Group {
-                                if Int(action) ?? 0 <= need {
-                                    Text("\(title): \(action)")
-                                        .font(.largeTitle)
-                                        .foregroundColor(.white)
-                                } else {
-                                    Text("Done")
-                                        .font(.largeTitle)
-                                        .foregroundColor(.white)
-                                }
+                Rectangle()
+                    .foregroundColor(Color(red: 0, green: 60/255, blue: 0))
+                    .frame(height: 120)
+                    .cornerRadius(30)
+                    .padding()
+                    .overlay() {
+                        Group {
+                            if Int(action) ?? 0 <= need {
+                                Text("\(title): \(action)")
+                                    .font(.largeTitle)
+                                    .foregroundColor(.white)
+                            } else {
+                                Text("Done")
+                                    .font(.largeTitle)
+                                    .foregroundColor(.white)
                             }
                         }
-                }
-                
+                    }
             }
+            
         }
+    }
     var body: some View {
         NavigationView {
             ZStack {
                 CameraSelfView()
                 barView
                 dpView()
-            }
-                .onAppear() {
-                    GetData().savedefaultsdataint(type: "howmanytimes?", data: 0)
-                }
-                .navigationTitle(title)
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar() {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button(action: {
-                            onoff = false
-                        }, label: {
-                            Text("退出")
-                        })
+                if warning {
+                    VStack {
+                        Image(systemName: "exclamationmark.triangle.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 100)
+                            .foregroundColor(.yellow)
+                        Text("危險動作")
+                            .foregroundStyle(.red)
                     }
                 }
+                
+            }
         }
-        
+        .onAppear() {
+            GetData().savedefaultsdataint(type: "howmanytimes?", data: 0)
+        }
+        .navigationTitle(title)
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar() {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: {
+                    onoff = false
+                }, label: {
+                    Text("退出")
+                })
+            }
+        }
         .onReceive(timer) { timer in
             action = "\(GetData().getdefaultsdataint(type: "howmanytimes?"))"
+            if "\(GetData().getdefaultsdataint(type: "isUserTried?"))" == "0" {
+                warning = false
+            } else {
+                warning = true
+            }
         }
     }
+        
 }
+
 
 struct Previews_Counter_Previews: PreviewProvider {
     static var previews: some View {
