@@ -58,6 +58,12 @@ struct GroupView: View {
                 }
             }
             for i in (0...chatConnectionManager.messages.count-1) {
+                if chatConnectionManager.messages[i].body.replacingOccurrences(of: "/dfdsfsdf/", with: "") != chatConnectionManager.messages[i].body {
+                    GetData().notification(title: "即時通訊", subtitle: chatConnectionManager.messages[i].body.replacingOccurrences(of: "/dfdsfsdf/", with: ""))
+                    chatConnectionManager.messages.remove(at: i)
+                }
+            }
+            for i in (0...chatConnectionManager.messages.count-1) {
                 if chatConnectionManager.messages[i].body == "stop" {
                     chatConnectionManager.messages.remove(at: i)
                     view = false

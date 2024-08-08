@@ -10,7 +10,9 @@ import Combine
 
 struct ChatListView: View {
     @EnvironmentObject var chatConnectionManager: ChatConnectionManager
+    @State var messageFild = ""
     @State var worksheet = false
+    @State var worksheet0 = false
     @State var names = [""]
     @State var yo = ""
     @State var hour = "0"
@@ -21,7 +23,7 @@ struct ChatListView: View {
     var body: some View {
         ScrollView {
             VStack {
-                HStack {
+                VStack {
                     Button(action: {
                         worksheet.toggle()
                     }) {
@@ -36,62 +38,78 @@ struct ChatListView: View {
                     .frame(height: 50)
                     .background(Color.blue)
                     .cornerRadius(15)
+                    Button(action: {
+                        worksheet0.toggle()
+                    }) {
+                        HStack {
+                            Spacer()
+                            Text("發放訊息")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                            Spacer()
+                        }
+                    }
+                    .frame(height: 50)
+                    .background(Color.blue)
+                    .cornerRadius(15)
                 }
                 .padding()
                 
                 VStack {
                     ForEach(chatConnectionManager.messages) { i in
-                        HStack {
-                            Color.orange
-                                .frame(height: 120)
-                                .cornerRadius(25)
-                                .overlay() {
-                                    VStack {
-                                        HStack {
-                                            Text("\(i.displayName)")
-                                                .font(.title2)
-                                                .bold()
-                                                .padding()
+                        if i.body.replacingOccurrences(of: "/dfdsfsdf/", with: "") == i.body {
+                            HStack {
+                                Color.orange
+                                    .frame(height: 120)
+                                    .cornerRadius(25)
+                                    .overlay() {
+                                        VStack {
+                                            HStack {
+                                                Text("\(i.displayName)")
+                                                    .font(.title2)
+                                                    .bold()
+                                                    .padding()
+                                                Spacer()
+                                            }
                                             Spacer()
-                                        }
-                                        Spacer()
-                                        HStack {
-                                            Text("\(DateFormatter.timestampFormatter.string(from: i.time))")
-                                                .font(.title2)
-                                                .padding()
-                                            Spacer()
-                                            Text("\(i.body)")
-                                                .font(.title2)
-                                                .padding()
+                                            HStack {
+                                                Text("\(DateFormatter.timestampFormatter.string(from: i.time))")
+                                                    .font(.title2)
+                                                    .padding()
+                                                Spacer()
+                                                Text("\(i.body)")
+                                                    .font(.title2)
+                                                    .padding()
+                                            }
                                         }
                                     }
-                                }
+                            }
+                            .padding(.horizontal)
                         }
-                        .padding(.horizontal)
                     }
                 }
                 //here
             }
         }
         .onDisappear() {
-//            let yo2 = Int(yo) ?? 0
-//            GetData().savedefaultsdataint(type: "yo", data: yo2)
-//            let hour2 = Int(hour) ?? 0
-//            GetData().savedefaultsdataint(type: "hour", data: hour2)
-//            let min2 = Int(min) ?? 0
-//            GetData().savedefaultsdataint(type: "min", data: min2)
-//            let s2 = Int(s) ?? 0
-//            GetData().savedefaultsdataint(type: "s", data: s2)
-//            GetData().savedefaultsdatabool(type: "ss", data: ss)
+            //            let yo2 = Int(yo) ?? 0
+            //            GetData().savedefaultsdataint(type: "yo", data: yo2)
+            //            let hour2 = Int(hour) ?? 0
+            //            GetData().savedefaultsdataint(type: "hour", data: hour2)
+            //            let min2 = Int(min) ?? 0
+            //            GetData().savedefaultsdataint(type: "min", data: min2)
+            //            let s2 = Int(s) ?? 0
+            //            GetData().savedefaultsdataint(type: "s", data: s2)
+            //            GetData().savedefaultsdatabool(type: "ss", data: ss)
         }
         .onAppear() {
             chatConnectionManager.send("start")
             chatConnectionManager.messages.removeLast()
-//            yo = String(GetData().getdefaultsdataint(type: "yo"))
-//            hour = String(GetData().getdefaultsdataint(type: "hour"))
-//            min = String(GetData().getdefaultsdataint(type: "min"))
-//            s = String(GetData().getdefaultsdataint(type: "s"))
-//            ss = GetData().getdefaultsdatabool(type: "ss")
+            //            yo = String(GetData().getdefaultsdataint(type: "yo"))
+            //            hour = String(GetData().getdefaultsdataint(type: "hour"))
+            //            min = String(GetData().getdefaultsdataint(type: "min"))
+            //            s = String(GetData().getdefaultsdataint(type: "s"))
+            //            ss = GetData().getdefaultsdatabool(type: "ss")
         }
         .sheet(isPresented: $worksheet) {
             NavigationView {
@@ -155,65 +173,112 @@ struct ChatListView: View {
             }
             .interactiveDismissDisabled(true)
         }
-//        .sheet(isPresented: $worksheet) {
-//            List {
-//                Section {
-//                    Text("仰臥起坐")
-//                    Button(action: {
-//                        chatConnectionManager.send("start sport sit-up")
-//                        chatConnectionManager.messages.removeLast()
-//                    }, label: {
-//                        Text("開始")
-//                    })
-//                }
-//                Section {
-//                    Text("掌上壓")
-//                    Button(action: {
-//                        chatConnectionManager.send("start sport pushup")
-//                        chatConnectionManager.messages.removeLast()
-//                    }, label: {
-//                        Text("開始")
-//                    })
-//                }
-//                Section {
-//                    Button(action: {
-//                        chatConnectionManager.send("stop sport")
-//                        chatConnectionManager.messages.removeLast()
-//                    }, label: {
-//                        Text("停止")
-//                    })
-//                }
-
-//                    HStack {
-//                        Toggle(isOn: $ss) {
-//                            Text("time limit")
-//                        }
-//                    }
-//                }
-//            }
-//        }
+        .sheet(isPresented: $worksheet0) {
+            NavigationView {
+                //                VStack{
+                //                    HStack {
+                //                        TextField("Type message here", text: $messageFild)
+                //                            .padding(.leading, 10)
+                //                            .padding(.vertical, 10)
+                //                            .background(.gray)
+                //                            .padding(.leading, 10)
+                //                            .onSubmit {
+                //                                sendMessage()
+                //                            }
+                //                        Button("發送") {
+                //                            sendMessage()
+                //                        }
+                //                        .foregroundColor(.white)
+                //                        .padding(10)
+                //                        .background(.blue)
+                //                        .cornerRadius(10)
+                //                        .padding(10)
+                //
+                //                    }
+                //
+                //
+                //                }
+                List {
+                    TextField("Type message here", text: $messageFild)
+                        .onSubmit {
+                            sendMessage()
+                        }
+                    HStack {
+                        Spacer()
+                        Button("發送") {
+                            sendMessage()
+                        }
+                        Spacer()
+                    }
+                }
+                .navigationTitle("發放訊息")
+                .toolbar() {
+                    Button("取消") {
+                        worksheet0.toggle()
+                    }
+                }
+            }
+            
+        }
+        //        .sheet(isPresented: $worksheet) {
+        //            List {
+        //                Section {
+        //                    Text("仰臥起坐")
+        //                    Button(action: {
+        //                        chatConnectionManager.send("start sport sit-up")
+        //                        chatConnectionManager.messages.removeLast()
+        //                    }, label: {
+        //                        Text("開始")
+        //                    })
+        //                }
+        //                Section {
+        //                    Text("掌上壓")
+        //                    Button(action: {
+        //                        chatConnectionManager.send("start sport pushup")
+        //                        chatConnectionManager.messages.removeLast()
+        //                    }, label: {
+        //                        Text("開始")
+        //                    })
+        //                }
+        //                Section {
+        //                    Button(action: {
+        //                        chatConnectionManager.send("stop sport")
+        //                        chatConnectionManager.messages.removeLast()
+        //                    }, label: {
+        //                        Text("停止")
+        //                    })
+        //                }
+        
+        //                    HStack {
+        //                        Toggle(isOn: $ss) {
+        //                            Text("time limit")
+        //                        }
+        //                    }
+        //                }
+        //            }
+        //        }
     }
     var secview: some View {
         VStack {
             List {
-//                Section {
-//                    HStack {
-//                        Text("duration : ")
-//                        TextEditor(text: $yo)
-//                            .keyboardType(.numberPad)
-//                            .onReceive(Just(yo)) { newValue in
-//                                let filtered = newValue.filter { "0123456789".contains($0) }
-//                                if filtered != newValue {
-//                                    self.yo = filtered
-//                                }
-//                            }
-//                    }
-//                }
+                //                Section {
+                //                    HStack {
+                //                        Text("duration : ")
+                //                        TextEditor(text: $yo)
+                //                            .keyboardType(.numberPad)
+                //                            .onReceive(Just(yo)) { newValue in
+                //                                let filtered = newValue.filter { "0123456789".contains($0) }
+                //                                if filtered != newValue {
+                //                                    self.yo = filtered
+                //                                }
+                //                            }
+                //                    }
+                //                }
                 let space = CGFloat(230)
                 Section {
-//                    HStack {
-//                        Text("times")
-//                    }
+                    //                    HStack {
+                    //                        Text("times")
+                    //                    }
                     HStack {
                         Text("分鐘: ")
                         Spacer()
@@ -263,23 +328,30 @@ struct ChatListView: View {
                                         .foregroundColor(.white)
                                     Spacer()
                                 }
-                            
-                        }
-                        .frame(height: 50)
-                        .background(Color.blue)
-                        .cornerRadius(15)
+                                
+                            }
+                            .frame(height: 50)
+                            .background(Color.blue)
+                            .cornerRadius(15)
                     }
                 }
             }
             .navigationTitle("設定")
         }
     }
+    
+    func sendMessage() -> Void {
+        let temp = messageFild
+        //        GetData().notification(title: "即時通訊", subtitle: temp)
+        chatConnectionManager.send("/dfdsfsdf/\(temp)")
+        messageFild = ""
+    }
 }
 
 
 struct ChatListView_Previews: PreviewProvider {
-  static var previews: some View {
-    ChatListView(worksheet: true)
-      .environmentObject(ChatConnectionManager())
-  }
+    static var previews: some View {
+        ChatListView(worksheet0: true)
+            .environmentObject(ChatConnectionManager())
+    }
 }

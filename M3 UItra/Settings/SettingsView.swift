@@ -168,12 +168,10 @@ struct SettingsView: View {
             username = defaults.string(forKey: "username") ?? "USERNAME"
             notifyon = defaults.bool(forKey: "notifyon")
             health = defaults.float(forKey: "health")
-            
-            
         }
         
         .alert("恭喜你, 你已經成為開發人員 !", isPresented: $showAlert, actions: {
-                    Button("完成") { }
+            Button("完成") { }
         })
         .alert("不需要了, 你已經是開發人員 !", isPresented: $showAlert2, actions: {
             Button("取消開發人員模式") {

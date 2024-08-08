@@ -41,8 +41,9 @@ struct TrainingViewButtonCell: View {
                 }
         }
         .fullScreenCover(isPresented: $view) {
-            AiView(onoff: $view, need: needed, title: title)
-            
+            NavigationView {
+                AiView(onoff: $view, need: needed, title: title)
+            }
         }
         
     }
