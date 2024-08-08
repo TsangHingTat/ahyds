@@ -51,6 +51,13 @@
             ReferencedContainer = "container:AI&#x6559;&#x4f60;&#x505a;&#x904b;&#x52d5;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "GEMINI_API_KEY"
+            value = "AIzaSyDQd1NjFLRp3_GQLP9YX4lRawbXTKBDwU8"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
