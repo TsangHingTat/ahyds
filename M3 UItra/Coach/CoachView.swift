@@ -144,6 +144,7 @@ struct CoachView: View {
             }
             .navigationTitle("Hermes")
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     func sendMessage() -> Void {
