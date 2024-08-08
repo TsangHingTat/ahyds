@@ -229,6 +229,7 @@ struct dateView: View {
                                     
                                 }
                         })
+                        .cornerRadius(20)
                     }
                     
                 }
@@ -238,6 +239,7 @@ struct dateView: View {
                         .foregroundColor(.red)
                         .opacity(0.8)
                         .frame(width: 347, height: 100)
+                        .cornerRadius(10)
                         .overlay() {
                             VStack {
                                 HStack {
@@ -249,17 +251,16 @@ struct dateView: View {
                                 
                             }
                         }
+                    
                 } else {
                     Button(action: {
                         if getrightdate() != getdatecom() {
                             popover = true
                         }
                         
-                        
                     }) {
                         HStack {
                             if getrightdate() == getdatecom() {
-                                
                                 Rectangle()
                                     .foregroundColor(.yellow)
                                     .opacity(0.7)
@@ -295,7 +296,7 @@ struct dateView: View {
                             } else {
                                 HStack {
                                     Rectangle()
-                                        .foregroundColor(.black)
+                                        .foregroundColor(.yellow)
                                         .opacity(0.5)
                                         .frame(width: 70, height: 100)
                                         .overlay() {
@@ -398,6 +399,7 @@ struct dateView: View {
                             
                             
                         }
+                        .cornerRadius(10)
                     }
                     
                 }
@@ -690,7 +692,7 @@ struct dateView: View {
                     popover = false
                     savealldata()
                 },
-                trailing: Button(action: {
+                                    trailing: Button(action: {
                     calmem = ""
                     popover = false
                     itemeditdata = ""
@@ -912,7 +914,7 @@ struct dateView: View {
                 blocktouch = true
                 lognow(message: "Unblock touch done")
             }
-
+            
         }
         .onAppear() {
             let lang = defaults.string(forKey: "AppleLanguages") ?? ""
@@ -1031,7 +1033,7 @@ struct dateView: View {
             NSLocalizedString("星期五", comment: "星期五"),
             NSLocalizedString("星期六", comment: "星期六")
         ]
-
+        
         let formatter  = DateFormatter()
         formatter.dateFormat = format
         guard let myDate = formatter.date(from: date) else { return nil }
@@ -1067,7 +1069,7 @@ struct dateView: View {
     func getrightdate() -> Date {
         let datecorrect = correctdate(num: month)
         let datecorrectday = correctdate(num: date)
-                
+        
         let string = "\(datecorrectday)/\(datecorrect)/\(fullyear)"
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"

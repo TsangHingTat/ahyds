@@ -45,11 +45,16 @@ struct ContentView: View {
                         Label("訓練", systemImage: "figure.walk")
                     }
                     .tag(4)
+                ScheduleView(refresh: $refresh)
+                    .tabItem {
+                        Label("日程表", systemImage: "calendar.circle")
+                    }
+                    .tag(5)
                 SettingsView(refresh: $refresh)
                     .tabItem {
                         Label("設定", systemImage: "command.circle")
                     }
-                    .tag(5)
+                    .tag(6)
                 
             }
             

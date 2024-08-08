@@ -35,15 +35,16 @@ struct CoachView: View {
                                                     .background((i.user == "ai") ? .green : .blue )
                                                     .cornerRadius(10)
                                             }
+                                            .contextMenu() {
+                                                Button("Copy") {
+                                                    UIPasteboard.general.string = i.message
+                                                }
+                                            }
                                             if i.user == "ai" {
                                                 Spacer()
                                             }
                                         }
-                                        .contextMenu() {
-                                            Button("Copy") {
-                                                UIPasteboard.general.string = i.message
-                                            }
-                                        }
+                                        
                                 
                                     }
                                 }

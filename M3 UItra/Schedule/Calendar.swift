@@ -103,7 +103,6 @@ struct CalendarView<DateView>: View where DateView: View {
         ScrollView(showsIndicators: false) {
             ForEach(months, id: \.self) { month in
                 Section {
-                    
                     ForEach(days(for: month), id: \.self) { date in
                         if calendar.isDate(date, equalTo: month, toGranularity: .month) {
                             content(date).id(date)
