@@ -18,6 +18,7 @@ struct dpView: View {
     @State var bool2 = 0
     @State var bool = 0
     @State var dotime = 0
+    @State var isUserTried = 0
     @State var temp =  ""
     @State var doingst = ""
     @State var goodmoring: Float = 0
@@ -71,7 +72,11 @@ struct dpView: View {
                 dotime += 1
                 
             }
+            if dotime >= 60 {
+                isUserTried = 1
+            }
             GetData().savedefaultsdataint(type: "howmanytimes?", data: dotime)
+            GetData().savedefaultsdataint(type: "isUserTried?", data: isUserTried)
             print(GetData().getdefaultsdata(type: "action"))
         }
         .onDisappear() {
