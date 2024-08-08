@@ -39,6 +39,12 @@ struct CoachView: View {
                                                 Spacer()
                                             }
                                         }
+                                        .contextMenu() {
+                                            Button("Copy") {
+                                                UIPasteboard.general.string = i.message
+                                            }
+                                        }
+                                
                                     }
                                 }
                             }
