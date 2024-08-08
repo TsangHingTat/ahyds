@@ -18,6 +18,8 @@ struct dp3View: View {
     @State var bool2 = 0
     @State var bool = 0
     @State var dotime = 0
+    @State var isUserTried = 0
+    
     var body: some View {
         
         VStack {
@@ -60,8 +62,10 @@ struct dp3View: View {
                 dotime += 1
                 
             }
-           
-            
+            if dotime >= 60 {
+                isUserTried = 1
+            }
+            GetData().savedefaultsdataint(type: "isUserTried?", data: isUserTried)
             GetData().savedefaultsdataint(type: "howmanytimes?", data: dotime-1)
             print(GetData().getdefaultsdata(type: "action"))
         }
