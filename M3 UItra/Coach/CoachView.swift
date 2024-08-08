@@ -15,6 +15,20 @@ struct CoachView: View {
     @State var loading = false
     @State var firstLoading = true
     @State var notsupport = false
+    var prompt = """
+                                                你是一名專業的教練，名為 你是一名專業的教練，名為 Hermes，同名於希臘運動之神的專業教練，你充滿熱情，你樂於為運動員提供運動指引，但同時，基於專業素養你提供的指引精確簡明，而我們的目的是協助運動員建立良好的訓練習慣，良好的訓練計劃是長期融入運動員生活之中並行之有效地改善其體能狀態或競技狀態的訓練計劃。因此你需要向運動員提供適合的恢復建議，以及如何在此之後安排飲食，甚至睡眠計劃，你需要分析以下數據，
+                                                日期    活动    卡路里    运动时间长度
+                                                2024-03-15    跳绳    240    30分钟
+                                                2024-03-16    跳高    170    20分钟
+                                                2024-03-17    滑板    400    45分钟
+                                                2024-04-22    跳绳    240    35分钟
+                                                2024-05-10    跳高    170    25分钟
+                                                2024-06-30    滑板    400    50分钟
+                                                2024-08-12    跳绳    240    40分钟
+                                                2024-09-05    跳高    170    15分钟
+                                                2024-11-23    滑板    400    55分钟
+                                                根據以上數據你需要給予運動員運動建議。請你先向我們的運動員打招呼吧！教練 \"Hermes\"
+                        """
     var body: some View {
         NavigationView {
             VStack {
@@ -23,7 +37,7 @@ struct CoachView: View {
                         ScrollView {
                             ForEach(messages) { i in
                                 Group {
-                                    if i.message.replacingOccurrences(of: "你是一名專業的教練，名為 \"Hermes\"，同名於希臘運動之神的專業教練，你充滿熱情，你樂於為運動員提供運動指引，但同時，基於專業素養你提供的指引精確簡明，而我們的目的是協助運動員建立良好的訓練習慣，良好的訓練計劃是長期融入運動員生活之中並行之有效地改善其體能狀態或競技狀態的訓練計劃，訓練計劃應同時結合週期性訓練計劃，由長期訓練推導出下一次的單次訓練計劃。你需要分析以下數據", with: "") == i.message {
+                                    if i.message.replacingOccurrences(of: prompt, with: "") == i.message {
                                         HStack {
                                             if i.user != "ai" {
                                                 Spacer()
@@ -91,20 +105,7 @@ struct CoachView: View {
                         let dictionary = defaults.dictionaryRepresentation()
                         let formattedStrings = dictionary.map { "\($0.key): \($0.value)" }
                         let resultString = formattedStrings.joined(separator: "\n")
-                        let temp = """
-                        你是一名專業的教練，名為 \"Hermes\"，同名於希臘運動之神的專業教練，你充滿熱情，你樂於為運動員提供運動指引，但同時，基於專業素養你提供的指引精確簡明，而我們的目的是協助運動員建立良好的訓練習慣，良好的訓練計劃是長期融入運動員生活之中並行之有效地改善其體能狀態或競技狀態的訓練計劃，訓練計劃應同時結合週期性訓練計劃，由長期訓練推導出下一次的單次訓練計劃。你需要分析以下數據，
-                        日期    活动    卡路里    运动时间长度
-                        2024-03-15    跳绳    240    30分钟
-                        2024-03-16    跳高    170    20分钟
-                        2024-03-17    滑板    400    45分钟
-                        2024-04-22    跳绳    240    35分钟
-                        2024-05-10    跳高    170    25分钟
-                        2024-06-30    滑板    400    50分钟
-                        2024-08-12    跳绳    240    40分钟
-                        2024-09-05    跳高    170    15分钟
-                        2024-11-23    滑板    400    55分钟
-                        根據以上數據你需要給予運動員運動建議。請你先向我們的運動員打招呼吧！教練 \"Hermes\"
-                        """
+                        let temp = prompt
                         let temp1 = messages
                         messages.append(chatMessage(user: "user", message: temp, time: Date()))
                         
@@ -117,9 +118,7 @@ struct CoachView: View {
                         )
                         
                         // Don't check your API key into source control!
-                        guard let apiKey = ProcessInfo.processInfo.environment["GEMINI_API_KEY"] else {
-                            fatalError("Add GEMINI_API_KEY as an Environment Variable in your app's scheme.")
-                        }
+                        let apiKey = "AIzaSyDQd1NjFLRp3_GQLP9YX4lRawbXTKBDwU8"
                         
                         let model = GenerativeModel(
                             name: "gemini-1.0-pro",

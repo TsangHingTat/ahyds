@@ -100,7 +100,7 @@ struct CalendarView<DateView>: View where DateView: View {
     }
 
     var body: some View {
-        ScrollView(showsIndicators: false) {
+        VStack {
             ForEach(months, id: \.self) { month in
                 Section {
                     ForEach(days(for: month), id: \.self) { date in

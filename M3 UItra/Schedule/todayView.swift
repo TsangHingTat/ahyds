@@ -104,7 +104,6 @@ struct TodayView: View {
 struct todayView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            Color.black
             TodayView(year: "2022", month: "08", istoday: true, home: true)
         }
         

@@ -60,7 +60,7 @@ struct DeveloperView: View {
             }
             
             Section(header: Text("日曆")) {
-                NavigationLink(destination: ScheduleView(refresh: $refresh)) {
+                NavigationLink(destination: ScheduleView()) {
                     HStack {
                         Image(systemName: "photo.circle")
                         Text("日曆")

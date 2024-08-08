@@ -9,34 +9,31 @@ import SwiftUI
 import Foundation
 
 struct ScheduleView: View {
-    @Binding var refresh: Bool
     var month = nowdate(format: "MM")
     var year = nowdate(format: "yyyy")
     @State var selection = nowdate(format: "MM")
     var body: some View {
         let monthInt = Int(month)
-        TabView(selection:$selection) {
-            ForEach((1..<(monthInt ?? 12)), id: \.self) {
-                let new = correctdate(num: "\($0)")
-                MonthView(year: year, month: new)
-                    .tag($0)
-            }
+//        TabView(selection:$selection) {
+//            ForEach((1..<(monthInt ?? 12)), id: \.self) {
+//                let new = correctdate(num: "\($0)")
+//                MonthView(year: year, month: new)
+//                    .tag($0)
+//            }
             let new = correctdate(num: nowdate(format: "MM"))
             MonthView(year: year, month: new, istoday: true)
                 .tag(nowdate(format: "MM"))
             
-            ForEach((((monthInt ?? 1)+1)...12), id: \.self) {
-                let new = correctdate(num: "\($0)")
-                MonthView(year: year, month: new)
-                    .tag($0)
-            }
+//            ForEach((((monthInt ?? 1)+1)...12), id: \.self) {
+//                let new = correctdate(num: "\($0)")
+//                MonthView(year: year, month: new)
+//                    .tag($0)
+//            }
             
-            
-        }
-        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-        .onDisappear() {
-            refresh = true
-        }
+//            
+//        }
+//        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+//        .background(Color.clear)
     }
     func correctdate(num: String) -> String {
         let add0 = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
@@ -57,12 +54,11 @@ struct MonthView: View {
     var istoday = false
     var body: some View {
         ZStack {
-            Color.white
             VStack {
                 Spacer()
                     .frame(height: 150)
                 VStack {
-                    ScrollView(showsIndicators: false) {
+                    VStack {
                         Spacer()
                             .frame(height: 18)
                         let imdate = "\(year)-\(month)"
@@ -76,19 +72,8 @@ struct MonthView: View {
             ZStack {
                 VStack {
                     Group {
-                        Color.white
-                            .frame(height: 160)
-                            .edgesIgnoringSafeArea(.all)
-                    }
-                    Spacer()
-                    
-                }
-                VStack {
-                    Group {
                         VStack {
                             TodayView(year: year, month: month, istoday: istoday)
-                            LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.01), Color.white]),startPoint: .bottom, endPoint: .top)
-                                .frame(height: 15)
 
                         }
                     }

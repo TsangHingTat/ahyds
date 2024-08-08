@@ -60,20 +60,22 @@ struct AiView: View {
                 }
                 
             }
+            
+            .navigationTitle(title)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationViewStyle(StackNavigationViewStyle())
+            .toolbar() {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        onoff = false
+                    }, label: {
+                        Text("退出")
+                    })
+                }
+            }
         }
         .onAppear() {
             GetData().savedefaultsdataint(type: "howmanytimes?", data: 0)
-        }
-        .navigationTitle(title)
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar() {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button(action: {
-                    onoff = false
-                }, label: {
-                    Text("退出")
-                })
-            }
         }
         .onReceive(timer) { timer in
             action = "\(GetData().getdefaultsdataint(type: "howmanytimes?"))"
