@@ -189,10 +189,7 @@ struct CoachView: View {
             responseMIMEType: "text/plain"
         )
         
-        // Don't check your API key into source control!
-        guard let apiKey = ProcessInfo.processInfo.environment["GEMINI_API_KEY"] else {
-            fatalError("Add GEMINI_API_KEY as an Environment Variable in your app's scheme.")
-        }
+        let apiKey = "AIzaSyDQd1NjFLRp3_GQLP9YX4lRawbXTKBDwU8"
         
         let model = GenerativeModel(
             name: "gemini-1.0-pro",
