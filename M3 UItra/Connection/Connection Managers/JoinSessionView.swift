@@ -74,6 +74,32 @@ struct JoinSessionView: View {
                                         }
                                     }
                             })
+                            Button(action: {
+                                chatConnectionManager.host()
+                            }, label: {
+                                Image("aa")
+                                    .resizable()
+                                    .frame(width: 340, height: 240)
+                                    .cornerRadius(15)
+                                    .padding()
+                                    .shadow(radius: 10)
+                                    .overlay() {
+                                        ZStack {
+                                            VStack {
+                                                Spacer()
+                                                HStack {
+                                                    Spacer()
+                                                    Text("\(NSLocalizedString("進入團體模式", comment: "連接課堂"))")
+                                                        .foregroundColor(.black)
+                                                        .font(.title)
+                                                        .bold()
+                                                        .padding(25)
+                                                }
+                                            }
+                                            
+                                        }
+                                    }
+                            })
                             
                         }
                     }
