@@ -47,6 +47,32 @@ struct JoinSessionView: View {
                                         }
                                     }
                             })
+                            Button(action: {
+                                chatConnectionManager.join()
+                            }, label: {
+                                Image("aa")
+                                    .resizable()
+                                    .frame(width: 340, height: 240)
+                                    .cornerRadius(15)
+                                    .padding()
+                                    .shadow(radius: 10)
+                                    .overlay() {
+                                        ZStack {
+                                            VStack {
+                                                Spacer()
+                                                HStack {
+                                                    Spacer()
+                                                    Text("\(NSLocalizedString("開始團體模式", comment: "開始團體模式"))")
+                                                        .foregroundColor(.black)
+                                                        .font(.title)
+                                                        .bold()
+                                                        .padding(25)
+                                                }
+                                            }
+                                            
+                                        }
+                                    }
+                            })
                         } else {
                             Button(action: {
                                 chatConnectionManager.host()
@@ -89,7 +115,7 @@ struct JoinSessionView: View {
                                                 Spacer()
                                                 HStack {
                                                     Spacer()
-                                                    Text("\(NSLocalizedString("進入團體模式", comment: "連接課堂"))")
+                                                    Text("\(NSLocalizedString("進入團體模式", comment: "進入團體模式"))")
                                                         .foregroundColor(.black)
                                                         .font(.title)
                                                         .bold()
