@@ -230,13 +230,13 @@ struct DeveloperView: View {
                 for i in 0...366 {
                     let int = Int.random(in: 1...3)
                     if int == 1 {
-                        otherdata(datatoday: yesterDay(pre: i), datainfo: "dataitem1", datastring: "仰臥起坐 20下 31秒")
-                        otherdata(datatoday: yesterDay(pre: i), datainfo: "dataitem2", datastring: "掌上壓 20下 22秒")
+                        otherdata(datatoday: yesterDay(pre: i), datainfo: "dataitem1", datastring: "仰臥起坐 20下")
+                        otherdata(datatoday: yesterDay(pre: i), datainfo: "dataitem2", datastring: "掌上壓 20下")
                         otherdata(datatoday: yesterDay(pre: i), datainfo: "datacal1", datastring: "170")
                         otherdata(datatoday: yesterDay(pre: i), datainfo: "datacal2", datastring: "240")
                     } else if int == 2 {
-                        otherdata(datatoday: yesterDay(pre: i), datainfo: "dataitem1", datastring: "仰臥起坐 14下 13秒")
-                        otherdata(datatoday: yesterDay(pre: i), datainfo: "dataitem2", datastring: "掌上壓 20下 22秒")
+                        otherdata(datatoday: yesterDay(pre: i), datainfo: "dataitem1", datastring: "仰臥起坐 14下")
+                        otherdata(datatoday: yesterDay(pre: i), datainfo: "dataitem2", datastring: "掌上壓 20下")
                         otherdata(datatoday: yesterDay(pre: i), datainfo: "datacal1", datastring: "170")
                         otherdata(datatoday: yesterDay(pre: i), datainfo: "datacal2", datastring: "240")
                     } else if int == 3 {
@@ -249,17 +249,17 @@ struct DeveloperView: View {
                 for i in 0...366 {
                     let int = Int.random(in: 1...4)
                     if int == 1 {
-                        otherdata(datatoday: folDay(pre: i), datainfo: "dataitem1", datastring: "仰臥起坐 14下 13秒")
-                        otherdata(datatoday: folDay(pre: i), datainfo: "dataitem2", datastring: "掌上壓 20下 22秒")
+                        otherdata(datatoday: folDay(pre: i), datainfo: "dataitem1", datastring: "仰臥起坐 14下")
+                        otherdata(datatoday: folDay(pre: i), datainfo: "dataitem2", datastring: "掌上壓 20下")
                         otherdata(datatoday: folDay(pre: i), datainfo: "datacal1", datastring: "170")
                         otherdata(datatoday: folDay(pre: i), datainfo: "datacal2", datastring: "240")
                     } else if int == 2 {
-                        otherdata(datatoday: folDay(pre: i), datainfo: "dataitem1", datastring: "仰臥起坐 14下 13秒")
-                        otherdata(datatoday: folDay(pre: i), datainfo: "dataitem2", datastring: "掌上壓 20下 22秒")
+                        otherdata(datatoday: folDay(pre: i), datainfo: "dataitem1", datastring: "仰臥起坐 14下")
+                        otherdata(datatoday: folDay(pre: i), datainfo: "dataitem2", datastring: "掌上壓 20下")
                         otherdata(datatoday: folDay(pre: i), datainfo: "datacal1", datastring: "170")
                         otherdata(datatoday: folDay(pre: i), datainfo: "datacal2", datastring: "240")
                     } else if int == 3 {
-                        otherdata(datatoday: folDay(pre: i), datainfo: "dataitem1", datastring: "掌上壓 20下 22秒")
+                        otherdata(datatoday: folDay(pre: i), datainfo: "dataitem1", datastring: "掌上壓 20下")
                         otherdata(datatoday: folDay(pre: i), datainfo: "datacal1", datastring: "240")
                     }
                 }
